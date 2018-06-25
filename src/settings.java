@@ -207,6 +207,7 @@ public class settings {
 		f.setVisible(true);
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 		f.setLocation(dim.width/2-f.getSize().width/2, dim.height/2-f.getSize().height/2);
+                f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		saveButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// Re-set the Indicator Properties.
@@ -382,7 +383,7 @@ public class settings {
 				}
 				// Upper-Case the SN.
 				String sn = snTextBox.getText();
-				sn.toUpperCase();
+				sn = sn.toUpperCase();
 				// Split the SN into an array.
 				String[] snArr = sn.split("");
 				// Set different strings based on the array. Also set the properties inside the Try/Catch stuff because apparently Eclipse doesn't like it if I don't.
