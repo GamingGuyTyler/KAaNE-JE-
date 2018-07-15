@@ -145,7 +145,7 @@ public class wires {
 		f.setVisible(true);
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 		f.setLocation(dim.width/2-f.getSize().width/2, dim.height/2-f.getSize().height/2);
-                f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		buttonAmount.addActionListener((ActionEvent e) -> {
                     String x = inputAmount.getItemAt(inputAmount.getSelectedIndex());
                     System.out.println("Inputed Wires: " + x);

@@ -35,9 +35,9 @@ class kaane {
 		JButton b=new JButton("OK");
 		b.setBounds(200,70,75,20);
 		// Define the Combo Box
-		String modules[]={"Settings","Wires","Button","Keypad","Simon Says","Who's on First","Memory [WIP]"};
+		String modules[]={"Settings","Wires","Button","Keypad","Simon Says","Who's on First","Memory","Morse Code","Complicated Wires","Wire Sequences"};
 		final JComboBox<String> cb=new JComboBox<>(modules);
-		cb.setBounds(50,70,110,20);
+		cb.setBounds(50,70,140,20);
 		// Define more JFrame stuff
 		f.add(cb); f.add(b); f.add(welcome);
 		f.setLayout(null);
@@ -48,26 +48,30 @@ class kaane {
 		f.setLocation(dim.width/2-f.getSize().width/2, dim.height/2-f.getSize().height/2);
                 f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// Wait till the user actually does stuff
-		b.addActionListener(new ActionListener() {
-                    public void actionPerformed(ActionEvent e) {
-			String x = cb.getItemAt(cb.getSelectedIndex());
-                            // Modules start below
-                            if(x == "Wires"){
-                                wires.module();
-                            } if (x == "Button") {
-                                button.module();
-                            } if(x == "Settings") {
-                                settings.menu();
-                            } if(x == "Keypad") {
-                                keypad.module();
-                            } if(x == "Simon Says") {
-                                simonSays.module();
-                            } if(x == "Who's on First") {
-                                whosOnFirst.module();
-                            } if(x == "Memory [WIP]") {
-                                memory.module();
-                            }
-			}
-		});
+		b.addActionListener((ActionEvent e) -> {
+                    String x = cb.getItemAt(cb.getSelectedIndex());
+                    // Modules start below
+                    if(x.equals("Wires")){
+                        wires.module();
+                    } if(x.equals("Button")) {
+                        button.module();
+                    } if(x.equals("Settings")) {
+                        settings.menu();
+                    } if(x.equals("Keypad")) {
+                        keypad.module();
+                    } if(x.equals("Simon Says")) {
+                        simonSays.module();
+                    } if(x.equals("Who's on First")) {
+                        whosOnFirst.module();
+                    } if(x.equals("Memory")) {
+                        memory.module();
+                    } if(x.equals("Morse Code")) {
+                        morseCode.module();
+                    } if(x.equals("Complicated Wires")) {
+                        complicatedWires.module();
+                    } if(x.equals("Wire Sequences")) {
+                        wireSequences.module();
+                    }
+                });
 	}
 }

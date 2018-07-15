@@ -21,58 +21,17 @@ public class settings {
 		File configFile = new File("config.properties");
 		// Define the properties.
 		Properties props = new Properties();
-		// Set the default properties.
-		props.setProperty("bob","0"); 
-		props.setProperty("bobLit","0");
-		props.setProperty("car","0");
-		props.setProperty("carLit","0");
-		props.setProperty("clr","0");
-		props.setProperty("clrLit","0");
-		props.setProperty("frk","0");
-		props.setProperty("frkLit","0");
-		props.setProperty("frq","0");
-		props.setProperty("frqLit","0");
-		props.setProperty("ind","0");
-		props.setProperty("indLit","0");
-		props.setProperty("msa","0");
-		props.setProperty("msaLit","0");
-		props.setProperty("nsa","0");
-		props.setProperty("nsaLit","0");
-		props.setProperty("sig","0");
-		props.setProperty("sigLit","0");
-		props.setProperty("snd","0");
-		props.setProperty("sndLit","0");
-		props.setProperty("trn","0");
-		props.setProperty("trnLit","0");
-		props.setProperty("batteriesTotal","0");
-		props.setProperty("batteryHolders","0");
-		props.setProperty("batteriesAA","0");
-		props.setProperty("batteriesD","0");
-		props.setProperty("dvid","0");
-		props.setProperty("parallel","0");
-		props.setProperty("ps2","0");
-		props.setProperty("rj45","0");
-		props.setProperty("serial","0");
-		props.setProperty("stereoRCA","0");
-		props.setProperty("sn1","B");
-		props.setProperty("sn2","B");
-		props.setProperty("sn3","B");
-		props.setProperty("sn4","0");
-		props.setProperty("sn5","0");
-		props.setProperty("sn6","0");
-		props.setProperty("displayModule","0");
-		// Write everything in
 		try {
-			FileWriter writer = new FileWriter(configFile);
-			props.store(writer, "settings");
+                    FileReader reader = new FileReader(configFile);
+                    props.load(reader);
 		} catch (FileNotFoundException ex) {
-			System.out.println("ERROR CODE #0001");
-			System.out.println("Config file could not be found.");
-			System.out.println("Ignoring...");
+                    System.out.println("ERROR CODE #0001");
+                    System.out.println("Config file could not be found!");
+                    System.out.println("Ignoring...");
 		} catch (IOException ex) {
-			System.out.println("ERROR CODE #0002");
-			System.out.println("IO Exception while trying to write in the config file.");
-			System.out.println("Ignoring...");
+                    System.out.println("ERROR CODE #0002");
+                    System.out.println("IO Exception while trying to load file!");
+                    System.out.println("Ignoring...");
 		}
 		// Define the Welcome Text
 		JLabel welcomeText = new JLabel();
@@ -198,7 +157,195 @@ public class settings {
 		JCheckBox dmCheck = new JCheckBox("DISPLAY MODULES");
 		dmCheck.setBounds(0,270,150,20);
                 dmCheck.setVisible(false); // set it to visible since it's unfinished
-		// Add everything in the JFrame
+                // Set all the settings to mirror the config file
+                // Indicators
+                int checks = Integer.parseInt(props.getProperty("bob"));
+                if (checks == 0) {
+                    bobCheck.setSelected(false);
+                } else {
+                    bobCheck.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("bobLit"));
+                if (checks == 0) {
+                    litBobCheck.setSelected(false);
+                } else {
+                    litBobCheck.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("car"));
+                if (checks == 0) {
+                    carCheck.setSelected(false);
+                } else {
+                    carCheck.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("carLit"));
+                if (checks == 0) {
+                    litCarCheck.setSelected(false);
+                } else {
+                    litCarCheck.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("clr"));
+                if (checks == 0) {
+                    clrCheck.setSelected(false);
+                } else {
+                    clrCheck.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("clrLit"));
+                if (checks == 0) {
+                    litClrCheck.setSelected(false);
+                } else {
+                    litClrCheck.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("frk"));
+                if (checks == 0) {
+                    frkCheck.setSelected(false);
+                } else {
+                    frkCheck.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("frkLit"));
+                if (checks == 0) {
+                    litFrkCheck.setSelected(false);
+                } else {
+                    litFrkCheck.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("frq"));
+                if (checks == 0) {
+                    frqCheck.setSelected(false);
+                } else {
+                    frqCheck.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("frqLit"));
+                if (checks == 0) {
+                    litFrqCheck.setSelected(false);
+                } else {
+                    litFrqCheck.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("ind"));
+                if (checks == 0) {
+                    indCheck.setSelected(false);
+                } else {
+                    indCheck.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("indLit"));
+                if (checks == 0) {
+                    litIndCheck.setSelected(false);
+                } else {
+                    litIndCheck.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("msa"));
+                if (checks == 0) {
+                    msaCheck.setSelected(false);
+                } else {
+                    msaCheck.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("msaLit"));
+                if (checks == 0) {
+                    litMsaCheck.setSelected(false);
+                } else {
+                    litMsaCheck.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("nsa"));
+                if (checks == 0) {
+                    nsaCheck.setSelected(false);
+                } else {
+                    nsaCheck.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("nsaLit"));
+                if (checks == 0) {
+                    litNsaCheck.setSelected(false);
+                } else {
+                    litNsaCheck.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("sig"));
+                if (checks == 0) {
+                    sigCheck.setSelected(false);
+                } else {
+                    sigCheck.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("sigLit"));
+                if (checks == 0) {
+                    litSigCheck.setSelected(false);
+                } else {
+                    litSigCheck.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("snd"));
+                if (checks == 0) {
+                    sndCheck.setSelected(false);
+                } else {
+                    sndCheck.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("sndLit"));
+                if (checks == 0) {
+                    litSndCheck.setSelected(false);
+                } else {
+                    litSndCheck.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("trn"));
+                if (checks == 0) {
+                    trnCheck.setSelected(false);
+                } else {
+                    trnCheck.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("trnLit"));
+                if (checks == 0) {
+                    litTrnCheck.setSelected(false);
+                } else {
+                    litTrnCheck.setSelected(true);
+                }
+                // Batteries
+                String checksString = props.getProperty("batteriesTotal");
+                batteriesTotalTextBox.setText(checksString);
+                checksString = props.getProperty("batteryHolders");
+                batteryHoldersTextBox.setText(checksString);
+                checksString = props.getProperty("batteriesAA");
+                batteriesAATextBox.setText(checksString);
+                checksString = props.getProperty("batteriesD");
+                batteriesDTextBox.setText(checksString);
+                // Ports
+                checks = Integer.parseInt(props.getProperty("dvid"));
+                if (checks == 0) {
+                    dvidCheck.setSelected(false);
+                } else {
+                    dvidCheck.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("parallel"));
+                if (checks == 0) {
+                    parallelCheck.setSelected(false);
+                } else {
+                    parallelCheck.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("ps2"));
+                if (checks == 0) {
+                    ps2Check.setSelected(false);
+                } else {
+                    ps2Check.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("rj45"));
+                if (checks == 0) {
+                    rj45Check.setSelected(false);
+                } else {
+                    rj45Check.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("serial"));
+                if (checks == 0) {
+                    serialCheck.setSelected(false);
+                } else {
+                    serialCheck.setSelected(true);
+                }
+                checks = Integer.parseInt(props.getProperty("stereoRCA"));
+                if (checks == 0) {
+                    stereoRCACheck.setSelected(false);
+                } else {
+                    stereoRCACheck.setSelected(true);
+                }
+                // SN
+                checksString = props.getProperty("sn1");
+                String checksString2 = props.getProperty("sn2");
+                String checksString3 = props.getProperty("sn3");
+                String checksString4 = props.getProperty("sn4");
+                String checksString5 = props.getProperty("sn5");
+                String checksString6 = props.getProperty("sn6");
+                snTextBox.setText(checksString + checksString2 + checksString3 + checksString4 + checksString5 + checksString6);
+                // Add everything in the JFrame
 		f.add(welcomeText); f.add(saveButton); f.add(bobCheck); f.add(litBobCheck); f.add(carCheck); f.add(litCarCheck); f.add(clrCheck); f.add(litClrCheck); f.add(frkCheck); f.add(litFrkCheck); f.add(frqCheck); f.add(litFrqCheck); f.add(indCheck); f.add(litIndCheck); f.add(msaCheck); f.add(litMsaCheck); f.add(nsaCheck); f.add(litNsaCheck); f.add(sigCheck); f.add(litSigCheck); f.add(sndCheck); f.add(litSndCheck); f.add(trnCheck); f.add(litTrnCheck); f.add(clearButton); f.add(changeText); f.add(batteriesTotalTextBox); f.add(batteriesTotalText); f.add(batteryHoldersTextBox); f.add(batteryHoldersText); f.add(batteriesAATextBox); f.add(batteriesAAText); f.add(batteriesDTextBox); f.add(batteriesDText); f.add(dvidCheck); f.add(parallelCheck); f.add(ps2Check); f.add(rj45Check); f.add(serialCheck); f.add(stereoRCACheck); f.add(dvidImg); f.add(parallelImg); f.add(ps2Img); f.add(rj45Img); f.add(serialImg); f.add(stereoRCAImg); f.add(snTextBox); f.add(snText); f.add(dmCheck);
 		// Define the rest of the JFrame stuff
 		f.setLayout(null);
@@ -207,7 +354,7 @@ public class settings {
 		f.setVisible(true);
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 		f.setLocation(dim.width/2-f.getSize().width/2, dim.height/2-f.getSize().height/2);
-                f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		saveButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// Re-set the Indicator Properties.

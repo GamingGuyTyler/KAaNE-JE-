@@ -1,7 +1,9 @@
 /**
  * Memory module, started work on 5:49 PM 6/24/2018
  * 
- * Version 0.1
+ * (i forgot to put the details of version 0.1 and 0.2)
+ * 
+ * Version 0.2
  */
 
 import javax.swing.*;
@@ -149,26 +151,6 @@ public class memory {
         // Stage 4 Output Text
         JLabel stage4OutputText = new JLabel();
         stage4OutputText.setBounds(70,212,190,20);
-        // stage 5 is completely invisible and i dont know why
-        // im going to fucking kill myself
-        // seriously
-        // it's literally identical to the fucking other ones
-        // why doesn't it show up?
-        // fuck knows.
-        // > it's not the same coords as anything else
-        // > doesn't show up when it's visible
-        // > reset button shows up AFTER stage 5 is defined
-        // > moving the code anywhere doesn't change a thing
-        // > making the jframe bigger before defining doesn't change anything
-        // > literally fucking nothing is wrong with the code
-        // > the code is also basically identical to the above code, so it should have no problems
-        // conclusion:
-        // JAVA IS A BROKE PIECE OF FUCKING SHIT AND I FUCKING HATE IT
-        // I'M PROBABLY GOING TO JUST REPLACE THIS WITH UNITY OR SOME SHIT
-        // SERIOUSLY, AT LEAST ON UNITY I DONT HAVE TO DICK AROUND WITH COORDINATES FOR 20 MINUTES!
-        // FUCK JAVA
-        // FUCK THIS PIECE OF SHIT CODE
-        // FUCK EVERYTHING
         // Stage 5 Text + Lines
         JLabel stage5Line1 = new JLabel();
         stage5Line1.setIcon(line);
@@ -238,7 +220,7 @@ public class memory {
         stage5DisplayButton.setVisible(false);
         stage5OutputText.setVisible(false);
         // Add everything to the JFrame
-        f.add(stage1); f.add(stage1line); f.add(stage1DisplayCombo); f.add(stage1DisplayText); f.add(stage1DisplayButton); f.add(resetButton); f.add(stage1LabelCombo); f.add(stage1LabelText); f.add(stage1NextButton); f.add(stage2Line1); f.add(stage2Line2); f.add(stage2); f.add(stage2DisplayCombo); f.add(stage2DisplayText); f.add(stage2DisplayButton); f.add(stage2LabelCombo); f.add(stage2LabelText); f.add(stage2NextButton); f.add(stage3Line1); f.add(stage3); f.add(stage3Line2); f.add(stage3DisplayCombo); f.add(stage3DisplayText); f.add(stage3DisplayButton); f.add(stage3LabelCombo); f.add(stage3LabelText); f.add(stage3NextButton); f.add(stage4Line1); f.add(stage4); f.add(stage4Line2); f.add(stage4DisplayCombo); f.add(stage4DisplayText); f.add(stage4DisplayButton); f.add(stage4LabelCombo); f.add(stage4LabelText); f.add(stage4NextButton); f.add(stage1OutputText); f.add(stage2OutputText); f.add(stage3OutputText); f.add(stage4OutputText); f.add(stage5OutputText);
+        f.add(stage1); f.add(stage1line); f.add(stage1DisplayCombo); f.add(stage1DisplayText); f.add(stage1DisplayButton); f.add(resetButton); f.add(stage1LabelCombo); f.add(stage1LabelText); f.add(stage1NextButton); f.add(stage2Line1); f.add(stage2Line2); f.add(stage2); f.add(stage2DisplayCombo); f.add(stage2DisplayText); f.add(stage2DisplayButton); f.add(stage2LabelCombo); f.add(stage2LabelText); f.add(stage2NextButton); f.add(stage3Line1); f.add(stage3); f.add(stage3Line2); f.add(stage3DisplayCombo); f.add(stage3DisplayText); f.add(stage3DisplayButton); f.add(stage3LabelCombo); f.add(stage3LabelText); f.add(stage3NextButton); f.add(stage4Line1); f.add(stage4); f.add(stage4Line2); f.add(stage4DisplayCombo); f.add(stage4DisplayText); f.add(stage4DisplayButton); f.add(stage4LabelCombo); f.add(stage4LabelText); f.add(stage4NextButton); f.add(stage1OutputText); f.add(stage2OutputText); f.add(stage3OutputText); f.add(stage4OutputText); f.add(stage5OutputText); f.add(stage5Line1); f.add(stage5); f.add(stage5Line2); f.add(stage5DisplayCombo); f.add(stage5DisplayText); f.add(stage5DisplayButton);
         // Define the rest of the JFrame stuff
         f.setLayout(null);
         f.setSize(350,450);
@@ -246,7 +228,7 @@ public class memory {
         f.setVisible(true);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         f.setLocation(dim.width/2-f.getSize().width/2, dim.height/2-f.getSize().height/2);
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         // Stage 1 Display
         stage1DisplayButton.addActionListener((ActionEvent e) -> {
             String display = stage1DisplayCombo.getItemAt(stage1DisplayCombo.getSelectedIndex());
