@@ -3,7 +3,7 @@
  * 
  * Started the project on June 16, 2018 at around 5:35 AM.
  * 
- * Current Version: 0.1
+ * Current Version: 0.4 (α)
  * 
  * 
  * KTaNE by Steel Crate Games
@@ -11,8 +11,6 @@
  * Keypad code and Needy Knobs idea by Jonathan-Walsh
  *
  * Mods belong to their rightful owners.
- *
- * KAaNE logo generated from patorjk.com
  *
  * Rest by me (Gaming Guy Tyler)
  *
@@ -35,9 +33,11 @@ class kaane {
 		JButton b=new JButton("OK");
 		b.setBounds(200,70,75,20);
 		// Define the Combo Box
-		String modules[]={"Settings","Wires","Button","Keypad","Simon Says","Who's on First","Memory","Morse Code","Complicated Wires","Wire Sequences"};
+		String modules[]={"Settings","Wires","Button","Keypad","Simon Says",
+                "Who's on First","Memory","Morse Code","Complicated Wires","Wire Sequences",
+                "Mazes","Passwords","Needy Gas","Capciator Discharge","Needy Knobs"};
 		final JComboBox<String> cb=new JComboBox<>(modules);
-		cb.setBounds(50,70,140,20);
+		cb.setBounds(50,70,150,20);
 		// Define more JFrame stuff
 		f.add(cb); f.add(b); f.add(welcome);
 		f.setLayout(null);
@@ -51,26 +51,22 @@ class kaane {
 		b.addActionListener((ActionEvent e) -> {
                     String x = cb.getItemAt(cb.getSelectedIndex());
                     // Modules start below
-                    if(x.equals("Wires")){
-                        wires.module();
-                    } if(x.equals("Button")) {
-                        button.module();
-                    } if(x.equals("Settings")) {
-                        settings.menu();
-                    } if(x.equals("Keypad")) {
-                        keypad.module();
-                    } if(x.equals("Simon Says")) {
-                        simonSays.module();
-                    } if(x.equals("Who's on First")) {
-                        whosOnFirst.module();
-                    } if(x.equals("Memory")) {
-                        memory.module();
-                    } if(x.equals("Morse Code")) {
-                        morseCode.module();
-                    } if(x.equals("Complicated Wires")) {
-                        complicatedWires.module();
-                    } if(x.equals("Wire Sequences")) {
-                        wireSequences.module();
+                    switch (x) {
+                        case "Settings": settings.menu(); break;
+                        case "Wires": wires.module(); break;
+                        case "Button": button.module(); break;
+                        case "Keypad": keypad.module(); break;
+                        case "Simon Says": simonSays.module(); break;
+                        case "Who's on First": whosOnFirst.module(); break;
+                        case "Memory": memory.module(); break;
+                        case "Morse Code": morseCode.module(); break;
+                        case "Complicated Wires": complicatedWires.module(); break;
+                        case "Wire Sequences": wireSequences.module(); break;
+                        case "Mazes": mazes.module(); break;
+                        case "Passwords": passwords.module(); break;
+                        case "Needy Gas": needyGas.module(); break;
+                        case "Capciator Discharge": needyCD.module(); break;
+                        case "Needy Knobs": needyKnobs.module(); break;
                     }
                 });
 	}

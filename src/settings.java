@@ -528,6 +528,31 @@ public class settings {
 				} else {
 					props.setProperty("dvid","0");
 				}
+                                if (parallelCheck.isSelected()) {
+                                    props.setProperty("parallel","1");
+                                } else {
+                                    props.setProperty("parallel","0");
+                                }
+                                if (ps2Check.isSelected()) {
+                                    props.setProperty("ps2","1");
+                                } else {
+                                    props.setProperty("ps2","0");
+                                }
+                                if (rj45Check.isSelected()) {
+                                    props.setProperty("rj45","1");
+                                } else {
+                                    props.setProperty("rj45","0");
+                                }
+                                if (serialCheck.isSelected()) {
+                                    props.setProperty("serial","1");
+                                } else {
+                                    props.setProperty("serial","0");
+                                }
+                                if (stereoRCACheck.isSelected()) {
+                                    props.setProperty("stereoRCA","1");
+                                } else {
+                                    props.setProperty("stereoRCA","0");
+                                }
 				// Upper-Case the SN.
 				String sn = snTextBox.getText();
 				sn = sn.toUpperCase();

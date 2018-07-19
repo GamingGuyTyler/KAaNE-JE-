@@ -84,19 +84,20 @@ public class complicatedWires {
             String parallel = props.getProperty("parallel");
             String lastDigit = "0";
             // Determine last digit
-            if (sn6 == "0" || sn6 == "1" || sn6 == "2" || sn6 == "3" || sn6 == "4" || sn6 == "5" || sn6 == "6" || sn6 == "7" || sn6 == "8" || sn6 == "9") {
+            if (sn6.equals("0") || sn6.equals("1") || sn6.equals("2") || sn6.equals("3") || sn6.equals("4") || sn6.equals("5") || sn6.equals("6") || sn6.equals("7") || sn6.equals("8") || sn6.equals("9")) {
                 lastDigit = sn6;
-            } else if (sn5 == "0" || sn5 == "1" || sn5 == "2" || sn5 == "3" || sn5 == "4" || sn5 == "5" || sn5 == "6" || sn5 == "7" || sn5 == "8" || sn5 == "9") {
+            } else if (sn5.equals("0") || sn5.equals("1") || sn5.equals("2") || sn5.equals("3") || sn5.equals("4") || sn5.equals("5") || sn5.equals("6") || sn5.equals("7") || sn5.equals("8") || sn5.equals("9")) {
                 lastDigit = sn5;
-            } else if (sn4 == "0" || sn4 == "1" || sn4 == "2" || sn4 == "3" || sn4 == "4" || sn4 == "5" || sn4 == "6" || sn4 == "7" || sn4 == "8" || sn4 == "9") {
+            } else if (sn4.equals("0") || sn4.equals("1") || sn4.equals("2") || sn4.equals("3") || sn4.equals("4") || sn4.equals("5") || sn4.equals("6") || sn4.equals("7") || sn4.equals("8") || sn4.equals("9")) {
                 lastDigit = sn4;
-            } else if (sn3 == "0" || sn3 == "1" || sn3 == "2" || sn3 == "3" || sn3 == "4" || sn3 == "5" || sn3 == "6" || sn3 == "7" || sn3 == "8" || sn3 == "9") {
+            } else if (sn3.equals("0") || sn3.equals("1") || sn3.equals("2") || sn3.equals("3") || sn3.equals("4") || sn3.equals("5") || sn3.equals("6") || sn3.equals("7") || sn3.equals("8") || sn3.equals("9")) {
                 lastDigit = sn3;
-            } else if (sn2 == "0" || sn2 == "1" || sn2 == "2" || sn2 == "3" || sn2 == "4" || sn2 == "5" || sn2 == "6" || sn2 == "7" || sn2 == "8" || sn2 == "9") {
+            } else if (sn2.equals("0") || sn2.equals("1") || sn2.equals("2") || sn2.equals("3") || sn2.equals("4") || sn2.equals("5") || sn2.equals("6") || sn2.equals("7") || sn2.equals("8") || sn2.equals("9")) {
                 lastDigit = sn2;
-            } else if (sn1 == "0" || sn1 == "1" || sn1 == "2" || sn1 == "3" || sn1 == "4" || sn1 == "5" || sn1 == "6" || sn1 == "7" || sn1 == "8" || sn1 == "9") {
+            } else if (sn1.equals("0") || sn1.equals("1") || sn1.equals("2") || sn1.equals("3") || sn1.equals("4") || sn1.equals("5") || sn1.equals("6") || sn1.equals("7") || sn1.equals("8") || sn1.equals("9")) {
                 lastDigit = sn1;
             }
+            System.out.println("Last Digit - " + lastDigit);
             // Convert edgework into booleans to make the logic more understandable
             boolean evenDigit = false;
             int lastDigitInt = Integer.parseInt(lastDigit);

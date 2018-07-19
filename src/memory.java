@@ -435,7 +435,7 @@ public class memory {
         });
         // Stage 5
         stage5DisplayButton.addActionListener((ActionEvent e) -> {
-            String display = stage5DisplayCombo.getItemAt(stage2DisplayCombo.getSelectedIndex());
+            String display = stage5DisplayCombo.getItemAt(stage5DisplayCombo.getSelectedIndex());
             System.out.println("Display #5 - " + display);
             stage5DisplayCombo.setEnabled(false);
             stage5DisplayButton.setEnabled(false);
