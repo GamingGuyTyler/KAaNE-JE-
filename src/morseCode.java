@@ -3,7 +3,9 @@
  * 
  * Finished Version 0.1 at 11:55 PM
  * 
- * Version 0.1
+ * Finished Version 0.2 at 7/28/2018 1:30 AM
+ * 
+ * Version 0.2
  */
 
 import javax.swing.*;
@@ -217,80 +219,77 @@ public class morseCode {
             outputText.setVisible(false);
             outputText.setBounds(80,140,60,20);
             System.out.println("Inputted second letter - " + text2);
-            switch (text1) {
-                case "-...":
-                    switch (text2) {
-                        case ".":
-                            System.out.println("Decyphered into E");
-                            System.out.println("Found word! Word is BEATS");
-                            System.out.println("3.600 MHz");
-                            outputText.setText("3.600 MHz");
-                            outputText.setVisible(true);
-                            break;
-                        case "..":
-                            System.out.println("Decyphered into I");
-                            System.out.println("Found word! Word is BISTRO");
-                            System.out.println("3.552 MHz");
-                            outputText.setText("3.552 MHz");
-                            outputText.setVisible(true);
-                            break;
-                        case "---":
-                            System.out.println("Decyphered into O");
-                            textBox2.setEditable(false);
-                            textButton2.setEnabled(false);
-                            textBox3.setVisible(true);
-                            textLabel3.setVisible(true);
-                            textButton3.setVisible(true);
-                            break;
-                        case ".-.":
-                            System.out.println("Decyphered into R");
-                            textBox2.setEditable(false);
-                            textButton2.setEnabled(false);
-                            textBox3.setVisible(true);
-                            textLabel3.setVisible(true);
-                            textButton3.setVisible(true);
-                            break;
-                        default:
-                            System.out.println("Invalid Input!");
-                            outputText.setText("Invalid Input!");
-                            outputText.setBounds(75,140,70,20);
-                            outputText.setVisible(true);
-                            break;
-                    }
-                case "...":
-                    switch (text2) {
-                        case "....":
-                            System.out.println("Decyphered into H");
-                            System.out.println("Found word! Word is SHELL");
-                            System.out.println("3.505 MHz");
-                            outputText.setText("3.505 MHz");
-                            outputText.setVisible(true);
-                            break;
-                        case ".-..":
-                            System.out.println("Decyphered into L");
-                            System.out.println("Found word! Word is SLICK");
-                            System.out.println("3.522 MHz");
-                            outputText.setText("3.522 MHz");
-                            outputText.setVisible(true);
-                            break;
-                        case "-":
-                            System.out.println("Decyphered into T");
-                            textBox2.setEditable(false);
-                            textButton2.setEnabled(false);
-                            textBox3.setVisible(true);
-                            textLabel3.setVisible(true);
-                            textButton3.setVisible(true);
-                            break;
-                        default:
-                            System.out.println("Invalid Input!");
-                            outputText.setText("Invalid Input!");
-                            outputText.setBounds(75,140,70,20);
-                            outputText.setVisible(true);
-                            break;
-                    }
-                    break;
-                default:
-                    break;
+            if (text1.equals("-...")) {
+                switch (text2) {
+                    case ".":
+                        System.out.println("Decyphered into E");
+                        System.out.println("Found word! Word is BEATS");
+                        System.out.println("3.600 MHz");
+                        outputText.setText("3.600 MHz");
+                        outputText.setVisible(true);
+                        break;
+                    case "..":
+                        System.out.println("Decyphered into I");
+                        System.out.println("Found word! Word is BISTRO");
+                        System.out.println("3.552 MHz");
+                        outputText.setText("3.552 MHz");
+                        outputText.setVisible(true);
+                        break;
+                    case "---":
+                        System.out.println("Decyphered into O");
+                        textBox2.setEditable(false);
+                        textButton2.setEnabled(false);
+                        textBox3.setVisible(true);
+                        textLabel3.setVisible(true);
+                        textButton3.setVisible(true);
+                        break;
+                    case ".-.":
+                        System.out.println("Decyphered into R");
+                        textBox2.setEditable(false);
+                        textButton2.setEnabled(false);
+                        textBox3.setVisible(true);
+                        textLabel3.setVisible(true);
+                        textButton3.setVisible(true);
+                        break;
+                    default:
+                        System.out.println("Invalid Input!");
+                        outputText.setText("Invalid Input!");
+                        outputText.setBounds(75,140,70,20);
+                        outputText.setVisible(true);
+                        break;
+                }
+            }
+            if (text1.equals("...")) {
+                switch (text2) {
+                    case "....":
+                        System.out.println("Decyphered into H");
+                        System.out.println("Found word! Word is SHELL");
+                        System.out.println("3.505 MHz");
+                        outputText.setText("3.505 MHz");
+                        outputText.setVisible(true);
+                        break;
+                    case ".-..":
+                        System.out.println("Decyphered into L");
+                        System.out.println("Found word! Word is SLICK");
+                        System.out.println("3.522 MHz");
+                        outputText.setText("3.522 MHz");
+                        outputText.setVisible(true);
+                        break;
+                    case "-":
+                        System.out.println("Decyphered into T");
+                        textBox2.setEditable(false);
+                        textButton2.setEnabled(false);
+                        textBox3.setVisible(true);
+                        textLabel3.setVisible(true);
+                        textButton3.setVisible(true);
+                        break;
+                    default:
+                        System.out.println("Invalid Input!");
+                        outputText.setText("Invalid Input!");
+                        outputText.setBounds(75,140,70,20);
+                        outputText.setVisible(true);
+                        break;
+                }
             }
         });
         textBox2.addActionListener((ActionEvent e) -> {
@@ -299,80 +298,77 @@ public class morseCode {
             outputText.setVisible(false);
             outputText.setBounds(80,140,60,20);
             System.out.println("Inputted second letter - " + text2);
-            switch (text1) {
-                case "-...":
-                    switch (text2) {
-                        case ".":
-                            System.out.println("Decyphered into E");
-                            System.out.println("Found word! Word is BEATS");
-                            System.out.println("3.600 MHz");
-                            outputText.setText("3.600 MHz");
-                            outputText.setVisible(true);
-                            break;
-                        case "..":
-                            System.out.println("Decyphered into I");
-                            System.out.println("Found word! Word is BISTRO");
-                            System.out.println("3.552 MHz");
-                            outputText.setText("3.552 MHz");
-                            outputText.setVisible(true);
-                            break;
-                        case "---":
-                            System.out.println("Decyphered into O");
-                            textBox2.setEditable(false);
-                            textButton2.setEnabled(false);
-                            textBox3.setVisible(true);
-                            textLabel3.setVisible(true);
-                            textButton3.setVisible(true);
-                            break;
-                        case ".-.":
-                            System.out.println("Decyphered into R");
-                            textBox2.setEditable(false);
-                            textButton2.setEnabled(false);
-                            textBox3.setVisible(true);
-                            textLabel3.setVisible(true);
-                            textButton3.setVisible(true);
-                            break;
-                        default:
-                            System.out.println("Invalid Input!");
-                            outputText.setText("Invalid Input!");
-                            outputText.setBounds(75,140,70,20);
-                            outputText.setVisible(true);
-                            break;
-                    }
-                case "...":
-                    switch (text2) {
-                        case "....":
-                            System.out.println("Decyphered into H");
-                            System.out.println("Found word! Word is SHELL");
-                            System.out.println("3.505 MHz");
-                            outputText.setText("3.505 MHz");
-                            outputText.setVisible(true);
-                            break;
-                        case ".-..":
-                            System.out.println("Decyphered into L");
-                            System.out.println("Found word! Word is SLICK");
-                            System.out.println("3.522 MHz");
-                            outputText.setText("3.522 MHz");
-                            outputText.setVisible(true);
-                            break;
-                        case "-":
-                            System.out.println("Decyphered into T");
-                            textBox2.setEditable(false);
-                            textButton2.setEnabled(false);
-                            textBox3.setVisible(true);
-                            textLabel3.setVisible(true);
-                            textButton3.setVisible(true);
-                            break;
-                        default:
-                            System.out.println("Invalid Input!");
-                            outputText.setText("Invalid Input!");
-                            outputText.setBounds(75,140,70,20);
-                            outputText.setVisible(true);
-                            break;
-                    }
-                    break;
-                default:
-                    break;
+            if (text1.equals("-...")) {
+                switch (text2) {
+                    case ".":
+                        System.out.println("Decyphered into E");
+                        System.out.println("Found word! Word is BEATS");
+                        System.out.println("3.600 MHz");
+                        outputText.setText("3.600 MHz");
+                        outputText.setVisible(true);
+                        break;
+                    case "..":
+                        System.out.println("Decyphered into I");
+                        System.out.println("Found word! Word is BISTRO");
+                        System.out.println("3.552 MHz");
+                        outputText.setText("3.552 MHz");
+                        outputText.setVisible(true);
+                        break;
+                    case "---":
+                        System.out.println("Decyphered into O");
+                        textBox2.setEditable(false);
+                        textButton2.setEnabled(false);
+                        textBox3.setVisible(true);
+                        textLabel3.setVisible(true);
+                        textButton3.setVisible(true);
+                        break;
+                    case ".-.":
+                        System.out.println("Decyphered into R");
+                        textBox2.setEditable(false);
+                        textButton2.setEnabled(false);
+                        textBox3.setVisible(true);
+                        textLabel3.setVisible(true);
+                        textButton3.setVisible(true);
+                        break;
+                    default:
+                        System.out.println("Invalid Input!");
+                        outputText.setText("Invalid Input!");
+                        outputText.setBounds(75,140,70,20);
+                        outputText.setVisible(true);
+                        break;
+                }
+            }
+            if (text1.equals("...")) {
+                switch (text2) {
+                    case "....":
+                        System.out.println("Decyphered into H");
+                        System.out.println("Found word! Word is SHELL");
+                        System.out.println("3.505 MHz");
+                        outputText.setText("3.505 MHz");
+                        outputText.setVisible(true);
+                        break;
+                    case ".-..":
+                        System.out.println("Decyphered into L");
+                        System.out.println("Found word! Word is SLICK");
+                        System.out.println("3.522 MHz");
+                        outputText.setText("3.522 MHz");
+                        outputText.setVisible(true);
+                        break;
+                    case "-":
+                        System.out.println("Decyphered into T");
+                        textBox2.setEditable(false);
+                        textButton2.setEnabled(false);
+                        textBox3.setVisible(true);
+                        textLabel3.setVisible(true);
+                        textButton3.setVisible(true);
+                        break;
+                    default:
+                        System.out.println("Invalid Input!");
+                        outputText.setText("Invalid Input!");
+                        outputText.setBounds(75,140,70,20);
+                        outputText.setVisible(true);
+                        break;
+                }
             }
         });
         textButton3.addActionListener((ActionEvent e) -> {
@@ -382,80 +378,21 @@ public class morseCode {
             outputText.setVisible(false);
             outputText.setBounds(80,140,60,20);
             System.out.println("Inputted third letter - " + text3);
-            switch (text1) {
-                case "-...":
-                    switch (text2) {
-                        case "---":
-                            switch (text3) {
-                                case "--":
-                                    System.out.println("Decyphered into M");
-                                    System.out.println("Found word! Word is BOMBS");
-                                    System.out.println("3.565 MHz");
-                                    outputText.setText("3.565 MHz");
-                                    outputText.setVisible(true);
-                                    break;
-                                case "-..-":
-                                    System.out.println("Decyphered into X");
-                                    System.out.println("Found word! Word is BOXES");
-                                    System.out.println("3.535 MHz");
-                                    outputText.setText("3.535 MHz");
-                                    outputText.setVisible(true);
-                                    break;
-                                default:
-                                    System.out.println("Invalid Input!");
-                                    outputText.setText("Invalid Input!");
-                                    outputText.setBounds(75,140,70,20);
-                                    outputText.setVisible(true);
-                                    break;
-                            }
-                            break;
-                        case ".-.":
-                            switch (text3) {
-                                case ".":
-                                    System.out.println("Decyphered into E");
-                                    System.out.println("Found word! Word is BREAK");
-                                    System.out.println("3.572 MHz");
-                                    outputText.setText("3.572 MHz");
-                                    outputText.setVisible(true);
-                                    break;
-                                case "..":
-                                    System.out.println("Decyphered into I");
-                                    System.out.println("Found word! Word is BRICK");
-                                    System.out.println("3.575 MHz");
-                                    outputText.setText("3.575 MHz");
-                                    outputText.setVisible(true);
-                                default:
-                                    System.out.println("Invalid Input!");
-                                    outputText.setText("Invalid Input!");
-                                    outputText.setBounds(75,140,70,20);
-                                    outputText.setVisible(true);
-                                    break;
-                            }
-                        default:
-                            break;
-                    }
-                    break;
-                case "...":
+            if (text1.equals("-...")) {
+                if (text2.equals("---")) {
                     switch (text3) {
-                        case ".":
-                            System.out.println("Decyphered into E");
-                            System.out.println("Found word! Word is STEAK");
-                            System.out.println("3.582 MHz");
-                            outputText.setText("3.582 MHz");
+                        case "--":
+                            System.out.println("Decyphered into M");
+                            System.out.println("Found word! Word is BOMBS");
+                            System.out.println("3.565 MHz");
+                            outputText.setText("3.565 MHz");
                             outputText.setVisible(true);
                             break;
-                        case "..":
-                            System.out.println("Decyphered into I");
-                            System.out.println("Found word! Word is STING");
-                            System.out.println("3.592 MHz");
-                            outputText.setText("3.592 MHz");
-                            outputText.setVisible(true);
-                            break;
-                        case ".-.":
-                            System.out.println("Decyphered into R");
-                            System.out.println("Found word! Word is STROBE");
-                            System.out.println("3.545 MHz");
-                            outputText.setText("3.545 MHz");
+                        case "-..-":
+                            System.out.println("Decyphered into X");
+                            System.out.println("Found word! Word is BOXES");
+                            System.out.println("3.535 MHz");
+                            outputText.setText("3.535 MHz");
                             outputText.setVisible(true);
                             break;
                         default:
@@ -465,9 +402,62 @@ public class morseCode {
                             outputText.setVisible(true);
                             break;
                     }
-                    break;
-                default:
-                    break;
+                }
+                if (text2.equals(".-.")) {
+                    switch (text3) {
+                        case ".":
+                            System.out.println("Decyphered into E");
+                            System.out.println("Found word! Word is BREAK");
+                            System.out.println("3.572 MHz");
+                            outputText.setText("3.572 MHz");
+                            outputText.setVisible(true);
+                            break;
+                        case "..":
+                            System.out.println("Decyphered into I");
+                            System.out.println("Found word! Word is BRICK");
+                            System.out.println("3.575 MHz");
+                            outputText.setText("3.575 MHz");
+                            outputText.setVisible(true);
+                            break;
+                        default:
+                            System.out.println("Invalid Input!");
+                            outputText.setText("Invalid Input!");
+                            outputText.setBounds(75,140,70,20);
+                            outputText.setVisible(true);
+                            break;
+                    }
+                }
+            }
+            if (text1.equals("...")) {
+                switch (text3) {
+                    case ".":
+                        System.out.println("Decyphered into E");
+                        System.out.println("Found word! Word is STEAK");
+                        System.out.println("3.582 MHz");
+                        outputText.setText("3.582 MHz");
+                        outputText.setVisible(true);
+                        break;
+                    case "..":
+                        System.out.println("Decyphered into I");
+                        System.out.println("Found word! Word is STING");
+                        System.out.println("3.592 MHz");
+                        outputText.setText("3.592 MHz");
+                        outputText.setVisible(true);
+                        break;
+                    case ".-.":
+                        System.out.println("Decyphered into R");
+                        System.out.println("Found word! Word is STROBE");
+                        System.out.println("3.545 MHz");
+                        outputText.setText("3.545 MHz");
+                        outputText.setVisible(true);
+                        break;
+                    default:
+                        System.out.println("Invalid Input!");
+                        outputText.setText("Invalid Input!");
+                        outputText.setBounds(75,140,70,20);
+                        outputText.setVisible(true);
+                        break;
+                }
             }
         });
         textBox3.addActionListener((ActionEvent e) -> {
@@ -477,80 +467,21 @@ public class morseCode {
             outputText.setVisible(false);
             outputText.setBounds(80,140,60,20);
             System.out.println("Inputted third letter - " + text3);
-            switch (text1) {
-                case "-...":
-                    switch (text2) {
-                        case "---":
-                            switch (text3) {
-                                case "--":
-                                    System.out.println("Decyphered into M");
-                                    System.out.println("Found word! Word is BOMBS");
-                                    System.out.println("3.565 MHz");
-                                    outputText.setText("3.565 MHz");
-                                    outputText.setVisible(true);
-                                    break;
-                                case "-..-":
-                                    System.out.println("Decyphered into X");
-                                    System.out.println("Found word! Word is BOXES");
-                                    System.out.println("3.535 MHz");
-                                    outputText.setText("3.535 MHz");
-                                    outputText.setVisible(true);
-                                    break;
-                                default:
-                                    System.out.println("Invalid Input!");
-                                    outputText.setText("Invalid Input!");
-                                    outputText.setBounds(75,140,70,20);
-                                    outputText.setVisible(true);
-                                    break;
-                            }
-                            break;
-                        case ".-.":
-                            switch (text3) {
-                                case ".":
-                                    System.out.println("Decyphered into E");
-                                    System.out.println("Found word! Word is BREAK");
-                                    System.out.println("3.572 MHz");
-                                    outputText.setText("3.572 MHz");
-                                    outputText.setVisible(true);
-                                    break;
-                                case "..":
-                                    System.out.println("Decyphered into I");
-                                    System.out.println("Found word! Word is BRICK");
-                                    System.out.println("3.575 MHz");
-                                    outputText.setText("3.575 MHz");
-                                    outputText.setVisible(true);
-                                default:
-                                    System.out.println("Invalid Input!");
-                                    outputText.setText("Invalid Input!");
-                                    outputText.setBounds(75,140,70,20);
-                                    outputText.setVisible(true);
-                                    break;
-                            }
-                        default:
-                            break;
-                    }
-                    break;
-                case "...":
+            if (text1.equals("-...")) {
+                if (text2.equals("---")) {
                     switch (text3) {
-                        case ".":
-                            System.out.println("Decyphered into E");
-                            System.out.println("Found word! Word is STEAK");
-                            System.out.println("3.582 MHz");
-                            outputText.setText("3.582 MHz");
+                        case "--":
+                            System.out.println("Decyphered into M");
+                            System.out.println("Found word! Word is BOMBS");
+                            System.out.println("3.565 MHz");
+                            outputText.setText("3.565 MHz");
                             outputText.setVisible(true);
                             break;
-                        case "..":
-                            System.out.println("Decyphered into I");
-                            System.out.println("Found word! Word is STING");
-                            System.out.println("3.592 MHz");
-                            outputText.setText("3.592 MHz");
-                            outputText.setVisible(true);
-                            break;
-                        case ".-.":
-                            System.out.println("Decyphered into R");
-                            System.out.println("Found word! Word is STROBE");
-                            System.out.println("3.545 MHz");
-                            outputText.setText("3.545 MHz");
+                        case "-..-":
+                            System.out.println("Decyphered into X");
+                            System.out.println("Found word! Word is BOXES");
+                            System.out.println("3.535 MHz");
+                            outputText.setText("3.535 MHz");
                             outputText.setVisible(true);
                             break;
                         default:
@@ -560,9 +491,62 @@ public class morseCode {
                             outputText.setVisible(true);
                             break;
                     }
-                    break;
-                default:
-                    break;
+                }
+                if (text2.equals(".-.")) {
+                    switch (text3) {
+                        case ".":
+                            System.out.println("Decyphered into E");
+                            System.out.println("Found word! Word is BREAK");
+                            System.out.println("3.572 MHz");
+                            outputText.setText("3.572 MHz");
+                            outputText.setVisible(true);
+                            break;
+                        case "..":
+                            System.out.println("Decyphered into I");
+                            System.out.println("Found word! Word is BRICK");
+                            System.out.println("3.575 MHz");
+                            outputText.setText("3.575 MHz");
+                            outputText.setVisible(true);
+                            break;
+                        default:
+                            System.out.println("Invalid Input!");
+                            outputText.setText("Invalid Input!");
+                            outputText.setBounds(75,140,70,20);
+                            outputText.setVisible(true);
+                            break;
+                    }
+                }
+            }
+            if (text1.equals("...")) {
+                switch (text3) {
+                    case ".":
+                        System.out.println("Decyphered into E");
+                        System.out.println("Found word! Word is STEAK");
+                        System.out.println("3.582 MHz");
+                        outputText.setText("3.582 MHz");
+                        outputText.setVisible(true);
+                        break;
+                    case "..":
+                        System.out.println("Decyphered into I");
+                        System.out.println("Found word! Word is STING");
+                        System.out.println("3.592 MHz");
+                        outputText.setText("3.592 MHz");
+                        outputText.setVisible(true);
+                        break;
+                    case ".-.":
+                        System.out.println("Decyphered into R");
+                        System.out.println("Found word! Word is STROBE");
+                        System.out.println("3.545 MHz");
+                        outputText.setText("3.545 MHz");
+                        outputText.setVisible(true);
+                        break;
+                    default:
+                        System.out.println("Invalid Input!");
+                        outputText.setText("Invalid Input!");
+                        outputText.setBounds(75,140,70,20);
+                        outputText.setVisible(true);
+                        break;
+                }
             }
         });
         resetButton.addActionListener((ActionEvent e) -> {
