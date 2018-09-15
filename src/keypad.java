@@ -27,6 +27,8 @@ public class keypad {
 	public static void module() {
 		System.out.println("[KEYPAD MODULE]");
 		f = new JFrame("KAaNE [KEYPAD MODULE]");
+                ImageIcon icon = new ImageIcon("imgs/icons/keypad.png");
+                f.setIconImage(icon.getImage());
 		// Define the icons
 		Map<Object, Icon> icons = new HashMap<Object, Icon>();
 		ImageIcon icon12 = new ImageIcon("imgs/keypad/1-copyright.png");
@@ -125,7 +127,7 @@ public class keypad {
 		f.setVisible(true);
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 		f.setLocation(dim.width/2-f.getSize().width/2, dim.height/2-f.getSize().height/2);
-                f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// Convert CBs into strings

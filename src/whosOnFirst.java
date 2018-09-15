@@ -15,6 +15,8 @@ public class whosOnFirst {
     public static void module() {
         System.out.println("[WHO'S ON FIRST MODULE]");
 	f = new JFrame("KAaNE [WHO'S ON FIRST MODULE]");
+        ImageIcon icon = new ImageIcon("imgs/icons/whos on first.png");
+        f.setIconImage(icon.getImage());
         // Define the Display CB
         String displayTexts[]={"","BLANK","C","CEE","DISPLAY","FIRST","HOLD ON","LEAD","LED","LEED","NO","NOTHING","OKAY","READ","RED","REED","SAYS","SEE","THEIR","THERE","THEY ARE","THEY'RE","UR","YES","YOU","YOU ARE", "YOU'RE","YOUR"};
         JComboBox<String> displayCombo=new JComboBox<>(displayTexts);
@@ -53,7 +55,7 @@ public class whosOnFirst {
         f.setVisible(true);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         f.setLocation(dim.width/2-f.getSize().width/2, dim.height/2-f.getSize().height/2);
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         displayButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String display = displayCombo.getItemAt(displayCombo.getSelectedIndex());

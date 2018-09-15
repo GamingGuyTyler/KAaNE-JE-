@@ -16,6 +16,8 @@ public class simonSays {
 	public static void module() {
             System.out.println("[SIMON SAYS MODULE]");
             f = new JFrame("KAaNE [SIMON SAYS MODULE]");
+            ImageIcon icon = new ImageIcon("imgs/icons/simon says.png");
+            f.setIconImage(icon.getImage());
             // Grab the config stuff
             File configFile = new File("config.properties");
             Properties props = new Properties();
@@ -68,7 +70,7 @@ public class simonSays {
             f.setVisible(true);
             Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
             f.setLocation(dim.width/2-f.getSize().width/2, dim.height/2-f.getSize().height/2);
-            f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
             button.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     String sn1 = props.getProperty("sn1");
@@ -95,8 +97,8 @@ public class simonSays {
                             outputTxt.setText("<html>Red - Yellow<br/>Blue - Green<br/>Green - Blue<br/>Yellow - Red</html>");
                             outputImg.setVisible(true);
                             outputTxt.setVisible(true);
-                        } else if (strikes.equals("2")) {
-                            System.out.println("Vowels, 2 Strikes");
+                        } else {
+                            System.out.println("Vowels, 2+ Strikes");
                             outputImg.setIcon(vowelTwo);
                             outputTxt.setText("<html>Red - Green<br/>Blue - Red<br/>Green - Yellow<br/>Yellow - Blue</html>");
                             outputImg.setVisible(true);
@@ -115,8 +117,8 @@ public class simonSays {
                             outputTxt.setText("<html>Red - Red<br/>Blue - Blue<br/>Green - Yellow<br/>Yellow - Green</html>");
                             outputImg.setVisible(true);
                             outputTxt.setVisible(true);
-                        } else if (strikes.equals("2")) {
-                            System.out.println("No vowels, 2 Strikes");
+                        } else {
+                            System.out.println("No vowels, 2+ Strikes");
                             outputImg.setIcon(nowelTwo);
                             outputTxt.setText("<html>Red - Yellow<br/>Blue - Green<br/>Green - Blue<br/>Yellow - Red</html>");
                             outputImg.setVisible(true);
