@@ -8,9 +8,12 @@
  * Note: If you get a strike, it's likely you'd also get a strike
  * if you weren't using this. It's hard to decipher the solving
  * code when you they don't even have the module open source.
+<<<<<<< HEAD
  * 
  * Note 2: Anddd now it's open source but now I don't even know
  * what the hell kind of sorting system they're using.
+=======
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
  */
 
 import be.pcl.swing.ImprovedFormattedTextField;
@@ -25,8 +28,11 @@ public class alphabetNumbers {
     public static void module() {
         System.out.println("[ALPHABET NUMBERS]");
         f = new JFrame("KAaNE [ALPHABET NUMBERS]");
+<<<<<<< HEAD
         ImageIcon icon = new ImageIcon("imgs/icons/alphabet numbers.png");
         f.setIconImage(icon.getImage());
+=======
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
         // Stage 1
         // TBs
         NumberFormat integerNumberInstance = NumberFormat.getIntegerInstance();

@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/gamin/eclipse-workspace/KAaNE/src/alphabet.java</file>
             <file>file:/C:/Users/gamin/eclipse-workspace/KAaNE/src/astrology.java</file>
             <file>file:/C:/Users/gamin/eclipse-workspace/KAaNE/src/backgrounds.java</file>
@@ -10,6 +11,14 @@
             <file>file:/C:/Users/gamin/eclipse-workspace/KAaNE/src/kaane.java</file>
             <file>file:/C:/Users/gamin/eclipse-workspace/KAaNE/src/simonSays.java</file>
             <file>file:/C:/Users/gamin/eclipse-workspace/KAaNE/src/algebra.java</file>
+=======
+            <file>file:/C:/Users/gamin/Downloads/KAaNE%20%5BJE%5D/src/alphabetNumbers.java</file>
+            <file>file:/C:/Users/gamin/Downloads/KAaNE%20%5BJE%5D/src/maze3D.java</file>
+            <file>file:/C:/Users/gamin/Downloads/KAaNE%20%5BJE%5D/src/kaane.java</file>
+            <file>file:/C:/Users/gamin/Downloads/KAaNE%20%5BJE%5D/src/alphabet.java</file>
+            <file>file:/C:/Users/gamin/Downloads/KAaNE%20%5BJE%5D/src/adventureGame.java</file>
+            <file>file:/C:/Users/gamin/Downloads/KAaNE%20%5BJE%5D/src/settings.java</file>
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
         </group>
     </open-files>
 </project-private>

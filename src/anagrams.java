@@ -16,8 +16,11 @@ public class anagrams {
     public static void module() {
         f = new JFrame("KAaNE [ANAGRAMS]");
         System.out.println("[ANAGRAMS]");
+<<<<<<< HEAD
         ImageIcon icon = new ImageIcon("imgs/icons/anagrams.png");
         f.setIconImage(icon.getImage());
+=======
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
         // TB
         JTextField tb = new JTextField();
         tb.setDocument(new JTextFieldLimit(6));

@@ -21,8 +21,11 @@ public class wireSequences {
         wireSequences.black = 0;
         System.out.println("[WIRE SEQUENCES MODULE]");
         f = new JFrame("KAaNE [WIRE SEQUENCES MODULE]");
+<<<<<<< HEAD
         ImageIcon icon = new ImageIcon("imgs/icons/wire sequences.png");
         f.setIconImage(icon.getImage());
+=======
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
         // Define the Color String Array (To lessen the amount of code)
         String colors[] = {"Red","Blue","Black","N/A"};
         // Define the combo boxes

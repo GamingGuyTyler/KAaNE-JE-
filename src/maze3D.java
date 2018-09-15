@@ -14,7 +14,12 @@ import java.io.*;
 
 public class maze3D {
     static JFrame f;
+<<<<<<< HEAD
     // Add all this during initialization because java doesn't like it if i don't
+=======
+    // Add all this during initialization because java doesn't like it
+    // if I don't
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
     static ImageIcon abcIcon = new ImageIcon("imgs/mazes3D/abc.png");
     static ImageIcon abdIcon = new ImageIcon("imgs/mazes3D/abd.png");
     static ImageIcon abhIcon = new ImageIcon("imgs/mazes3D/abh.png");
@@ -55,8 +60,11 @@ public class maze3D {
     public static void module() {
         System.out.println("KAaNE [3D MAZE]");
         f = new JFrame("[3D MAZE]");
+<<<<<<< HEAD
         ImageIcon icon = new ImageIcon("imgs/icons/3d maze.png");
         f.setIconImage(icon.getImage());
+=======
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
         // Get the config props
         File configFile = new File("config.properties");
         Properties props = new Properties();

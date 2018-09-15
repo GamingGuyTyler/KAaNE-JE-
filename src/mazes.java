@@ -15,8 +15,11 @@ public class mazes {
     public static void module() {
         System.out.println("[MAZES MODULE]");
         f = new JFrame("KAaNE [MAZES MODULE]");
+<<<<<<< HEAD
         ImageIcon icon = new ImageIcon("imgs/icons/mazes.png");
         f.setIconImage(icon.getImage());
+=======
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
         // Define the instructional text
         JLabel instructions = new JLabel("Click the areas that are circled.");
         instructions.setBounds(75,10,180,20);

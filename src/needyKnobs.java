@@ -13,8 +13,11 @@ public class needyKnobs {
     static JFrame f;
     public static void module() {
         f = new JFrame("KAaNE [KNOBS MODULE]");
+<<<<<<< HEAD
         ImageIcon icon = new ImageIcon("imgs/icons/knobs.png");
         f.setIconImage(icon.getImage());
+=======
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
         // Define the only fucking thing (thank god i dont have to spend 12 years on this)
         ImageIcon img = new ImageIcon("imgs/knobs/quickIdentification.jpg");
         JLabel imgShow = new JLabel(img);

@@ -14,6 +14,7 @@ import java.util.Properties;
 
 public class settings {
     static JFrame f;
+<<<<<<< HEAD
     static Timer t;
     static int x = 255;
     public static void menu() {
@@ -21,6 +22,11 @@ public class settings {
         f = new JFrame("KAaNE [SETTINGS]");
         ImageIcon icon2 = new ImageIcon("imgs/icons/settings.png");
         f.setIconImage(icon2.getImage());
+=======
+    public static void menu() {
+        System.out.println("[SETTINGS]");
+        f = new JFrame("KAaNE [SETTINGS]");
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
         // Make the config file
         File configFile = new File("config.properties");
         // Define the properties.
@@ -53,8 +59,11 @@ public class settings {
         changeText.setHorizontalAlignment(JLabel.CENTER);
         changeText.setSize(320,600);
         changeText.setVisible(false);
+<<<<<<< HEAD
         changeText.setForeground(new Color(0,0,0,255));
         changeText.setBackground(new Color(255,255,255,255));
+=======
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
         // Define the Indicator Checkboxes
         String lit = "LIT";
         JCheckBox bobCheck = new JCheckBox("BOB");
@@ -353,9 +362,12 @@ public class settings {
         f.setLocation(dim.width/2-f.getSize().width/2, dim.height/2-f.getSize().height/2);
         f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         saveButton.addActionListener((ActionEvent e) -> {
+<<<<<<< HEAD
             changeText.setForeground(new Color(0,0,0,255));
             changeText.setBackground(new Color(255,255,255,255));
             x = 255;
+=======
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
             // Re-set the Indicator Properties.
             boolean isSelected = bobCheck.isSelected();
             if (isSelected == true) {
@@ -535,6 +547,7 @@ public class settings {
             props.setProperty("stereoRCAQuantity",stereoRCAQuantity);
             if (Integer.parseInt(dvidQuantity) > 0) {
                 props.setProperty("dvid","1");
+<<<<<<< HEAD
             } else {
                 props.setProperty("dvid","0");
             }
@@ -562,6 +575,23 @@ public class settings {
                 props.setProperty("stereoRCA","1");
             } else {
                 props.setProperty("stereoRCA","0");
+=======
+            }
+            if (Integer.parseInt(parallelQuantity) > 0) {
+                props.setProperty("parallel","1");
+            }
+            if (Integer.parseInt(ps2Quantity) > 0) {
+                props.setProperty("ps2","1");
+            }
+            if (Integer.parseInt(rj45Quantity) > 0) {
+                props.setProperty("rj45","1");
+            }
+            if (Integer.parseInt(serialQuantity) > 0) {
+                props.setProperty("serial","1");
+            }
+            if (Integer.parseInt(stereoRCAQuantity) > 0) {
+                props.setProperty("stereoRCA","1");
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
             }
             // Upper-Case the SN.
             String sn = snTextBox.getText();
@@ -631,6 +661,7 @@ public class settings {
                 System.out.println("Ignoring...");
             }
             // Show the "saved" text.
+<<<<<<< HEAD
             // Fade in code by Gowtham on Java Demos
             // Slightly nodified by me to fade out
             t=new Timer(10, (ActionEvent ae) -> {
@@ -650,6 +681,12 @@ public class settings {
             changeText.setForeground(new Color(0,0,0,255));
             changeText.setBackground(new Color(255,255,255,255));
             x = 255;
+=======
+            changeText.setText("SAVED!");
+            changeText.setVisible(true);
+        });
+        clearButton.addActionListener((ActionEvent e) -> {
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
             // Unselect all the Indicator Checkboxes
             bobCheck.setSelected(false);
             litBobCheck.setSelected(false);
@@ -690,6 +727,7 @@ public class settings {
             // Unselect the Display Module checkbox
             dmCheck.setSelected(false);
             // Show the "cleared" text.
+<<<<<<< HEAD
             t=new Timer(10, (ActionEvent ae) -> {
                 // Decrease the alpha value by time
                 // so that transparency Increases for each
@@ -702,6 +740,10 @@ public class settings {
             changeText.setVisible(true);
             t.setInitialDelay(2000);
             t.start();
+=======
+            changeText.setText("CLEARED!");
+            changeText.setVisible(true);
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
         });
     }
 }

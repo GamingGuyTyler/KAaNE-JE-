@@ -17,8 +17,11 @@ public class adjacentLetters {
     public static void module() {
         f = new JFrame("KAaNE [ADJACENT LETTERS]");
         System.out.println("KAaNE [ADJACENT LETTERS]");
+<<<<<<< HEAD
         ImageIcon icon = new ImageIcon("imgs/icons/adjacent letters.png");
         f.setIconImage(icon.getImage());
+=======
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
         // TBs
         JTextField tb1 = new JTextField();
         tb1.setDocument(new JTextFieldLimit(1));

@@ -17,8 +17,11 @@ public class complicatedWires {
     public static void module() {
         System.out.println("[COMPLICATED WIRES MODULE]");
         f = new JFrame("KAaNE [COMPLICATED WIRES MODULE]");
+<<<<<<< HEAD
         ImageIcon icon = new ImageIcon("imgs/icons/complicated wires.png");
         f.setIconImage(icon.getImage());
+=======
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
         // Grab the config stuff
         File configFile = new File("config.properties");
         Properties props = new Properties();
@@ -108,7 +111,11 @@ public class complicatedWires {
             }
             boolean bats = false;
             int batInt = Integer.parseInt(batteries);
+<<<<<<< HEAD
             if (batInt > 1) {
+=======
+            if (batInt > 2) {
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
                 bats = true;
             }
             boolean par = false;

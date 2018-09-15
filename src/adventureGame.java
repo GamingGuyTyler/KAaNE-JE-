@@ -19,8 +19,11 @@ public class adventureGame {
     public static void module() {
         System.out.println("[ADV. GAME]");
         f = new JFrame("KAaNE [ADV. GAME]");
+<<<<<<< HEAD
         ImageIcon icon = new ImageIcon("imgs/icons/adventure game.png");
         f.setIconImage(icon.getImage());
+=======
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
         JOptionPane.showMessageDialog(null,"Use the potion if you have it.","KAaNE [ADV.GAME]",JOptionPane.PLAIN_MESSAGE);
         // Grab the config stuff
         File configFile = new File("config.properties");

@@ -16,8 +16,11 @@ public class passwords {
     public static void module() {
         System.out.println("[PASSWORDS MODULE]");
         f = new JFrame("KAaNE [PASSWORDS MODULE]");
+<<<<<<< HEAD
         ImageIcon icon = new ImageIcon("imgs/icons/passwords.png");
         f.setIconImage(icon.getImage());
+=======
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
         // Define the column labels
         JLabel tcLabel = new JLabel("3rd Clmn");
         tcLabel.setBounds(10,10,55,20);

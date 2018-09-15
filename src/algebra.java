@@ -22,8 +22,11 @@ public class algebra {
     public static void module() {
         System.out.println("[ALGEBRA]");
         f = new JFrame("KAaNE [ALGEBRA]");
+<<<<<<< HEAD
         ImageIcon icon = new ImageIcon("imgs/icons/algebra.png");
         f.setIconImage(icon.getImage());
+=======
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
         // Grab the config stuff
         File configFile = new File("config.properties");
         Properties props = new Properties();
@@ -186,9 +189,15 @@ public class algebra {
         }
         // Z
         int modules = Integer.parseInt(props.getProperty("modules"));
+<<<<<<< HEAD
         int AAbats = Integer.parseInt(props.getProperty("batteriesAA"));
         int Dbats = Integer.parseInt(props.getProperty("batteriesD"));
         z = modules + (AAbats * Dbats);
+=======
+        int AAbats = Integer.parseInt(props.getProperty("modules"));
+        int Dbats = Integer.parseInt(props.getProperty("modules"));
+        z = modules + AAbats + Dbats;
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
         if (bh == 0) {
             z = z + 3;
         }
@@ -207,7 +216,11 @@ public class algebra {
             System.out.println("y: " + y);
             System.out.println("z: " + z);
             String aEquation = (String) aCB.getItemAt(aCB.getSelectedIndex());
+<<<<<<< HEAD
             double a = 0;
+=======
+            int a = 0;
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
             switch (aEquation) {
                 case "a = 3z":
                     a = 3 * z;
@@ -231,24 +244,37 @@ public class algebra {
                     a = x + 1;
                     break;
                 case "a = x/2":
+<<<<<<< HEAD
                     a = x / 2.0;
+=======
+                    a = x / 2;
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
                     break;
                 case "a = y - 2":
                     a = y - 2;
                     break;
                 case "a = y/4":
+<<<<<<< HEAD
                     a = y / 4.0;
+=======
+                    a = y / 4;
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
                     break;
                 case "a = z - 7":
                     a = z - 7;
                     break;
                 case "a = z/10":
+<<<<<<< HEAD
                     a = z / 10.0;
+=======
+                    a = z / 10;
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
                     break;
                 default:
                     break;
             }
             System.out.println("a - " + a);
+<<<<<<< HEAD
             aOutput.setText(Double.toString(a));
         });
         bButton.addActionListener((ActionEvent e) -> {
@@ -257,11 +283,22 @@ public class algebra {
             switch (bEquation) {
                 case "b = (2x/10) - y":
                     b = ((2.0 * x) / 10.0) - y;
+=======
+            aOutput.setText(Integer.toString(a));
+        });
+        bButton.addActionListener((ActionEvent e) -> {
+            String bEquation = (String) bCB.getItemAt(bCB.getSelectedIndex());
+            int b = 0;
+            switch (bEquation) {
+                case "b = (2x/10)":
+                    b = (2 * x) / 10;
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
                     break;
                 case "b = (7x)y":
                     b = (7 * x) * y;
                     break;
                 case "b = (x + y) - (z/2)":
+<<<<<<< HEAD
                     b = (x + y) - (z/2.0);
                     break;
                 case "b = (y/2) - z":
@@ -269,6 +306,15 @@ public class algebra {
                     break;
                 case "b = (z - y) / 2":
                     b = (z - y) / 2.0;
+=======
+                    b = (x + y) - (z/2);
+                    break;
+                case "b = (y/2) - z":
+                    b = (y / 2) - z;
+                    break;
+                case "b = (z - y) / 2":
+                    b = (z - y) / 2;
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
                     break;
                 case "b = (zy) - (2x)":
                     b = (z * y) - (2 * x);
@@ -289,6 +335,7 @@ public class algebra {
                     break;
             }
             System.out.println("b - " + b);
+<<<<<<< HEAD
             bOutput.setText(Double.toString(b));
         });
         cButton.addActionListener((ActionEvent e) -> {
@@ -300,11 +347,25 @@ public class algebra {
                     break;
                 case "3x - ((2 + y)/10) = (z/4) - c":
                     c = (2 + y) / 10.0 - (x * 3.0) + (z / 4.0);
+=======
+            bOutput.setText(Integer.toString(b));
+        });
+        cButton.addActionListener((ActionEvent e) -> {
+            String cEquation = (String) cCB.getItemAt(cCB.getSelectedIndex());
+            int c = 0;
+            switch (cEquation) {
+                case "(y/2) + 7 = 4c + z":
+                    c = ((y / 2 + 7) - z) / 4;
+                    break;
+                case "3x - ((2 + y)/10) = (z/4) - c":
+                    c = (2 + y) / 10 - (x * 3) + (z / 4);
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
                     break;
                 case "8x - z = c - y":
                     c = (x * 8) - z + y;
                     break;
                 case "9(y/2) = c - (xy/4)":
+<<<<<<< HEAD
                     c = 9 * (y / 2.0) + (x * y) / 4.0;
                     break;
                 case "x(y/2) + 11 = (4 + c)/2y":
@@ -318,6 +379,21 @@ public class algebra {
                     break;
                 case "(z/2) - (x/4) = 4c - z":
                     c = ((z / 2.0) - (x / 4.0) + z) / 4.0;
+=======
+                    c = 9 * (y / 2) + (x * y) / 4;
+                    break;
+                case "x(y/2) + 11 = (4 + c)/2y":
+                    c = (x * (y / 2) + 11) * (y * 2) - 4;
+                    break;
+                case "x - 2y = c - z":
+                    c = x - (2 * y) + z;
+                    break;
+                case "xy = z + (c/10)":
+                    c = ((x * y) - z) * 10;
+                    break;
+                case "(z/2) - (x/4) = 4c - z":
+                    c = ((z / 2) - (x / 4) + z) / 4;
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
                     break;
                 case "fun^10 x int^40 = ir2":
                     System.out.println("ERROR OCCURED! UNKNOWN EQUATION!");
@@ -327,7 +403,11 @@ public class algebra {
                     break;
             }
             System.out.println("c - " + c);
+<<<<<<< HEAD
             cOutput.setText(Double.toString(c));
+=======
+            cOutput.setText(Integer.toString(c));
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
         });
     }
     // isPrime code not made by me, i just found it on google.

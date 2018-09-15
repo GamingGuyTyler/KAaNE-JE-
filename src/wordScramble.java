@@ -1,4 +1,5 @@
 /**
+<<<<<<< HEAD
  * Word Scramble, started work on 7/29/2018 8:38 PM
  * 
  * Finished version 0.1 on 7/29/2018 11:43 PM
@@ -6,6 +7,13 @@
  * Finished version 0.2 on 8/05/2018 11:19 PM
  * 
  * Version 0.2
+=======
+ * Anagrams, started work on 7/29/2018 8:38 PM
+ * 
+ * Finished version 0.1 on 7/29/2018 11:43 PM
+ * 
+ * Version 0.1
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
  */
 
 import javax.swing.*;
@@ -17,10 +25,15 @@ import java.util.*;
 public class wordScramble {
     static JFrame f;
     public static void module() {
+<<<<<<< HEAD
         f = new JFrame("KAaNE [WORD SCRAMBLE]");
         System.out.println("[WORD SCRAMBLE]");
         ImageIcon icon = new ImageIcon("imgs/icons/word scramble.png");
         f.setIconImage(icon.getImage());
+=======
+        f = new JFrame("KAaNE [ANAGRAMS]");
+        System.out.println("[ANAGRAMS]");
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
         // TB
         JTextField tb = new JTextField();
         tb.setDocument(new JTextFieldLimit(6));

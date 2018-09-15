@@ -17,8 +17,11 @@ public class alphabet {
     public static void module() {
         System.out.println("[ALPHABET]");
         f = new JFrame("KAaNE [ALPHABET]");
+<<<<<<< HEAD
         ImageIcon icon = new ImageIcon("imgs/icons/alphabet.png");
         f.setIconImage(icon.getImage());
+=======
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
         // TBs
         JTextField tb1 = new JTextField();
         tb1.setDocument(new JTextFieldLimit(1));
@@ -365,6 +368,7 @@ public class alphabet {
             // If the letters can spell out a 2 letter word, output that word.
             // Also, if the letters can spell another word, output that word + the other word.
             // Otherwise, output the remaining words alphabetically + the word.
+<<<<<<< HEAD
             if ((letter1.equals("A") || letter2.equals("A") || letter3.equals("A") || letter4.equals("A")) 
                 && (letter1.equals("C") || letter2.equals("C") || letter3.equals("C") || letter4.equals("C"))) {
                 // Check if other 2 letter words can apply
@@ -466,13 +470,154 @@ public class alphabet {
                         if (!letter2.equals("J") && !letter2.equals("R")) {
                             outputs.add(letter2);
                         } else if (!letter3.equals("J") && !letter3.equals("R")) {
+=======
+            if (letter1.equals("A") || letter2.equals("A") || letter3.equals("A") || letter4.equals("A")) {
+                if (letter1.equals("C") || letter2.equals("C") || letter3.equals("C") || letter4.equals("C")) {
+                    // Check if other 2 letter words can apply
+                    if ((letter1.equals("G") || letter2.equals("G") || letter3.equals("G") || letter4.equals("G")) 
+                        && (letter1.equals("S") || letter2.equals("S") || letter3.equals("S") || letter4.equals("S"))) {
+                        System.out.println("ACGS");
+                        outputLabel.setText("ACGS");
+                    }
+                    else if ((letter1.equals("J") || letter2.equals("J") || letter3.equals("J") || letter4.equals("J")) 
+                        && (letter1.equals("R") || letter2.equals("R") || letter3.equals("R") || letter4.equals("R"))) {
+                            System.out.println("ACJR");
+                            outputLabel.setText("ACJR");
+                    }
+                    else if ((letter1.equals("O") || letter2.equals("O") || letter3.equals("O") || letter4.equals("O"))
+                        && (letter1.equals("P") || letter2.equals("P") || letter3.equals("P") || letter4.equals("P"))) {
+                            System.out.println("ACOP");
+                            outputLabel.setText("ACOP");
+                    }
+                    // If they don't, just alphabetize the remaining letters
+                    else {
+                        ArrayList<String> outputs = new ArrayList<>();
+                        if (!letter1.equals("A") && !letter1.equals("C")) {
+                            outputs.add(letter1);
+                            if (!letter2.equals("A") && !letter2.equals("C")) {
+                                outputs.add(letter2);
+                            } else if (!letter3.equals("A") && !letter3.equals("C")) {
+                                outputs.add(letter3);
+                            } else  {
+                                outputs.add(letter4);
+                            }
+                        } else if (!letter2.equals("A") && !letter2.equals("C")) {
+                            outputs.add(letter2);
+                            if (!letter3.equals("A") && !letter3.equals("C")) {
+                                outputs.add(letter3);
+                            } else {
+                                outputs.add(letter4);
+                            }
+                        } else {
+                            outputs.add(letter3);
+                            outputs.add(letter4);
+                        }
+                        String letters[] = outputs.toArray(new String[0]);
+                        Arrays.sort(letters);
+                        System.out.println("AC" + letters[0] + letters[1]);
+                        outputLabel.setText("AC" + letters[0] + letters[1]);
+                    }
+                    check = 1;
+                }
+            } else if (letter1.equals("G") || letter2.equals("G") || letter3.equals("G") || letter4.equals("G")) {
+                if (letter1.equals("S") || letter2.equals("S") || letter3.equals("S") || letter4.equals("S")) {
+                    if ((letter1.equals("J") || letter2.equals("J") || letter3.equals("J") || letter4.equals("J")) 
+                        && (letter1.equals("R") || letter2.equals("R") || letter3.equals("R") || letter4.equals("R"))) {
+                            System.out.println("GSJR");
+                            outputLabel.setText("GSJR");
+                    }
+                    else if ((letter1.equals("O") || letter2.equals("O") || letter3.equals("O") || letter4.equals("O"))
+                        && (letter1.equals("P") || letter2.equals("P") || letter3.equals("P") || letter4.equals("P"))) {
+                            System.out.println("GSOP");
+                            outputLabel.setText("GSOP");
+                    }
+                    else {
+                        ArrayList<String> outputs = new ArrayList<>();
+                        if (!letter1.equals("G") && !letter1.equals("S")) {
+                            outputs.add(letter1);
+                            if (!letter2.equals("G") && !letter2.equals("S")) {
+                                outputs.add(letter2);
+                            } else if (!letter3.equals("G") && !letter3.equals("S")) {
+                                outputs.add(letter3);
+                            } else  {
+                                outputs.add(letter4);
+                            }
+                        } else if (!letter2.equals("G") && !letter2.equals("S")) {
+                            outputs.add(letter2);
+                            if (!letter3.equals("G") && !letter3.equals("S")) {
+                                outputs.add(letter3);
+                            } else {
+                                outputs.add(letter4);
+                            }
+                        } else {
+                            outputs.add(letter3);
+                            outputs.add(letter4);
+                        }
+                        String letters[] = outputs.toArray(new String[0]);
+                        Arrays.sort(letters);
+                        System.out.println("GS" + letters[0] + letters[1]);
+                        outputLabel.setText("GS" + letters[0] + letters[1]);
+                    }
+                    check = 1;
+                }
+            } else if (letter1.equals("J") || letter2.equals("J") || letter3.equals("J") || letter4.equals("J")) {
+                if (letter1.equals("R") || letter2.equals("R") || letter3.equals("R") || letter4.equals("R")) {
+                    if ((letter1.equals("O") || letter2.equals("O") || letter3.equals("O") || letter4.equals("O"))
+                        && (letter1.equals("P") || letter2.equals("P") || letter3.equals("P") || letter4.equals("P"))) {
+                            System.out.println("JROP");
+                            outputLabel.setText("JROP");
+                    }
+                    else {
+                        ArrayList<String> outputs = new ArrayList<>();
+                        if (!letter1.equals("J") && !letter1.equals("R")) {
+                            outputs.add(letter1);
+                            if (!letter2.equals("J") && !letter2.equals("R")) {
+                                outputs.add(letter2);
+                            } else if (!letter3.equals("J") && !letter3.equals("R")) {
+                                outputs.add(letter3);
+                            } else  {
+                                outputs.add(letter4);
+                            }
+                        } else if (!letter2.equals("J") && !letter2.equals("R")) {
+                            outputs.add(letter2);
+                            if (!letter3.equals("J") && !letter3.equals("R")) {
+                                outputs.add(letter3);
+                            } else {
+                                outputs.add(letter4);
+                            }
+                        } else {
+                            outputs.add(letter3);
+                            outputs.add(letter4);
+                        }
+                        String letters[] = outputs.toArray(new String[0]);
+                        Arrays.sort(letters);
+                        System.out.println("JR" + letters[0] + letters[1]);
+                        outputLabel.setText("JR" + letters[0] + letters[1]);
+                    }
+                    check = 1;
+                }
+            } else if (letter1.equals("O") || letter2.equals("O") || letter3.equals("O") || letter4.equals("O")) {
+                if (letter1.equals("P") || letter2.equals("P") || letter3.equals("P") || letter4.equals("P")) {
+                    ArrayList<String> outputs = new ArrayList<>();
+                    if (!letter1.equals("O") && !letter1.equals("P")) {
+                        outputs.add(letter1);
+                        if (!letter2.equals("O") && !letter2.equals("P")) {
+                            outputs.add(letter2);
+                        } else if (!letter3.equals("O") && !letter3.equals("P")) {
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
                             outputs.add(letter3);
                         } else  {
                             outputs.add(letter4);
                         }
+<<<<<<< HEAD
                     } else if (!letter2.equals("J") && !letter2.equals("R")) {
                         outputs.add(letter2);
                         if (!letter3.equals("J") && !letter3.equals("R")) {
+=======
+                    } else if (!letter2.equals("O") && !letter2.equals("P")) {
+                        outputs.add(letter2);
+                        if (!letter3.equals("O") && !letter3.equals("P")) {
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
                             outputs.add(letter3);
                         } else {
                             outputs.add(letter4);
@@ -483,6 +628,7 @@ public class alphabet {
                     }
                     String letters[] = outputs.toArray(new String[0]);
                     Arrays.sort(letters);
+<<<<<<< HEAD
                     System.out.println("JR" + letters[0] + letters[1]);
                     outputLabel.setText("JR" + letters[0] + letters[1]);
                 }
@@ -515,6 +661,12 @@ public class alphabet {
                 System.out.println("OP" + letters[0] + letters[1]);
                 outputLabel.setText("OP" + letters[0] + letters[1]);
                 check = 1;
+=======
+                    System.out.println("OP" + letters[0] + letters[1]);
+                    outputLabel.setText("OP" + letters[0] + letters[1]);
+                    check = 1;
+                }
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
             }
             // If no words are compatible, then just output all the letters alphabetically.
             if (check == 0) {

@@ -11,9 +11,13 @@
  * Keypad code and Needy Knobs idea by Jonathan-Walsh
  *
  * Mods belong to their rightful owners.
+<<<<<<< HEAD
  * 
  * Icons from ktane.timwi.de
  * 
+=======
+ *
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
  * Rest by me (Gaming Guy Tyler)
  *
  */
@@ -28,9 +32,13 @@ class kaane {
     AutoCompleteDecorator decorator;
     public static void main(String[] args) {
         // Define JFrame stuff
+<<<<<<< HEAD
         f = new JFrame("KAaNE");
         ImageIcon icon = new ImageIcon("imgs/icons/KAaNE logo.png");
         f.setIconImage(icon.getImage());
+=======
+        f=new JFrame("KAaNE");
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
         // Define the Welcome Text
         final JLabel welcome = new JLabel();
         welcome.setBounds(10,10,350,50);
@@ -42,9 +50,14 @@ class kaane {
         String modules[]={"","Settings","Wires","Button","Keypad","Simon Says", // vanilla
         "Who's on First","Memory","Morse Code","Complicated Wires","Wire Sequences",
         "Mazes","Passwords","Needy Gas","Capciator Discharge","Needy Knobs",
+<<<<<<< HEAD
         "3D Maze","3D Tunnels","Adjacent Letters","Adventure Game","Algebra", // mods
         "Alphabet","Alphabet Numbers","Anagrams","Adv. Vent Gas","Astrology",
         "Backgrounds","Word Scramble"};
+=======
+        "3D Maze","Adjacent Letters","Adventure Game","Algebra","Alphabet", // mods
+        "Alphabet Numbers","Anagrams","Word Scramble"};
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
         final JComboBox<String> cb=new JComboBox<>(modules);
         cb.setBounds(50,70,150,20);
         // Do the cool autocomplete stuff
@@ -87,10 +100,13 @@ class kaane {
                 case "Adjacent Letters": adjacentLetters.module(); break;
                 case "Anagrams": anagrams.module(); break;
                 case "Word Scramble": wordScramble.module(); break;
+<<<<<<< HEAD
                 case "Adv. Vent Gas": advancedVentingGas.module(); break;
                 case "Astrology": astrology.module(); break;
                 case "Backgrounds": backgrounds.module(); break;
                 case "3D Tunnels": threeDTunnels.module(); break;
+=======
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
             }
         });
     }

@@ -17,8 +17,11 @@ public class morseCode {
     public static void module() {
         System.out.println("[MORSE CODE MODULE]");
         f = new JFrame("KAaNE [MORSE CODE MODULE]");
+<<<<<<< HEAD
         ImageIcon icon = new ImageIcon("imgs/icons/morse code.png");
         f.setIconImage(icon.getImage());
+=======
+>>>>>>> 3dedd24bc3ad9a0d728ef4ef2433a9543d23f4e5
         // Define the welcome text
         JLabel welcomeText = new JLabel();
         welcomeText.setText("Do not seperate dots/dashes.");
