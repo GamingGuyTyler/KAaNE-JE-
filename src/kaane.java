@@ -3,7 +3,7 @@
  * 
  * Started the project on June 16, 2018 at around 5:35 AM.
  * 
- * Current Version: 0.5 (β)
+ * Current Version: 0.7 (β)
  * 
  * 
  * KTaNE by Steel Crate Games
@@ -42,9 +42,9 @@ class kaane {
         String modules[]={"","Settings","Wires","Button","Keypad","Simon Says", // vanilla
         "Who's on First","Memory","Morse Code","Complicated Wires","Wire Sequences",
         "Mazes","Passwords","Needy Gas","Capciator Discharge","Needy Knobs",
-        "3D Maze","3D Tunnels","Adjacent Letters","Adventure Game","Algebra", // mods
-        "Alphabet","Alphabet Numbers","Anagrams","Adv. Vent Gas","Astrology",
-        "Backgrounds","Word Scramble"};
+        "101 Dalmatians","3D Maze","3D Tunnels","Accumulation","Adjacent Letters", // mods
+        "Adventure Game","Algebra","Alphabet","Alphabet Numbers","Anagrams","Adv. Vent Gas",
+        "Astrology","Backgrounds","Bases","Battleship","Word Scramble"};
         final JComboBox<String> cb=new JComboBox<>(modules);
         cb.setBounds(50,70,150,20);
         // Do the cool autocomplete stuff
@@ -91,6 +91,10 @@ class kaane {
                 case "Astrology": astrology.module(); break;
                 case "Backgrounds": backgrounds.module(); break;
                 case "3D Tunnels": threeDTunnels.module(); break;
+                case "Bases": bases.module(); break;
+                case "Battleship": battleship.module(); break;
+                case "Accumulation": accumulation.module(); break;
+                case "101 Dalmatians": dalmatians.module(); break;
             }
         });
     }

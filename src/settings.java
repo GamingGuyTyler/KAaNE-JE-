@@ -173,6 +173,12 @@ public class settings {
         JCheckBox dmCheck = new JCheckBox("DISPLAY MODULES");
         dmCheck.setBounds(0,270,150,20);
         dmCheck.setVisible(false); // set it to visible since it's unfinished
+        // Define the plate text box.
+        ImprovedFormattedTextField plateTB = new ImprovedFormattedTextField(integerNumberInstance,0);
+        plateTB.setBounds(121,213,50,20);
+        // Define the plate text.
+        JLabel plateText = new JLabel("PORT PLATES");
+        plateText.setBounds(176,213,80,20);
         // Set all the settings to mirror the config file
         // Indicators
         int checks = Integer.parseInt(props.getProperty("bob"));
@@ -335,6 +341,9 @@ public class settings {
         // Modules
         checksString = props.getProperty("modules");
         moduleTB.setText(checksString);
+        // Plates
+        checksString = props.getProperty("plates");
+        plateTB.setText(checksString);
         // Add everything in the JFrame
         f.add(welcomeText); f.add(saveButton); 
         f.add(bobCheck); f.add(litBobCheck); f.add(carCheck); f.add(litCarCheck); f.add(clrCheck); f.add(litClrCheck); f.add(frkCheck); f.add(litFrkCheck); f.add(frqCheck); f.add(litFrqCheck); f.add(indCheck); f.add(litIndCheck); f.add(msaCheck); f.add(litMsaCheck); f.add(nsaCheck); f.add(litNsaCheck); f.add(sigCheck); f.add(litSigCheck); f.add(sndCheck); f.add(litSndCheck); f.add(trnCheck); f.add(litTrnCheck); 
@@ -342,7 +351,7 @@ public class settings {
          f.add(batteriesAATextBox); f.add(batteriesAAText); f.add(batteriesDTextBox); f.add(batteriesDText);
         f.add(dvidImg); f.add(parallelImg); f.add(ps2Img); f.add(rj45Img); f.add(serialImg); f.add(stereoRCAImg);
         f.add(dvidText); f.add(parallelText); f.add(ps2Text); f.add(rj45Text); f.add(serialText); f.add(stereoRCAText);
-        f.add(snTextBox); f.add(snText); f.add(dmCheck); f.add(moduleTB); f.add(moduleText);
+        f.add(snTextBox); f.add(snText); f.add(dmCheck); f.add(moduleTB); f.add(moduleText); f.add(plateTB); f.add(plateText);
         f.add(dvidTB); f.add(parallelTB); f.add(ps2TB); f.add(rj45TB); f.add(serialTB); f.add(stereoRCATB);
         // Define the rest of the JFrame stuff
         f.setLayout(null);
@@ -617,6 +626,7 @@ public class settings {
             } else {
                 props.setProperty("displayModule","0");
             }
+            props.setProperty("plates",plateTB.getText());
             // Write everything into the config file.
             try {
                 FileWriter writer = new FileWriter(configFile);
@@ -687,6 +697,8 @@ public class settings {
             snTextBox.setText("");
             // Set the module text to 0.
             moduleTB.setText("0");
+            // Set the port plate text to 0.
+            plateTB.setText("0");
             // Unselect the Display Module checkbox
             dmCheck.setSelected(false);
             // Show the "cleared" text.
