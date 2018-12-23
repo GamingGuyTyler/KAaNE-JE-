@@ -37,16 +37,16 @@ class kaane {
         welcome.setText("<html>Welcome to KAaNE [Java Ed.]! Select a Module below!<br/>MAKE SURE TO SET THE EDGEWORK SETTINGS BEFORE ANYTHING ELSE!</html>");
         // Define the Button
         JButton b=new JButton("OK");
-        b.setBounds(200,70,75,20);
+        b.setBounds(225,70,75,20);
         // Define the Combo Box
         String modules[]={"","Settings","Wires","Button","Keypad","Simon Says", // vanilla
         "Who's on First","Memory","Morse Code","Complicated Wires","Wire Sequences",
         "Mazes","Passwords","Needy Gas","Capciator Discharge","Needy Knobs",
         "101 Dalmatians","3D Maze","3D Tunnels","Accumulation","Adjacent Letters", // mods
         "Adventure Game","Algebra","Alphabet","Alphabet Numbers","Anagrams","Adv. Vent Gas",
-        "Astrology","Backgrounds","Bases","Battleship","Word Scramble"};
+        "Astrology","Backgrounds","Bases","Battleship","Benedict Cumberbatch","Word Scramble"};
         final JComboBox<String> cb=new JComboBox<>(modules);
-        cb.setBounds(50,70,150,20);
+        cb.setBounds(50,70,175,20);
         // Do the cool autocomplete stuff
         // Dev note: Looks like this is a bit buggy. If anyone can fix it up, i'd be grateful.
         AutoCompleteDecorator.decorate(cb);
@@ -95,6 +95,7 @@ class kaane {
                 case "Battleship": battleship.module(); break;
                 case "Accumulation": accumulation.module(); break;
                 case "101 Dalmatians": dalmatians.module(); break;
+                case "Benedict Cumberbatch": benedictCumberbatch.module(); break;
             }
         });
     }
