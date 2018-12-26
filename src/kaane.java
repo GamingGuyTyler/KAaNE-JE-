@@ -44,7 +44,8 @@ class kaane {
         "Mazes","Passwords","Needy Gas","Capciator Discharge","Needy Knobs",
         "101 Dalmatians","3D Maze","3D Tunnels","Accumulation","Adjacent Letters", // mods
         "Adventure Game","Algebra","Alphabet","Alphabet Numbers","Anagrams","Adv. Vent Gas",
-        "Astrology","Backgrounds","Bases","Battleship","Benedict Cumberbatch","Word Scramble"};
+        "Astrology","Backgrounds","Bases","Battleship","Benedict Cumberbatch","Big Circle",
+        "Word Scramble"};
         final JComboBox<String> cb=new JComboBox<>(modules);
         cb.setBounds(50,70,175,20);
         // Do the cool autocomplete stuff
@@ -96,6 +97,7 @@ class kaane {
                 case "Accumulation": accumulation.module(); break;
                 case "101 Dalmatians": dalmatians.module(); break;
                 case "Benedict Cumberbatch": benedictCumberbatch.module(); break;
+                case "Big Circle": bigCircle.module(); break;
             }
         });
     }

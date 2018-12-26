@@ -179,6 +179,18 @@ public class settings {
         // Define the plate text.
         JLabel plateText = new JLabel("PORT PLATES");
         plateText.setBounds(176,213,80,20);
+        // Define the modded indicator text box
+        ImprovedFormattedTextField modIndTB = new ImprovedFormattedTextField(integerNumberInstance,0);
+        modIndTB.setBounds(121,233,50,20);
+        // Define the modded indicator text
+        JLabel modIndText = new JLabel("MOD INDICATORS");
+        modIndText.setBounds(176,233,100,20);
+        // Define the modded ports text
+        ImprovedFormattedTextField modPortTB = new ImprovedFormattedTextField(integerNumberInstance,0);
+        modPortTB.setBounds(121,253,50,20);
+        // Define the modded ports text
+        JLabel modPortText = new JLabel("MOD PORTS");
+        modPortText.setBounds(176,253,80,20);
         // Set all the settings to mirror the config file
         // Indicators
         int checks = Integer.parseInt(props.getProperty("bob"));
@@ -344,6 +356,12 @@ public class settings {
         // Plates
         checksString = props.getProperty("plates");
         plateTB.setText(checksString);
+        // Mod Indicators
+        checksString = props.getProperty("modInd");
+        modIndTB.setText(checksString);
+        // Mod Ports
+        checksString = props.getProperty("modPort");
+        modPortTB.setText(checksString);
         // Add everything in the JFrame
         f.add(welcomeText); f.add(saveButton); 
         f.add(bobCheck); f.add(litBobCheck); f.add(carCheck); f.add(litCarCheck); f.add(clrCheck); f.add(litClrCheck); f.add(frkCheck); f.add(litFrkCheck); f.add(frqCheck); f.add(litFrqCheck); f.add(indCheck); f.add(litIndCheck); f.add(msaCheck); f.add(litMsaCheck); f.add(nsaCheck); f.add(litNsaCheck); f.add(sigCheck); f.add(litSigCheck); f.add(sndCheck); f.add(litSndCheck); f.add(trnCheck); f.add(litTrnCheck); 
@@ -353,6 +371,7 @@ public class settings {
         f.add(dvidText); f.add(parallelText); f.add(ps2Text); f.add(rj45Text); f.add(serialText); f.add(stereoRCAText);
         f.add(snTextBox); f.add(snText); f.add(dmCheck); f.add(moduleTB); f.add(moduleText); f.add(plateTB); f.add(plateText);
         f.add(dvidTB); f.add(parallelTB); f.add(ps2TB); f.add(rj45TB); f.add(serialTB); f.add(stereoRCATB);
+        f.add(modPortTB); f.add(modIndTB); f.add(modPortText); f.add(modIndText);
         // Define the rest of the JFrame stuff
         f.setLayout(null);
         f.setSize(370,350);
@@ -626,7 +645,10 @@ public class settings {
             } else {
                 props.setProperty("displayModule","0");
             }
+            // do the rest
             props.setProperty("plates",plateTB.getText());
+            props.setProperty("modInd",modIndTB.getText());
+            props.setProperty("modPort",modPortTB.getText());
             // Write everything into the config file.
             try {
                 FileWriter writer = new FileWriter(configFile);
@@ -699,6 +721,9 @@ public class settings {
             moduleTB.setText("0");
             // Set the port plate text to 0.
             plateTB.setText("0");
+            // Set the modded stuff text to 0
+            modIndTB.setText("0");
+            modPortTB.setText("0");
             // Unselect the Display Module checkbox
             dmCheck.setSelected(false);
             // Show the "cleared" text.
