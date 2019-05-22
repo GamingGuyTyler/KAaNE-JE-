@@ -9,4 +9,4 @@ Simply go to the Releases and download the latest version from there.
 
 ## Further Info
 
-Further info can be found in the README file included in KAaNE.
+Further info can be found in the wiki. [Here's a link.](https://github.com/GamingGuyTyler/KAaNE-JE-/wiki)
