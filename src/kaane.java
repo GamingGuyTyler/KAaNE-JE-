@@ -39,13 +39,14 @@ class kaane {
         JButton b=new JButton("OK");
         b.setBounds(225,70,75,20);
         // Define the Combo Box
-        String modules[]={"","Settings","Wires","Button","Keypad","Simon Says", // vanilla
-        "Who's on First","Memory","Morse Code","Complicated Wires","Wire Sequences",
-        "Mazes","Passwords","Needy Gas","Capciator Discharge","Needy Knobs",
-        "101 Dalmatians","3D Maze","3D Tunnels","Accumulation","Adjacent Letters", // mods
-        "Adventure Game","Algebra","Alphabet","Alphabet Numbers","Anagrams","Adv. Vent Gas",
-        "Astrology","Backgrounds","Bases","Battleship","Benedict Cumberbatch","Big Circle",
-        "Word Scramble"};
+        String modules[]={"","Settings", "Custom Modloader", // KAaNE menus
+                "Wires","Button","Keypad","Simon Says", // vanilla
+                "Who's on First","Memory","Morse Code","Complicated Wires","Wire Sequences",
+                "Mazes","Passwords","Needy Gas","Capciator Discharge","Needy Knobs",
+                "101 Dalmatians","3D Maze","3D Tunnels","Accumulation","Adjacent Letters", // mods
+                "Adventure Game","Alchemy","Algebra","Alphabet","Alphabet Numbers","Anagrams",
+                "Adv. Vent Gas","Astrology","Backgrounds","Bases","Battleship","Benedict Cumberbatch",
+                "Big Circle","Binary LEDs","Word Scramble"};
         final JComboBox<String> cb=new JComboBox<>(modules);
         cb.setBounds(50,70,175,20);
         // Do the cool autocomplete stuff
@@ -66,6 +67,7 @@ class kaane {
             // Modules start below
             switch (x) {
                 case "Settings": settings.menu(); break;
+                case "Custom Modloader":  modloader.menu(); break;
                 case "Wires": wires.module(); break;
                 case "Button": button.module(); break;
                 case "Keypad": keypad.module(); break;
@@ -98,6 +100,9 @@ class kaane {
                 case "101 Dalmatians": dalmatians.module(); break;
                 case "Benedict Cumberbatch": benedictCumberbatch.module(); break;
                 case "Big Circle": bigCircle.module(); break;
+                // case "Air Traffic Controller": atc.module(); break;  (currently not available)
+                case "Alchemy": alchemy.module(); break;
+                case "Binary LEDs": binaryLED.module(); break;
             }
         });
     }
