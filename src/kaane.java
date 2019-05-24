@@ -44,9 +44,9 @@ class kaane {
                 "Who's on First","Memory","Morse Code","Complicated Wires","Wire Sequences",
                 "Mazes","Passwords","Needy Gas","Capciator Discharge","Needy Knobs",
                 "101 Dalmatians","3D Maze","3D Tunnels","Accumulation","Adjacent Letters", // mods
-                "Adventure Game","Alchemy","Algebra","Alphabet","Alphabet Numbers","Anagrams",
-                "Adv. Vent Gas","Astrology","Backgrounds","Bases","Battleship","Benedict Cumberbatch",
-                "Big Circle","Binary LEDs","Word Scramble"};
+                "Adventure Game","Air Traffic Controller","Alchemy","Algebra","Alphabet","Alphabet Numbers",
+                "Anagrams","Adv. Vent Gas","Astrology","Backgrounds","Bases","Battleship",
+                "Benedict Cumberbatch","Big Circle","Binary LEDs","Word Scramble"};
         final JComboBox<String> cb=new JComboBox<>(modules);
         cb.setBounds(50,70,175,20);
         // Do the cool autocomplete stuff
@@ -100,7 +100,7 @@ class kaane {
                 case "101 Dalmatians": dalmatians.module(); break;
                 case "Benedict Cumberbatch": benedictCumberbatch.module(); break;
                 case "Big Circle": bigCircle.module(); break;
-                // case "Air Traffic Controller": atc.module(); break;  (currently not available)
+                case "Air Traffic Controller": atc.module(); break;
                 case "Alchemy": alchemy.module(); break;
                 case "Binary LEDs": binaryLED.module(); break;
             }

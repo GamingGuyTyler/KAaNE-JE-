@@ -19,7 +19,6 @@ import java.util.*;
 
 public class wires {
     static JFrame f;
-    @SuppressWarnings("empty-statement")
     public static void module() {
         System.out.println("[WIRES MODULE]");
         f = new JFrame("KAaNE [WIRES MODULE]");
