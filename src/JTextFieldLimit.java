@@ -1,3 +1,5 @@
+// Code from Real Gagnon and tim_yates on rgagnon.com and Stack Overflow
+
 import javax.swing.text.*;
 
 public class JTextFieldLimit extends PlainDocument {

@@ -4,17 +4,8 @@
  * Started the project on June 16, 2018 at around 5:35 AM.
  * 
  * Current Version: 0.7 (β)
- * 
- * 
- * KTaNE by Steel Crate Games
  *
- * Keypad code and Needy Knobs idea by Jonathan-Walsh
- *
- * Mods belong to their rightful owners.
- * 
- * Icons from ktane.timwi.de
- * 
- * Rest by me (Gaming Guy Tyler)
+ * Credits can be found on www.github.com/GamingGuyTyler/KAaNE-JE-/wiki/Credits
  *
  */
 
@@ -43,7 +34,7 @@ class kaane {
                 "Wires","Button","Keypad","Simon Says", // vanilla
                 "Who's on First","Memory","Morse Code","Complicated Wires","Wire Sequences",
                 "Mazes","Passwords","Needy Gas","Capciator Discharge","Needy Knobs",
-                "101 Dalmatians","3D Maze","3D Tunnels","Accumulation","Adjacent Letters", // mods
+                "101 Dalmatians","3D Maze","3D Tunnels","aa","Accumulation","Adjacent Letters", // mods
                 "Adventure Game","Air Traffic Controller","Alchemy","Algebra","Alphabet","Alphabet Numbers",
                 "Anagrams","Adv. Vent Gas","Astrology","Backgrounds","Bases","Battleship",
                 "Benedict Cumberbatch","Big Circle","Binary LEDs","Word Scramble"};
@@ -103,6 +94,7 @@ class kaane {
                 case "Air Traffic Controller": atc.module(); break;
                 case "Alchemy": alchemy.module(); break;
                 case "Binary LEDs": binaryLED.module(); break;
+                case "aa": aa.module(); break;
             }
         });
     }
