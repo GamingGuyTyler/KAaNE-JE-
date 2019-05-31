@@ -20,4 +20,14 @@ public class string {
         catch(NumberFormatException ex){return false;}  
         return true;
     }
+    public static boolean isVowel(String a) {
+        if (a.equals("A") || a.equals("a") ||
+            a.equals("E") || a.equals("e") ||
+            a.equals("I") || a.equals("i") ||
+            a.equals("O") || a.equals("o") ||
+            a.equals("U") || a.equals("u")) {
+            return true;
+        }
+        else return false;
+    }
 }
