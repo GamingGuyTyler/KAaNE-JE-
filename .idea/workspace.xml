@@ -8,10 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d44d9dc5-2aab-40df-860d-087858e770cc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/aa.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/aa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/kaane.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/kaane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kaane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kaane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/string.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/string.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unfairCipher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unfairCipher.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,28 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/kaane.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="98" column="67" selection-start-line="98" selection-start-column="67" selection-end-line="98" selection-end-column="67" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/unfairCipher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+            <state relative-caret-position="230">
+              <caret line="324" column="38" selection-start-line="324" selection-start-column="38" selection-end-line="324" selection-end-column="38" />
               <folding>
+                <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#5094#5102#0" expanded="true" />
-                <element signature="e#5056#5064#0" expanded="true" />
+                <element signature="method#keyA#0;class#unfairCipher#0" />
+                <element signature="method#keyB#0;class#unfairCipher#0" />
+                <element signature="e#13444#13452#0" expanded="true" />
+                <element signature="method#hexConvert#0;class#unfairCipher#0" />
+                <element signature="method#adjustText#0;class#unfairCipher#0" />
               </folding>
             </state>
           </provider>
@@ -55,8 +44,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="18" selection-start-line="18" selection-end-line="23" selection-end-column="5" />
+            <state relative-caret-position="306">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -64,7 +53,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/settings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="1598">
               <caret line="104" column="8" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="79" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -77,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/src/bitmaps.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
-              <caret line="25" column="44" lean-forward="true" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+              <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -89,7 +78,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/aa.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-252">
+            <state relative-caret-position="408">
               <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="41" selection-end-column="27" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -102,13 +91,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/atc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3943">
+            <state relative-caret-position="4267">
               <caret line="262" column="8" selection-start-line="262" selection-start-column="8" selection-end-line="263" selection-end-column="52" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#15143#15536#0" expanded="true" />
-                <element signature="e#15535#15536#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -117,7 +104,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/string.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
+            <state relative-caret-position="510">
               <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
             </state>
           </provider>
@@ -126,8 +113,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/wires.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="166" column="49" lean-forward="true" selection-start-line="166" selection-start-column="49" selection-end-line="166" selection-end-column="49" />
+            <state relative-caret-position="2754">
+              <caret line="166" column="49" selection-start-line="166" selection-start-column="49" selection-end-line="166" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -164,12 +151,14 @@
       <find>q2</find>
       <find>q3</find>
       <find>q1</find>
+      <find>plainText.</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>q2</replace>
       <replace>q3</replace>
       <replace>q4</replace>
+      <replace>plain.</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -187,6 +176,7 @@
         <option value="$PROJECT_DIR$/src/bitmaps.java" />
         <option value="$PROJECT_DIR$/src/kaane.java" />
         <option value="$PROJECT_DIR$/src/string.java" />
+        <option value="$PROJECT_DIR$/src/tangible/ListHelper.java" />
         <option value="$PROJECT_DIR$/src/unfairCipher.java" />
       </list>
     </option>
@@ -198,7 +188,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1485" />
+    <option name="x" value="960" />
+    <option name="width" value="960" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectView">
@@ -206,7 +197,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -229,6 +219,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -290,9 +281,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1485" height="1040" extended-state="0" />
+    <frame x="960" y="0" width="960" height="1040" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26666668" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.42777777" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -300,12 +291,12 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3296582" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32855567" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32855567" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
@@ -325,8 +316,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa3528.42106/kg.class" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa3528.42106/kh.class" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa3528.42106/ki.class" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa3528.42106/kj.class" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa3528.42106/kk.class" />
@@ -399,6 +388,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/kaane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1462">
+          <caret line="98" column="67" selection-start-line="98" selection-start-column="67" selection-end-line="98" selection-end-column="67" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/settings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1598">
+          <caret line="104" column="8" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bitmaps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="41" selection-end-column="27" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/atc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4267">
+          <caret line="262" column="8" selection-start-line="262" selection-start-column="8" selection-end-line="263" selection-end-column="52" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/string.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wires.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2754">
+          <caret line="166" column="49" selection-start-line="166" selection-start-column="49" selection-end-line="166" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/modloader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2924">
@@ -410,94 +477,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/settings.java">
+    <entry file="file://$PROJECT_DIR$/src/tangible.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="104" column="8" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="79" />
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tangible/ListHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kaane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="98" column="67" selection-start-line="98" selection-start-column="67" selection-end-line="98" selection-end-column="67" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bitmaps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="25" column="44" lean-forward="true" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-252">
-          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="41" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="18" selection-start-line="18" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/wires.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="166" column="49" lean-forward="true" selection-start-line="166" selection-start-column="49" selection-end-line="166" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/atc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3943">
-          <caret line="262" column="8" selection-start-line="262" selection-start-column="8" selection-end-line="263" selection-end-column="52" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#15143#15536#0" expanded="true" />
-            <element signature="e#15535#15536#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/string.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/unfairCipher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+        <state relative-caret-position="230">
+          <caret line="324" column="38" selection-start-line="324" selection-start-column="38" selection-end-line="324" selection-end-column="38" />
           <folding>
+            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#5094#5102#0" expanded="true" />
-            <element signature="e#5056#5064#0" expanded="true" />
+            <element signature="method#keyA#0;class#unfairCipher#0" />
+            <element signature="method#keyB#0;class#unfairCipher#0" />
+            <element signature="e#13444#13452#0" expanded="true" />
+            <element signature="method#hexConvert#0;class#unfairCipher#0" />
+            <element signature="method#adjustText#0;class#unfairCipher#0" />
           </folding>
         </state>
       </provider>

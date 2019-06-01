@@ -12,7 +12,6 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import java.text.NumberFormat;
-import java.text.ParseException;
 import java.util.*;
 import java.util.List;
 
@@ -64,6 +63,7 @@ public class unfairCipher {
         f.setVisible(true);
         // Logic
         button.addActionListener((ActionEvent e) -> {
+            System.out.println("Ah shit...here we go again.");
             // Serial Number
             String sn1 = props.getProperty("sn1");
             String sn2 = props.getProperty("sn2");
@@ -78,16 +78,21 @@ public class unfairCipher {
             String plates = props.getProperty("plates");
             // Battery Holders
             String batteryHolders = props.getProperty("batteryHolders");
+            System.out.println("====CALCULATING KEYS====");
             // Key A
             String keyA = keyA(sn4,sn5,sn,moduleID,plates,batteryHolders);
+            // Key B
+            String keyB = keyB();
+            // Key C
+            System.out.println("====KEY C====");
+            String keyC = playfair(keyB,keyA);
         });
     }
-    public static String keyA(String sn4, String sn5, String sn, String moduleID, String plates, String batteryHolders) {
+    private static String keyA(String sn4, String sn5, String sn, String moduleID, String plates, String batteryHolders) {
         String output = "";
-        System.out.println("CALCULATING KEY A");
+        System.out.println("====KEY A====");
         System.out.println("SN: " + sn);
         // STEP 2
-        // Convert SN's to chars
         int sn1INT = 0;
         int sn2INT = 0;
         int sn3INT = 0;
@@ -190,17 +195,169 @@ public class unfairCipher {
         System.out.println("KEY A - " + output);
         return output;
     }
-    public static String hexConvert (int a) {
+    private static String keyB () {
+        System.out.println("====KEY B====");
+        // Array of Arrays
+        String[][] possibilities = {
+                {"ABDA","FEV","DBHC","BLD","DBIE","AFEF","AFCG","CQH","DEAI","FEAA","EFAB","DECC"},
+                {"ABDB","FEW","DBHD","BLE","DBIF","AFEG","AFCH","CQI","DEAA","FEAB","EFAC","DECD"},
+                {"ABDC","FEX","DBHE","BLF","DBIG","AFEH","AFCI","CQA","DEAB","FEAC","EFAD","DECE"},
+                {"ABDD","FEY","DBHF","BLG","DBIH","AFEI","AFCA","CQB","DEAC","FEAD","EFAE","DECF"},
+                {"ABDE","FEZ","DBHG","BLH","DBII","AFEA","AFCB","CQC","DEAD","FEAE","EFAF","DED"},
+                {"ABDF","FEBG","DBHH","BLI","DBIA","AFEB","AFCC","CQD","DEAE","FEAF","EFB","DEDA"},
+                {"ABDG","FEBH","DBHI","BLA","DBIB","AFEC","AFCD","CQE","DEAF","FET","EFBA","DEDB"}
+        };
+        // Grab current day + month
+        Calendar calendar = Calendar.getInstance();
+        int day = calendar.get(Calendar.DAY_OF_WEEK);
+        int month = calendar.get(Calendar.MONTH);
+        // Get indexes
+        int i1 = 0;
+        int i2 = 0;
+        switch (day) {
+            case Calendar.MONDAY: i1 = 0; break;
+            case Calendar.TUESDAY: i1 = 1; break;
+            case Calendar.WEDNESDAY: i1 = 2; break;
+            case Calendar.THURSDAY: i1 = 3; break;
+            case Calendar.FRIDAY: i1 = 4; break;
+            case Calendar.SATURDAY: i1 = 5; break;
+            case Calendar.SUNDAY: i1 = 6; break;
+        }
+        switch (month) {
+            case Calendar.JANUARY: i2 = 0; break;
+            case Calendar.FEBRUARY: i2 = 1; break;
+            case Calendar.MARCH: i2 = 2; break;
+            case Calendar.APRIL: i2 = 3; break;
+            case Calendar.MAY: i2 = 4; break;
+            case Calendar.JUNE: i2 = 5; break;
+            case Calendar.JULY: i2 = 6; break;
+            case Calendar.AUGUST: i2 = 7; break;
+            case Calendar.SEPTEMBER: i2 = 8; break;
+            case Calendar.OCTOBER: i2 = 9; break;
+            case Calendar.NOVEMBER: i2 = 10; break;
+            case Calendar.DECEMBER: i2 = 11; break;
+        }
+        // output
+        String output = possibilities[i1][i2];
+        System.out.println("Day Index: " + i1 + ", Month Index: " + i2);
+        System.out.println("KEY B: " + output);
+        return output;
+    }
+    private static String playfair(String key, String plain) {
+        System.out.println("Playfair Inputs: Key - " + key + " PlainText - " + plain);
+        // Mostly manually converted from Maca's code (because I don't know how to complex code for shit)
+
+        // define alphabet
+        char[] alphabet = "ABCDEFGHIKLMNOPQRSTUVWXYZ".toCharArray();
+
+        // adjust key
+        key = key.trim();
+        key = key.toUpperCase();
+        key = key.replace(" ", "");
+        key = key.replace("J","I");
+        plain = plain.trim();
+        plain = plain.toUpperCase();
+        plain = plain.replace(" ","");
+        plain = plain.replace("J","I");
+
+        StringBuilder keyString = new StringBuilder();
+
+        for (char c : key.toCharArray()) {
+            if (!keyString.toString().contains(String.valueOf(c))) {
+                keyString.append(c);
+                // alphabet = alphabet.Where(val => val != c).ToArray();
+                List alphabetList = new ArrayList(Arrays.asList(alphabet));
+                for (Iterator<String> it=alphabetList.iterator(); it.hasNext();) {
+                    if (it.next().contains(String.valueOf(c)))
+                        it.remove();
+                }
+                String str = alphabetList.toString().replaceAll(",","");
+                alphabet = str.substring(1,str.length()-1).replaceAll(" ","").toCharArray();
+                // I have no idea if the above code will work, but it's my best attempt.
+                // Fuck me C# devs are lucky.
+            }
+        }
+
+        adjustText(plain);
+
+        // If the length of the plain text is odd, add X
+        if ((plain.length() % 2 > 0)){
+            plain += "X";
+        }
+
+        ArrayList<String> plainTextEdited = new ArrayList<String>();
+
+        //Split plain text into pairs
+        for (int i = 0; i < plain.length(); i += 2) {
+            //If a pair of chars contains the same letters replace one of them with X
+            if (plain.charAt(i) == (plain.charAt(i + 1))) {
+                plainTextEdited.add(String.valueOf(plain.charAt(i) + 'X'));
+            }
+            else {
+                plainTextEdited.add(String.valueOf(plain.charAt(i) + plain.charAt(i + 1)));
+            }
+        }
+
+        //region Create 5 x 5 matrix
+        List<Cell> matrix = new ArrayList<>();
+
+        int keyIDCounter = 0;
+        int alphabetIDCounter = 0;
+
+        //Fill the matrix. First with the key characters then with the alphabet
+        for (int x = 0; x < 5; x++) {
+            for (int y = 0; y < 5; y++) {
+                if (keyIDCounter < keyString.length()) {
+                    Cell cell = new Cell(keyString.charAt(keyIDCounter), x, y);
+                    matrix.add(cell);
+                    keyIDCounter++;
+                }
+                else {
+                    Cell cell = new Cell(alphabet[alphabetIDCounter], x, y);
+                    matrix.add(cell);
+                    alphabetIDCounter++;
+
+                }
+            }
+        }
+        //endregion
+
+        // TODO: FIX CONVERSION ERRORS
+        StringBuilder cipher = new StringBuilder();
+        for (String pair : plainTextEdited) {
+            int indexA = tangible.ListHelper.findIndex(matrix, c -> c.character == pair.charAt(0));
+            Cell a = matrix.get(indexA).clone();
+            int indexB = tangible.ListHelper.findIndex(matrix, c -> c.character == pair.charAt(1));
+            Cell b = matrix.get(indexB).clone();
+            //Write cipher
+            if (a.X == b.X){
+                cipher.append(matrix.get(tangible.ListHelper.findIndex(matrix, c -> c.Y == (a.Y + 1) % 5 && c.X == a.X)).character);
+                cipher.append(matrix.get(tangible.ListHelper.findIndex(matrix, c -> c.Y == (b.Y + 1) % 5 && c.X == b.X)).character);
+            }
+            else if (a.Y == b.Y) {
+                cipher.append(matrix.get(tangible.ListHelper.findIndex(matrix, c -> c.Y == a.Y && c.X == (a.X + 1) % 5)).character);
+                cipher.append(matrix.get(tangible.ListHelper.findIndex(matrix, c -> c.Y == b.Y % 5 && c.X == (b.X + 1) % 5)).character);
+            }
+            else {
+                cipher.append(matrix.get(tangible.ListHelper.findIndex(matrix, c -> c.X == a.X && c.Y == b.Y)).character);
+                cipher.append(matrix.get(tangible.ListHelper.findIndex(matrix, c -> c.X == b.X % 5 && c.Y == a.Y)).character);
+            }
+        }
+        return cipher.toString();
+    }
+    private static String hexConvert (int a) {
         System.out.println("CONVERTING TO HEX...");
         String output = "";
         boolean continuing = true;
         List<String> hexRemainder = new ArrayList<String>();
         int iteration = 0;
+        int b = a;
         while (continuing) {
             // Divide by 16
+            b = a;
             int remainder = a % 16;
             a /= 16;
-            if (a != 0) {
+            if (b != 0) {
                 // Convert remainder to Hex
                 hexRemainder.add(Integer.toHexString(remainder));
                 iteration += 1;
@@ -220,5 +377,39 @@ public class unfairCipher {
         // remove leading zeros (just in case)
         output.replaceFirst("^0+(?!$)", "");
         return output;
+    }
+    // Below is converted from Maca's code using both a C# to Java converter and manual converting.
+    private static String adjustText(String text) {
+        text = text.trim();
+        text = text.replace(" ", "");
+        text = text.replace("J", "I");
+        text = text.toUpperCase();
+
+        return text;
+    }
+    // Note: Might not work as intended due to Java not allowing user-defined value types.
+    // public struct Cell
+    public static final class Cell {
+        public char character;
+        public int X;
+        public int Y;
+
+        public Cell() {}
+
+        public Cell(char _character, int _X, int _Y) {
+            this.character = _character;
+            this.X = _X;
+            this.Y = _Y;
+        }
+
+        public Cell clone() {
+            Cell varCopy = new Cell();
+
+            varCopy.character = this.character;
+            varCopy.X = this.X;
+            varCopy.Y = this.Y;
+
+            return varCopy;
+        }
     }
 }
