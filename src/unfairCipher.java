@@ -20,6 +20,8 @@ import java.util.List;
 
 public class unfairCipher {
     static JFrame f;
+    private static char[][] charTable;
+    private static Point[] positions;
     public static void module() {
         System.out.println("[UNFAIR CIPHER]");
         f = new JFrame("KAaNE [UNFAIR CIPHER]");
@@ -247,130 +249,10 @@ public class unfairCipher {
         System.out.println("KEY B: " + output);
         return output;
     }
-    // Note: Might not work as intended due to Java not allowing user-defined value types.
-    // public struct Cell
-    public final static class Cell {
-        public char character;
-        public int X;
-        public int Y;
-        public Cell() {}
-
-        public Cell(char _character, int _X, int _Y) {
-            this.character = _character;
-            this.X = _X;
-            this.Y = _Y;
-        }
-
-        public Cell clone() {
-            Cell varCopy = new Cell();
-
-            varCopy.character = this.character;
-            varCopy.X = this.X;
-            varCopy.Y = this.Y;
-
-            return varCopy;
-        }
-    }
     private static String playfair(String key, String plain) {
         System.out.println("Playfair Inputs: Key - " + key + " PlainText - " + plain);
-        // Mostly manually converted from Maca's code (because I don't know how to complex code for shit)
-
-        // define alphabet
-        char[] alphabet = "ABCDEFGHIKLMNOPQRSTUVWXYZ".toCharArray();
-
-        // adjust key
-        key = key.trim();
-        key = key.toUpperCase();
-        key = key.replace(" ", "");
-        key = key.replace("J","I");
-        plain = plain.trim();
-        plain = plain.toUpperCase();
-        plain = plain.replace(" ","");
-        plain = plain.replace("J","I");
-
-        StringBuilder keyString = new StringBuilder();
-
-        // TODO: Fix any exceptions
-        for (char c : key.toCharArray()) {
-            if (!keyString.toString().contains(String.valueOf(c))) {
-                keyString.append(c);
-                // alphabet = alphabet.Where(val => val != c).ToArray();
-                List alphabetList = new ArrayList(Arrays.asList(alphabet));
-                for (Iterator<String> it=alphabetList.iterator(); it.hasNext();) {
-                    if (it.next().contains(String.valueOf(c)))
-                        it.remove();
-                }
-                String str = alphabetList.toString().replaceAll(",","");
-                alphabet = str.substring(1,str.length()-1).replaceAll(" ","").toCharArray();
-                // I have no idea if the above code will work, but it's my best attempt.
-                // Fuck me C# devs are lucky.
-            }
-        }
-
-        adjustText(plain);
-
-        // If the length of the plain text is odd, add X
-        if ((plain.length() % 2 > 0)){
-            plain += "X";
-        }
-
-        ArrayList<String> plainTextEdited = new ArrayList<String>();
-
-        //Split plain text into pairs
-        for (int i = 0; i < plain.length(); i += 2) {
-            //If a pair of chars contains the same letters replace one of them with X
-            if (plain.charAt(i) == (plain.charAt(i + 1))) {
-                plainTextEdited.add(String.valueOf(plain.charAt(i) + 'X'));
-            }
-            else {
-                plainTextEdited.add(String.valueOf(plain.charAt(i) + plain.charAt(i + 1)));
-            }
-        }
-
-        //region Create 5 x 5 matrix
-        List<Cell> matrix = new ArrayList<>();
-
-        int keyIDCounter = 0;
-        int alphabetIDCounter = 0;
-
-        //Fill the matrix. First with the key characters then with the alphabet
-        for (int x = 0; x < 5; x++) {
-            for (int y = 0; y < 5; y++) {
-                if (keyIDCounter < keyString.length()) {
-                    Cell cell = new Cell(keyString.charAt(keyIDCounter), x, y);
-                    matrix.add(cell);
-                    keyIDCounter++;
-                }
-                else {
-                    Cell cell = new Cell(alphabet[alphabetIDCounter], x, y);
-                    matrix.add(cell);
-                    alphabetIDCounter++;
-
-                }
-            }
-        }
-        //endregion
-        StringBuilder cipher = new StringBuilder();
-        for (String pair : plainTextEdited) {
-            int indexA = ListHelper.findIndex(matrix, (Cell c) -> c.character == pair.charAt(0));
-            Cell a = matrix.get(indexA).clone();
-            int indexB = ListHelper.findIndex(matrix, (Cell c) -> c.character == pair.charAt(1));
-            Cell b = matrix.get(indexB).clone();
-            //Write cipher
-            if (a.X == b.X){
-                cipher.append(matrix.get(ListHelper.findIndex(matrix, (Cell c) -> c.Y == (a.Y + 1) % 5 && c.X == a.X)).character);
-                cipher.append(matrix.get(ListHelper.findIndex(matrix, (Cell c) -> c.Y == (b.Y + 1) % 5 && c.X == b.X)).character);
-            }
-            else if (a.Y == b.Y) {
-                cipher.append(matrix.get(ListHelper.findIndex(matrix, (Cell c) -> c.Y == a.Y && c.X == (a.X + 1) % 5)).character);
-                cipher.append(matrix.get(ListHelper.findIndex(matrix, (Cell c) -> c.Y == b.Y % 5 && c.X == (b.X + 1) % 5)).character);
-            }
-            else {
-                cipher.append(matrix.get(ListHelper.findIndex(matrix, (Cell c) -> c.X == a.X && c.Y == b.Y)).character);
-                cipher.append(matrix.get(ListHelper.findIndex(matrix, (Cell c) -> c.X == b.X % 5 && c.Y == a.Y)).character);
-            }
-        }
-        return cipher.toString();
+        createTable(key,true);
+        return encode(prepareText(plain,true));
     }
     private static String hexConvert (int a) {
         System.out.println("CONVERTING TO HEX...");
@@ -412,5 +294,75 @@ public class unfairCipher {
         text = text.toUpperCase();
 
         return text;
+    }
+    // Credit to Rosetta Code for the Playfair Cipher code
+    private static String prepareText(String s, boolean changeJtoI) {
+        s = s.toUpperCase().replaceAll("[^A-Z]", "");
+        return changeJtoI ? s.replace("J", "I") : s.replace("Q", "");
+    }
+    private static void createTable(String key, boolean changeJtoI) {
+        charTable = new char[5][5];
+        positions = new Point[26];
+
+        String s = prepareText(key + "ABCDEFGHIJKLMNOPQRSTUVWXYZ", changeJtoI);
+
+        int len = s.length();
+        for (int i = 0, k = 0; i < len; i++) {
+            char c = s.charAt(i);
+            if (positions[c - 'A'] == null) {
+                charTable[k / 5][k % 5] = c;
+                positions[c - 'A'] = new Point(k % 5, k / 5);
+                k++;
+            }
+        }
+    }
+
+    private static String encode(String s) {
+        StringBuilder sb = new StringBuilder(s);
+
+        for (int i = 0; i < sb.length(); i += 2) {
+
+            if (i == sb.length() - 1)
+                sb.append(sb.length() % 2 == 1 ? 'X' : "");
+
+            else if (sb.charAt(i) == sb.charAt(i + 1))
+                sb.insert(i + 1, 'X');
+        }
+        return codec(sb, 1);
+    }
+
+    private static String decode(String s) {
+        return codec(new StringBuilder(s), 4);
+    }
+
+    private static String codec(StringBuilder text, int direction) {
+        int len = text.length();
+        for (int i = 0; i < len; i += 2) {
+            char a = text.charAt(i);
+            char b = text.charAt(i + 1);
+
+            int row1 = positions[a - 'A'].y;
+            int row2 = positions[b - 'A'].y;
+            int col1 = positions[a - 'A'].x;
+            int col2 = positions[b - 'A'].x;
+
+            if (row1 == row2) {
+                col1 = (col1 + direction) % 5;
+                col2 = (col2 + direction) % 5;
+
+            } else if (col1 == col2) {
+                row1 = (row1 + direction) % 5;
+                row2 = (row2 + direction) % 5;
+
+            } else {
+                int tmp = col1;
+                col1 = col2;
+                col2 = tmp;
+            }
+
+            text.setCharAt(i, charTable[row1][col1]);
+            text.setCharAt(i + 1, charTable[row2][col2]);
+        }
+        return text.toString();
     }
 }
