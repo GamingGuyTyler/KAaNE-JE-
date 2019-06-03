@@ -56,7 +56,16 @@ public final class ListHelper
 
         return -1;
     }
+    public static <T> int findIndex(List<T> source, Predicate<T> predicate)
+    {
+        for (int i = 0; i < source.size(); i++)
+        {
+            if (predicate.test(source.get(i)))
+                return i;
+        }
 
+        return -1;
+    }
     public static <T> int findIndex(ArrayList<T> source, int start, Predicate<T> predicate)
     {
         for (int i = start; i < source.size(); i++)

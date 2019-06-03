@@ -7,6 +7,9 @@
  */
 
 import be.pcl.swing.ImprovedFormattedTextField;
+import tangible.ListHelper;
+
+import javax.management.ObjectInstance;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -86,6 +89,7 @@ public class unfairCipher {
             // Key C
             System.out.println("====KEY C====");
             String keyC = playfair(keyB,keyA);
+            System.out.println("Key C - " + keyC);
         });
     }
     private static String keyA(String sn4, String sn5, String sn, String moduleID, String plates, String batteryHolders) {
@@ -243,6 +247,30 @@ public class unfairCipher {
         System.out.println("KEY B: " + output);
         return output;
     }
+    // Note: Might not work as intended due to Java not allowing user-defined value types.
+    // public struct Cell
+    public final static class Cell {
+        public char character;
+        public int X;
+        public int Y;
+        public Cell() {}
+
+        public Cell(char _character, int _X, int _Y) {
+            this.character = _character;
+            this.X = _X;
+            this.Y = _Y;
+        }
+
+        public Cell clone() {
+            Cell varCopy = new Cell();
+
+            varCopy.character = this.character;
+            varCopy.X = this.X;
+            varCopy.Y = this.Y;
+
+            return varCopy;
+        }
+    }
     private static String playfair(String key, String plain) {
         System.out.println("Playfair Inputs: Key - " + key + " PlainText - " + plain);
         // Mostly manually converted from Maca's code (because I don't know how to complex code for shit)
@@ -262,6 +290,7 @@ public class unfairCipher {
 
         StringBuilder keyString = new StringBuilder();
 
+        // TODO: Fix any exceptions
         for (char c : key.toCharArray()) {
             if (!keyString.toString().contains(String.valueOf(c))) {
                 keyString.append(c);
@@ -321,26 +350,24 @@ public class unfairCipher {
             }
         }
         //endregion
-
-        // TODO: FIX CONVERSION ERRORS
         StringBuilder cipher = new StringBuilder();
         for (String pair : plainTextEdited) {
-            int indexA = tangible.ListHelper.findIndex(matrix, c -> c.character == pair.charAt(0));
+            int indexA = ListHelper.findIndex(matrix, (Cell c) -> c.character == pair.charAt(0));
             Cell a = matrix.get(indexA).clone();
-            int indexB = tangible.ListHelper.findIndex(matrix, c -> c.character == pair.charAt(1));
+            int indexB = ListHelper.findIndex(matrix, (Cell c) -> c.character == pair.charAt(1));
             Cell b = matrix.get(indexB).clone();
             //Write cipher
             if (a.X == b.X){
-                cipher.append(matrix.get(tangible.ListHelper.findIndex(matrix, c -> c.Y == (a.Y + 1) % 5 && c.X == a.X)).character);
-                cipher.append(matrix.get(tangible.ListHelper.findIndex(matrix, c -> c.Y == (b.Y + 1) % 5 && c.X == b.X)).character);
+                cipher.append(matrix.get(ListHelper.findIndex(matrix, (Cell c) -> c.Y == (a.Y + 1) % 5 && c.X == a.X)).character);
+                cipher.append(matrix.get(ListHelper.findIndex(matrix, (Cell c) -> c.Y == (b.Y + 1) % 5 && c.X == b.X)).character);
             }
             else if (a.Y == b.Y) {
-                cipher.append(matrix.get(tangible.ListHelper.findIndex(matrix, c -> c.Y == a.Y && c.X == (a.X + 1) % 5)).character);
-                cipher.append(matrix.get(tangible.ListHelper.findIndex(matrix, c -> c.Y == b.Y % 5 && c.X == (b.X + 1) % 5)).character);
+                cipher.append(matrix.get(ListHelper.findIndex(matrix, (Cell c) -> c.Y == a.Y && c.X == (a.X + 1) % 5)).character);
+                cipher.append(matrix.get(ListHelper.findIndex(matrix, (Cell c) -> c.Y == b.Y % 5 && c.X == (b.X + 1) % 5)).character);
             }
             else {
-                cipher.append(matrix.get(tangible.ListHelper.findIndex(matrix, c -> c.X == a.X && c.Y == b.Y)).character);
-                cipher.append(matrix.get(tangible.ListHelper.findIndex(matrix, c -> c.X == b.X % 5 && c.Y == a.Y)).character);
+                cipher.append(matrix.get(ListHelper.findIndex(matrix, (Cell c) -> c.X == a.X && c.Y == b.Y)).character);
+                cipher.append(matrix.get(ListHelper.findIndex(matrix, (Cell c) -> c.X == b.X % 5 && c.Y == a.Y)).character);
             }
         }
         return cipher.toString();
@@ -378,7 +405,6 @@ public class unfairCipher {
         output.replaceFirst("^0+(?!$)", "");
         return output;
     }
-    // Below is converted from Maca's code using both a C# to Java converter and manual converting.
     private static String adjustText(String text) {
         text = text.trim();
         text = text.replace(" ", "");
@@ -386,30 +412,5 @@ public class unfairCipher {
         text = text.toUpperCase();
 
         return text;
-    }
-    // Note: Might not work as intended due to Java not allowing user-defined value types.
-    // public struct Cell
-    public static final class Cell {
-        public char character;
-        public int X;
-        public int Y;
-
-        public Cell() {}
-
-        public Cell(char _character, int _X, int _Y) {
-            this.character = _character;
-            this.X = _X;
-            this.Y = _Y;
-        }
-
-        public Cell clone() {
-            Cell varCopy = new Cell();
-
-            varCopy.character = this.character;
-            varCopy.X = this.X;
-            varCopy.Y = this.Y;
-
-            return varCopy;
-        }
     }
 }
