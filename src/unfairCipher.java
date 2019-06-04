@@ -7,9 +7,6 @@
  */
 
 import be.pcl.swing.ImprovedFormattedTextField;
-import tangible.ListHelper;
-
-import javax.management.ObjectInstance;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -92,6 +89,102 @@ public class unfairCipher {
             System.out.println("====KEY C====");
             String keyC = playfair(keyB,keyA);
             System.out.println("Key C - " + keyC);
+            // MSG
+            String msg = encryptMsg.getText();
+            // STEP 1
+            System.out.println("====OFFSET CALC====");
+            int offset = 0;
+            // Port Types
+            String dvidStr = props.getProperty("dvid");
+            String parallelStr = props.getProperty("parallel");
+            String ps2Str = props.getProperty("ps2");
+            String rj45Str = props.getProperty("rj45");
+            String serialStr = props.getProperty("serial");
+            String stereoRCAStr = props.getProperty("stereoRCA");
+            if (dvidStr.equals("1")) offset -= 2;
+            if (parallelStr.equals("1")) offset -= 2;
+            if (ps2Str.equals("1")) offset -= 2;
+            if (rj45Str.equals("1")) offset -= 2;
+            if (serialStr.equals("1")) offset -= 2;
+            if (stereoRCAStr.equals("1")) offset -= 2;
+            System.out.println("Offset after port types: " + offset);
+            // Port Plate
+            offset *= Integer.parseInt(plates);
+            System.out.println("Offset after port plates: " + offset);
+            // Serial Number
+            if (string.isVowel(sn1)) offset -= 2;
+            else if (!string.isDigit(sn1)) offset += 1;
+            if (string.isVowel(sn2)) offset -= 2;
+            else if (!string.isDigit(sn2)) offset += 1;
+            if (string.isVowel(sn3)) offset -= 2;
+            else if (!string.isDigit(sn3)) offset += 1;
+            if (string.isVowel(sn4)) offset -= 2;
+            else if (!string.isDigit(sn4)) offset += 1;
+            if (string.isVowel(sn5)) offset -= 2;
+            else if (!string.isDigit(sn5)) offset += 1;
+            if (string.isVowel(sn6)) offset -= 2;
+            else if (!string.isDigit(sn6)) offset += 1;
+            System.out.println("Offset after SN: " + offset);
+            // Indicators
+            int bobInt = Integer.parseInt(props.getProperty("bob"));
+            int carInt = Integer.parseInt(props.getProperty("car"));
+            int clrInt = Integer.parseInt(props.getProperty("clr"));
+            int frkInt = Integer.parseInt(props.getProperty("frk"));
+            int frqInt = Integer.parseInt(props.getProperty("frq"));
+            int indInt = Integer.parseInt(props.getProperty("ind"));
+            int msaInt = Integer.parseInt(props.getProperty("msa"));
+            int nsaInt = Integer.parseInt(props.getProperty("nsa"));
+            int sigInt = Integer.parseInt(props.getProperty("sig"));
+            int sndInt = Integer.parseInt(props.getProperty("snd"));
+            int trnInt = Integer.parseInt(props.getProperty("trn"));
+            int bobLitInt = Integer.parseInt(props.getProperty("bobLit"));
+            int carLitInt = Integer.parseInt(props.getProperty("carLit"));
+            int clrLitInt = Integer.parseInt(props.getProperty("clrLit"));
+            int frkLitInt = Integer.parseInt(props.getProperty("frkLit"));
+            int frqLitInt = Integer.parseInt(props.getProperty("frqLit"));
+            int indLitInt = Integer.parseInt(props.getProperty("indLit"));
+            int msaLitInt = Integer.parseInt(props.getProperty("msaLit"));
+            int nsaLitInt = Integer.parseInt(props.getProperty("nsaLit"));
+            int sigLitInt = Integer.parseInt(props.getProperty("sigLit"));
+            int sndLitInt = Integer.parseInt(props.getProperty("sndLit"));
+            int trnLitInt = Integer.parseInt(props.getProperty("trnLit"));
+            int bobUnlitInt = (bobInt == 1) && (bobLitInt == 0) ? 1 : 0;
+            int carUnlitInt = (carInt == 1) && (carLitInt == 0) ? 1 : 0;
+            int clrUnlitInt = (clrInt == 1) && (clrLitInt == 0) ? 1 : 0;
+            int frkUnlitInt = (frkInt == 1) && (frkLitInt == 0) ? 1 : 0;
+            int frqUnlitInt = (frqInt == 1) && (frqLitInt == 0) ? 1 : 0;
+            int indUnlitInt = (indInt == 1) && (indLitInt == 0) ? 1 : 0;
+            int msaUnlitInt = (msaInt == 1) && (msaLitInt == 0) ? 1 : 0;
+            int nsaUnlitInt = (nsaInt == 1) && (nsaLitInt == 0) ? 1 : 0;
+            int sigUnlitInt = (sigInt == 1) && (sigLitInt == 0) ? 1 : 0;
+            int sndUnlitInt = (sndInt == 1) && (sndLitInt == 0) ? 1 : 0;
+            int trnUnlitInt = (trnInt == 1) && (trnLitInt == 0) ? 1 : 0;
+            offset = (bobUnlitInt == 1) ? offset - 2 : (bobLitInt == 1) ? offset + 2 : offset;
+            offset = (carUnlitInt == 1) ? offset - 2 : (carLitInt == 1) ? offset + 2 : offset;
+            offset = (clrUnlitInt == 1) ? offset - 2 : (clrLitInt == 1) ? offset + 2 : offset;
+            offset = (frkUnlitInt == 1) ? offset - 2 : (frkLitInt == 1) ? offset + 2 : offset;
+            offset = (frqUnlitInt == 1) ? offset - 2 : (frqLitInt == 1) ? offset + 2 : offset;
+            offset = (indUnlitInt == 1) ? offset - 2 : (indLitInt == 1) ? offset + 2 : offset;
+            offset = (msaUnlitInt == 1) ? offset - 2 : (msaLitInt == 1) ? offset + 2 : offset;
+            offset = (nsaUnlitInt == 1) ? offset - 2 : (nsaLitInt == 1) ? offset + 2 : offset;
+            offset = (sigUnlitInt == 1) ? offset - 2 : (sigLitInt == 1) ? offset + 2 : offset;
+            offset = (sndUnlitInt == 1) ? offset - 2 : (sndLitInt == 1) ? offset + 2 : offset;
+            offset = (trnUnlitInt == 1) ? offset - 2 : (trnLitInt == 1) ? offset + 2 : offset;
+            System.out.println("Offset after Indicators: " + offset);
+            // Batteries
+            int batteriesTotalInt = Integer.parseInt(props.getProperty("batteriesTotal"));
+            offset -= batteriesTotalInt;
+            if (batteriesTotalInt == 0) offset += 10;
+            System.out.println("Offset after Batteries: " + offset);
+            // No ports
+            if (dvidStr.equals("0") && parallelStr.equals("0") && ps2Str.equals("0") && rj45Str.equals("0") && serialStr.equals("0") && stereoRCAStr.equals("0")) offset *= 2;
+            System.out.println("Offset after checking no ports: " + offset);
+            // Modules
+            int modulesInt = Integer.parseInt(props.getProperty("modules"));
+            offset = (modulesInt > 30) ? offset / 2 : offset;
+            System.out.println("Offset Final - " + offset);
+            // Decrypt using caesar
+
         });
     }
     private static String keyA(String sn4, String sn5, String sn, String moduleID, String plates, String batteryHolders) {
@@ -331,10 +424,6 @@ public class unfairCipher {
         return codec(sb, 1);
     }
 
-    private static String decode(String s) {
-        return codec(new StringBuilder(s), 4);
-    }
-
     private static String codec(StringBuilder text, int direction) {
         int len = text.length();
         for (int i = 0; i < len; i += 2) {
@@ -364,5 +453,36 @@ public class unfairCipher {
             text.setCharAt(i + 1, charTable[row2][col2]);
         }
         return text.toString();
+    }
+    // Caesar cipher code by The Java Programmer
+    public static String caesar(String message, int key) {
+        char ch;
+        String decryptedMessage = "";
+        for(int i = 0; i < message.length(); ++i){
+            ch = message.charAt(i);
+
+            if(ch >= 'a' && ch <= 'z'){
+                ch = (char)(ch - key);
+
+                if(ch < 'a'){
+                    ch = (char)(ch + 'z' - 'a' + 1);
+                }
+
+                decryptedMessage += ch;
+            }
+            else if(ch >= 'A' && ch <= 'Z'){
+                ch = (char)(ch - key);
+
+                if(ch < 'A'){
+                    ch = (char)(ch + 'Z' - 'A' + 1);
+                }
+
+                decryptedMessage += ch;
+            }
+            else {
+                decryptedMessage += ch;
+            }
+        }
+        return decryptedMessage;
     }
 }
