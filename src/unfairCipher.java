@@ -1,13 +1,14 @@
 /**
  * Unfair Cipher, started work on 7:30 AM 5/31/2019
  *
- * Paused work on 11:00 AM 5/31/2019 (finished key a + gui)
+ * FINALLY finished ver 1 on 12:11 PM 6/6/2019
  *
  * Version 0.1
  */
 
 import be.pcl.swing.ImprovedFormattedTextField;
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
@@ -52,12 +53,20 @@ public class unfairCipher {
         // Button
         JButton button = new JButton("OK");
         button.setBounds(200,50,75,20);
+        // Output Text Area
+        JTextArea output = new JTextArea();
+        output.setBounds(5,75,285,100);
+        output.setEditable(false);
+        output.setLineWrap(true);
+        Border border = BorderFactory.createLineBorder(Color.BLACK);
+        output.setBorder(BorderFactory.createCompoundBorder(border,BorderFactory.createEmptyBorder(1,1,1,1)));
         // Add everything
         f.add(encryptMsg); f.add(moduleIDTB); f.add(strikeTB);
         f.add(moduleIDLabel); f.add(strikeLabel); f.add(button);
+        f.add(output);
         // Define JFrame
         f.setLayout(null);
-        f.setSize(300,150);
+        f.setSize(300,225);
         f.setResizable(false);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         f.setLocation(dim.width/2-f.getSize().width/2, dim.height/2-f.getSize().height/2);
@@ -87,7 +96,7 @@ public class unfairCipher {
             String keyB = keyB();
             // Key C
             System.out.println("====KEY C====");
-            String keyC = playfair(keyB,keyA);
+            String keyC = playfair(keyB,keyA,true);
             System.out.println("Key C - " + keyC);
             // MSG
             String msg = encryptMsg.getText();
@@ -109,7 +118,7 @@ public class unfairCipher {
             if (stereoRCAStr.equals("1")) offset -= 2;
             System.out.println("Offset after port types: " + offset);
             // Port Plate
-            offset *= Integer.parseInt(plates);
+            offset += Integer.parseInt(plates);
             System.out.println("Offset after port plates: " + offset);
             // Serial Number
             if (string.isVowel(sn1)) offset -= 2;
@@ -184,7 +193,32 @@ public class unfairCipher {
             offset = (modulesInt > 30) ? offset / 2 : offset;
             System.out.println("Offset Final - " + offset);
             // Decrypt using caesar
-
+            System.out.println("====CIPHERING====");
+            String afterCaesar = caesarDecode(msg,offset);
+            System.out.println("After Caesar Decryption: " + afterCaesar);
+            // Do it again (If you don't, from the looks of it, it won't give the correct one. That's from my suspicions, though)
+            afterCaesar = caesarDecode(afterCaesar,offset);
+            System.out.println("After Caesar #2: " + afterCaesar);
+            // Decrypt twice with playfair
+            String afterPFkeyC = playfair(keyC,afterCaesar, false);
+            System.out.println("After Key C Playfair: " + afterPFkeyC);
+            String finalMSG = playfair(keyA,afterPFkeyC,false);
+            System.out.println("After Key A Playfair: " + finalMSG);
+            // Execute Instructions
+            String[] splitMSG = splitToThree(finalMSG); // split to three for easier reading
+            String strikes = strikeTB.getText();
+            boolean bobSkip = bobLitInt == 1 && batteriesTotalInt == 2;
+            // Grab instructions
+            String[] instructions = generateInstructions(splitMSG,Integer.parseInt(moduleID),Integer.parseInt(strikes),bobSkip);
+            for (int a = 0;a<instructions.length;a++) {
+                String curr = instructions[a];
+                System.out.println(curr);
+                if (a == 0) {
+                    output.setText(curr);
+                } else {
+                    output.append("\n" + curr);
+                }
+            }
         });
     }
     private static String keyA(String sn4, String sn5, String sn, String moduleID, String plates, String batteryHolders) {
@@ -342,10 +376,11 @@ public class unfairCipher {
         System.out.println("KEY B: " + output);
         return output;
     }
-    private static String playfair(String key, String plain) {
+    private static String playfair(String key, String plain, boolean encode) {
         System.out.println("Playfair Inputs: Key - " + key + " PlainText - " + plain);
         createTable(key,true);
-        return encode(prepareText(plain,true));
+        if (encode) return encode(prepareText(plain,true));
+        else return decode(prepareText(plain,true));
     }
     private static String hexConvert (int a) {
         System.out.println("CONVERTING TO HEX...");
@@ -380,13 +415,98 @@ public class unfairCipher {
         output.replaceFirst("^0+(?!$)", "");
         return output;
     }
-    private static String adjustText(String text) {
-        text = text.trim();
-        text = text.replace(" ", "");
-        text = text.replace("J", "I");
-        text = text.toUpperCase();
-
-        return text;
+    private static String[] splitToThree (String s) {
+        List<String> outputList = new ArrayList<String>();
+        int b = 3;
+        for (int a=0; a<s.length();a+=3) {
+            outputList.add(s.substring(a,b));
+            b += 3;
+        }
+        String[] output = new String[outputList.size()];
+        outputList.toArray(output);
+        return output;
+    }
+    private static String[] generateInstructions(String[] msg, int moduleID, int strikes, boolean bobSkip) {
+        List<String> outputList = new ArrayList<String>();
+        int colorPress = 0;
+        String lastAdd = "";
+        boolean lastAddCLR = false;
+        // Surround in for statement for repeats
+        for (int a=0;a<msg.length;a++) {
+            String curr = msg[a];
+            // PCR
+            if (curr.equals("PCR")) {outputList.add("[PCR] Press Red"); lastAdd = "Press Red"; colorPress++; lastAddCLR = true;}
+            // PCG
+            if (curr.equals("PCG")) {outputList.add("[PCG] Press Green"); lastAdd = "Press Green"; colorPress++; lastAddCLR = true;}
+            // PCB
+            if (curr.equals("PCB")) {outputList.add("[PCB] Press Blue"); lastAdd = "Press Blue"; colorPress++; lastAddCLR = true;}
+            // SUB
+            if (curr.equals("SUB")) {
+                outputList.add("[SUB] Press Outer when the seconds on the timer match");
+                lastAdd = "Press Outer when the seconds on the timer match";
+            }
+            // MIT
+            if (curr.equals("MIT")) {
+                int merc = moduleID + colorPress + (a + 1);
+                int mercmod = merc % 10;
+                outputList.add("[MIT] Press Inner when last digit is " + mercmod);
+                lastAdd = "Press Inner when the last digit is " + mercmod;
+            }
+            // PRN
+            if (curr.equals("PRN")) {
+                if (isPrime(moduleID % 20)) {
+                    outputList.add("[PRN %20] Press Inner");
+                    lastAdd = "Press Inner";
+                }
+                else {
+                    outputList.add("[PRN !20] Press Outer");
+                    lastAdd = "Press Outer";
+                }
+            }
+            // CHK
+            if (curr.equals("CHK")) {
+                if (isPrime(moduleID % 20)) {
+                    outputList.add("[CHK %20] Press Outer");
+                    lastAdd = "Press Outer";
+                }
+                else {
+                    outputList.add("[CHK !20] Press Inner");
+                    lastAdd = "Press Inner";
+                }
+            }
+            // BOB
+            if (curr.equals("BOB")) {
+                outputList.add("[BOB] Press Inner");
+                lastAdd = "Press Inner";
+                if (bobSkip) {
+                    // If Lit BOB + 2 batteries, then insta skip the rest.
+                    String[] output = new String[outputList.size()];
+                    outputList.toArray(output);
+                    return output;
+                }
+            }
+            // REP/EAT
+            if (curr.equals("REP") || curr.equals("EAT")) {
+                if (a == 0) {
+                    outputList.add("[REP/EAT #1] Press Inner");
+                    lastAdd = "Press Inner";
+                }
+                else {
+                    outputList.add("[REP/EAT] " + lastAdd);
+                    if (lastAddCLR) colorPress++;
+                }
+            }
+            // STR/IKE
+            if (curr.equals("STR") || curr.equals("IKE")) {
+                colorPress++;
+                String button = strikes % 3 == 0 ? "Red" : strikes % 3 == 1 ? "Green" : "Blue";
+                outputList.add("[STR/IKE] Press " + button);
+                lastAdd = "Press " + button;
+            }
+        }
+        String[] output = new String[outputList.size()];
+        outputList.toArray(output);
+        return output;
     }
     // Credit to Rosetta Code for the Playfair Cipher code
     private static String prepareText(String s, boolean changeJtoI) {
@@ -409,7 +529,6 @@ public class unfairCipher {
             }
         }
     }
-
     private static String encode(String s) {
         StringBuilder sb = new StringBuilder(s);
 
@@ -423,7 +542,9 @@ public class unfairCipher {
         }
         return codec(sb, 1);
     }
-
+    private static String decode(String s) {
+        return codec(new StringBuilder(s), 4);
+    }
     private static String codec(StringBuilder text, int direction) {
         int len = text.length();
         for (int i = 0; i < len; i += 2) {
@@ -454,35 +575,35 @@ public class unfairCipher {
         }
         return text.toString();
     }
-    // Caesar cipher code by The Java Programmer
-    public static String caesar(String message, int key) {
-        char ch;
-        String decryptedMessage = "";
-        for(int i = 0; i < message.length(); ++i){
-            ch = message.charAt(i);
-
-            if(ch >= 'a' && ch <= 'z'){
-                ch = (char)(ch - key);
-
-                if(ch < 'a'){
-                    ch = (char)(ch + 'z' - 'a' + 1);
+    // Credit to the Rosetta Code again
+    private static String caesarDecode(String enc, int offset) {
+        return caesarEncode(enc, 26-offset);
+    }
+    private static String caesarEncode(String enc, int offset) {
+        offset = offset % 26 + 26;
+        StringBuilder encoded = new StringBuilder();
+        for (char i : enc.toCharArray()) {
+            if (Character.isLetter(i)) {
+                if (Character.isUpperCase(i)) {
+                    encoded.append((char) ('A' + (i - 'A' + offset) % 26 ));
+                } else {
+                    encoded.append((char) ('a' + (i - 'a' + offset) % 26 ));
                 }
-
-                decryptedMessage += ch;
-            }
-            else if(ch >= 'A' && ch <= 'Z'){
-                ch = (char)(ch - key);
-
-                if(ch < 'A'){
-                    ch = (char)(ch + 'Z' - 'A' + 1);
-                }
-
-                decryptedMessage += ch;
-            }
-            else {
-                decryptedMessage += ch;
+            } else {
+                encoded.append(i);
             }
         }
-        return decryptedMessage;
+        return encoded.toString();
+    }
+    // Credit to Mkyong for the prime check code
+    private static boolean isPrime(int n) {
+        //check if n is a multiple of 2
+        if (n%2==0) return false;
+        //if not, then just check the odds
+        for(int i=3;i*i<=n;i+=2) {
+            if(n%i==0)
+                return false;
+        }
+        return true;
     }
 }
