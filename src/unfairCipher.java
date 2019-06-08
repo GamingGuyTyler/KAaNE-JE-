@@ -15,6 +15,8 @@ import java.io.*;
 import java.text.NumberFormat;
 import java.util.*;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class unfairCipher {
     static JFrame f;
@@ -196,9 +198,6 @@ public class unfairCipher {
             System.out.println("====CIPHERING====");
             String afterCaesar = caesarDecode(msg,offset);
             System.out.println("After Caesar Decryption: " + afterCaesar);
-            // Do it again (If you don't, from the looks of it, it won't give the correct one. That's from my suspicions, though)
-            afterCaesar = caesarDecode(afterCaesar,offset);
-            System.out.println("After Caesar #2: " + afterCaesar);
             // Decrypt twice with playfair
             String afterPFkeyC = playfair(keyC,afterCaesar, false);
             System.out.println("After Key C Playfair: " + afterPFkeyC);
@@ -206,6 +205,8 @@ public class unfairCipher {
             System.out.println("After Key A Playfair: " + finalMSG);
             // Execute Instructions
             String[] splitMSG = splitToThree(finalMSG); // split to three for easier reading
+            splitMSG = fixYourselfDammit(splitMSG); // fix itself
+            System.out.println("Fixed up: " + splitMSG[0] + splitMSG[1] + splitMSG[2] + splitMSG[3]);
             String strikes = strikeTB.getText();
             boolean bobSkip = bobLitInt == 1 && batteriesTotalInt == 2;
             // Grab instructions
@@ -258,6 +259,7 @@ public class unfairCipher {
         String digitConverted = hexConvert(digitSingleInt);
         System.out.println("Step 4 string: " + digitConverted);
         // STEP 5
+        /**
         String[] digitConvertedArray = digitConverted.split("");
         List<String> convertAgain = new ArrayList<String>();
         for (int index = 0; index!=digitConvertedArray.length-1; index += 1) {
@@ -304,6 +306,14 @@ public class unfairCipher {
         System.out.println("Step 5 iteration " + index + ": " + convertAgain.toArray()[index-1]);
         convertAgain.removeAll(Arrays.asList("",null));
         System.out.println("Step 5 String: " + Arrays.toString(convertAgain.toArray()).toUpperCase());
+        **/
+        List<String> convertAgain = new ArrayList<String>();
+        String pleaseWork = digitConverted.replace("26", "Z").replace("25", "Y").replace("24", "X").replace("23", "W").replace("22", "V").replace("21", "U").replace("20", "T").replace("19", "S")
+                .replace("18", "R").replace("17", "Q").replace("16", "P").replace("15", "O").replace("14", "N").replace("13", "M").replace("12", "L").replace("11", "K")
+                .replace("10", "I").replace("9", "I").replace("8", "H").replace("7", "G").replace("6", "F").replace("5", "E").replace("4", "D")
+                .replace("3", "C").replace("2", "B").replace("1", "A").replace("0", "");
+        convertAgain.add(pleaseWork);
+        System.out.println("Step 5 String: " + pleaseWork);
         // STEP 6
         System.out.println("Module ID - " + moduleID);
         System.out.println("Plates - " + plates);
@@ -507,6 +517,40 @@ public class unfairCipher {
         String[] output = new String[outputList.size()];
         outputList.toArray(output);
         return output;
+    }
+    private static String[] fixYourselfDammit(String[] msg) {
+        // Fix any 'X's
+        for (int a=0; a<msg.length;a+=1) {
+            String current = msg[a];
+            // probably one of the worst ways to do this, but fuck it
+            switch (current) {
+                // PCR
+                case "XCR": case "PXR": msg[a] = "PCR"; break;
+                // PCG
+                case "XCG": case "PXG": msg[a] = "PCG"; break;
+                // PCB
+                case "XCB": case "PXB": msg[a] = "PCB"; break;
+                // SUB
+                case "XUB": case "SXB": case "SUX": msg[a] = "SUB"; break;
+                // MIT
+                case "XIT": case "MXT": case "MIX": msg[a] = "MIT"; break;
+                // PRN
+                case "XRN": case "PXN": case "PRX": msg[a] = "PRN"; break;
+                // CHK
+                case "XHK": case "CXK": case "CHX": msg[a] = "CHK"; break;
+                // BOB
+                case "XOB": case "BXB": case "BOX": msg[a] = "BOB"; break;
+                // REP
+                case "XEP": case "RXP": case "REX": msg[a] = "REP"; break;
+                // EAT
+                case "XAT": case "EXT": case "EAX": msg[a] = "EAT"; break;
+                // STR
+                case "XTR": case "SXR": case "STX": msg[a] = "STR"; break;
+                // IKE
+                case "XKE": case "IXE": case "IKX": msg[a] = "IKE"; break;
+            }
+        }
+        return msg;
     }
     // Credit to Rosetta Code for the Playfair Cipher code
     private static String prepareText(String s, boolean changeJtoI) {
