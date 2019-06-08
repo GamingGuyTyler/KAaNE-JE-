@@ -8,7 +8,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d44d9dc5-2aab-40df-860d-087858e770cc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/modloader.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modloader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/unfairCipher.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/unfairCipher.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kaane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kaane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modloader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/unfairCipher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unfairCipher.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -23,44 +27,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/unfairCipher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="313" column="88" lean-forward="true" selection-start-line="313" selection-start-column="88" selection-end-line="313" selection-end-column="88" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="imports" expanded="true" />
-                <element signature="method#keyB#0;class#unfairCipher#0" />
-                <element signature="method#hexConvert#0;class#unfairCipher#0" />
-                <element signature="method#splitToThree#0;class#unfairCipher#0" />
-                <element signature="e#21424#21432#0" expanded="true" />
-                <element signature="method#generateInstructions#0;class#unfairCipher#0" />
-                <element signature="method#fixYourselfDammit#0;class#unfairCipher#0" />
-                <element signature="method#prepareText#0;class#unfairCipher#0" />
-                <element signature="method#createTable#0;class#unfairCipher#0" />
-                <element signature="method#encode#0;class#unfairCipher#0" />
-                <element signature="e#27863#27864#0" expanded="true" />
-                <element signature="e#27916#27917#0" expanded="true" />
-                <element signature="method#codec#0;class#unfairCipher#0" />
-                <element signature="e#28972#28973#0" expanded="true" />
-                <element signature="e#29023#29024#0" expanded="true" />
-                <element signature="method#caesarEncode#0;class#unfairCipher#0" />
-                <element signature="method#isPrime#0;class#unfairCipher#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/regex/Matcher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="535" column="18" selection-start-line="535" selection-start-column="18" selection-end-line="535" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/settings.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -73,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/kaane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1139">
-              <caret line="79" column="55" selection-start-line="79" selection-start-column="55" selection-end-line="79" selection-end-column="55" />
+            <state relative-caret-position="-204">
+              <caret line="39" column="66" selection-start-line="39" selection-start-column="66" selection-end-line="39" selection-end-column="66" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -89,7 +55,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/modloader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="446">
               <caret line="115" column="52" selection-start-line="115" selection-start-column="52" selection-end-line="115" selection-end-column="52" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -211,12 +177,12 @@
         <option value="$PROJECT_DIR$/src/JTextFieldLimit.java" />
         <option value="$PROJECT_DIR$/src/aa.java" />
         <option value="$PROJECT_DIR$/src/bitmaps.java" />
-        <option value="$PROJECT_DIR$/src/kaane.java" />
         <option value="$PROJECT_DIR$/src/string.java" />
         <option value="$PROJECT_DIR$/src/tangible/ListHelper.java" />
         <option value="$PROJECT_DIR$/src/PlayfairCipherEncryption.java" />
-        <option value="$PROJECT_DIR$/src/modloader.java" />
         <option value="$PROJECT_DIR$/src/unfairCipher.java" />
+        <option value="$PROJECT_DIR$/src/modloader.java" />
+        <option value="$PROJECT_DIR$/src/kaane.java" />
       </list>
     </option>
   </component>
@@ -226,7 +192,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1551" />
@@ -237,8 +203,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -319,7 +285,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.43123668" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -354,7 +320,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa3528.42106/kn.class" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa3528.42106/ko.class" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa3528.42106/kp.class" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa3528.42106/kq.class" />
@@ -454,10 +419,45 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayfairCipherEncryption.java" />
+    <entry file="file://$PROJECT_DIR$/src/unfairCipher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="606" column="46" selection-start-line="606" selection-start-column="46" selection-end-line="606" selection-end-column="46" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#keyB#0;class#unfairCipher#0" />
+            <element signature="method#playfair#0;class#unfairCipher#0" />
+            <element signature="method#hexConvert#0;class#unfairCipher#0" />
+            <element signature="method#splitToThree#0;class#unfairCipher#0" />
+            <element signature="method#generateInstructions#0;class#unfairCipher#0" />
+            <element signature="method#fixYourselfDammit#0;class#unfairCipher#0" />
+            <element signature="method#prepareText#0;class#unfairCipher#0" />
+            <element signature="method#createTable#0;class#unfairCipher#0" />
+            <element signature="method#caesarEncode#0;class#unfairCipher#0" />
+            <element signature="method#isPrime#0;class#unfairCipher#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/regex/Matcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8568">
+          <caret line="535" column="18" selection-start-line="535" selection-start-column="18" selection-end-line="535" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/net/URLClassLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
+        <state relative-caret-position="198">
           <caret line="380" column="18" selection-start-line="380" selection-start-column="18" selection-end-line="380" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="423" column="24" selection-start-line="423" selection-start-column="24" selection-end-line="423" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -466,17 +466,6 @@
         <state relative-caret-position="11815">
           <caret line="705" column="40" selection-start-line="705" selection-start-column="40" selection-end-line="705" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kaane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="79" column="55" selection-start-line="79" selection-start-column="55" selection-end-line="79" selection-end-column="55" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -534,7 +523,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/modloader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="446">
           <caret line="115" column="52" selection-start-line="115" selection-start-column="52" selection-end-line="115" selection-end-column="52" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -543,36 +532,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/regex/Matcher.java">
+    <entry file="file://$PROJECT_DIR$/src/kaane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="535" column="18" selection-start-line="535" selection-start-column="18" selection-end-line="535" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/unfairCipher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="313" column="88" lean-forward="true" selection-start-line="313" selection-start-column="88" selection-end-line="313" selection-end-column="88" />
+        <state relative-caret-position="-204">
+          <caret line="39" column="66" selection-start-line="39" selection-start-column="66" selection-end-line="39" selection-end-column="66" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="method#keyB#0;class#unfairCipher#0" />
-            <element signature="method#hexConvert#0;class#unfairCipher#0" />
-            <element signature="method#splitToThree#0;class#unfairCipher#0" />
-            <element signature="e#21424#21432#0" expanded="true" />
-            <element signature="method#generateInstructions#0;class#unfairCipher#0" />
-            <element signature="method#fixYourselfDammit#0;class#unfairCipher#0" />
-            <element signature="method#prepareText#0;class#unfairCipher#0" />
-            <element signature="method#createTable#0;class#unfairCipher#0" />
-            <element signature="method#encode#0;class#unfairCipher#0" />
-            <element signature="e#27863#27864#0" expanded="true" />
-            <element signature="e#27916#27917#0" expanded="true" />
-            <element signature="method#codec#0;class#unfairCipher#0" />
-            <element signature="e#28972#28973#0" expanded="true" />
-            <element signature="e#29023#29024#0" expanded="true" />
-            <element signature="method#caesarEncode#0;class#unfairCipher#0" />
-            <element signature="method#isPrime#0;class#unfairCipher#0" />
           </folding>
         </state>
       </provider>

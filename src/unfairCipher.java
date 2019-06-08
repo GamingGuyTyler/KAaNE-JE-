@@ -15,8 +15,6 @@ import java.io.*;
 import java.text.NumberFormat;
 import java.util.*;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class unfairCipher {
     static JFrame f;
@@ -206,7 +204,7 @@ public class unfairCipher {
             // Execute Instructions
             String[] splitMSG = splitToThree(finalMSG); // split to three for easier reading
             splitMSG = fixYourselfDammit(splitMSG); // fix itself
-            System.out.println("Fixed up: " + splitMSG[0] + splitMSG[1] + splitMSG[2] + splitMSG[3]);
+            System.out.println("Fixed up: " + splitMSG[0] + " " + splitMSG[1] + " " + splitMSG[2] + " " + splitMSG[3]);
             String strikes = strikeTB.getText();
             boolean bobSkip = bobLitInt == 1 && batteriesTotalInt == 2;
             // Grab instructions
@@ -590,6 +588,7 @@ public class unfairCipher {
         return codec(new StringBuilder(s), 4);
     }
     private static String codec(StringBuilder text, int direction) {
+        // edited slightly to match maca's code
         int len = text.length();
         for (int i = 0; i < len; i += 2) {
             char a = text.charAt(i);
@@ -603,11 +602,9 @@ public class unfairCipher {
             if (row1 == row2) {
                 col1 = (col1 + direction) % 5;
                 col2 = (col2 + direction) % 5;
-
             } else if (col1 == col2) {
                 row1 = (row1 + direction) % 5;
                 row2 = (row2 + direction) % 5;
-
             } else {
                 int tmp = col1;
                 col1 = col2;

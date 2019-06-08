@@ -94,11 +94,11 @@ public class modloader {
             System.out.println("[MODLOADER] Launching " + file.getName());
             try {
                 // Grab the URL of the file
-                URL url = file.toURI().toURL();
+                URL url = file.getParentFile().toURI().toURL();
                 URL[] urls = new URL[]{url};
                 System.out.println("[MODLOADER] URL of file: " + url);
                 // Make a ClassLoader
-                ClassLoader cl = new URLClassLoader(urls);
+                URLClassLoader cl = new URLClassLoader(urls);
                 // If the class name = file name
                 if (classCB.isSelected()) {
                     // Get the name of the class
