@@ -37,7 +37,7 @@ class kaane {
                 "101 Dalmatians","3D Maze","3D Tunnels","aa","Accumulation","Adjacent Letters", // mods
                 "Adventure Game","Air Traffic Controller","Alchemy","Algebra","Alphabet","Alphabet Numbers",
                 "Anagrams","Adv. Vent Gas","Astrology","Backgrounds","Bases","Battleship",
-                "Benedict Cumberbatch","Big Circle","Binary LEDs","Unfair Cipher","Word Scramble"};
+                "Benedict Cumberbatch","Big Circle","Binary LEDs","Bitmaps","Unfair Cipher","Word Scramble"};
         final JComboBox<String> cb=new JComboBox<>(modules);
         cb.setBounds(50,70,175,20);
         // Do the cool autocomplete stuff
@@ -95,7 +95,7 @@ class kaane {
                 case "Alchemy": alchemy.module(); break;
                 case "Binary LEDs": binaryLED.module(); break;
                 case "aa": aa.module(); break;
-                // case "Bitmaps": bitmaps.module(); break; (currently in development, won't be included in 0.7.1)
+                case "Bitmaps": bitmaps.module(); break;
                 case "Unfair Cipher": unfairCipher.module(); break;
             }
         });

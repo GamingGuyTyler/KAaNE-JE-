@@ -384,6 +384,9 @@ public class settings {
             changeText.setForeground(new Color(0,0,0,255));
             changeText.setBackground(new Color(255,255,255,255));
             x = 255;
+            // ----------------------------------------------------
+            // Primary Edgework
+            // ----------------------------------------------------
             // Re-set the Indicator Properties.
             boolean isSelected = bobCheck.isSelected();
             if (isSelected == true) {
@@ -603,44 +606,49 @@ public class settings {
             } else {
                 props.setProperty("sn1",sn1);
             }
+            String sn2;
             try {
-                String sn2 = snArr[1];
+                sn2 = snArr[1];
                 props.setProperty("sn2",sn2);
             } catch (ArrayIndexOutOfBoundsException ex) {
-                String sn2 = "B"; // Rest of the textbox is empty, so just set it as the default property.
+                sn2 = "B"; // Rest of the textbox is empty, so just set it as the default property.
                 props.setProperty("sn2",sn2);
             }
+            String sn3;
             try {
-                String sn3 = snArr[2];
+                sn3 = snArr[2];
                 props.setProperty("sn3",sn3);
             } catch (ArrayIndexOutOfBoundsException ex) {
-                String sn3 = "B";
+                sn3 = "B";
                 props.setProperty("sn3",sn3);
             }
+            String sn4;
             try {
-                String sn4 = snArr[3];
+                sn4 = snArr[3];
                 props.setProperty("sn4",sn4);
             } catch (ArrayIndexOutOfBoundsException ex) {
-                String sn4 = "0";
+                sn4 = "0";
                 props.setProperty("sn4",sn4);
             }
+            String sn5;
             try {
-                String sn5 = snArr[4];
+                sn5 = snArr[4];
                 props.setProperty("sn5",sn5);
             } catch (ArrayIndexOutOfBoundsException ex) {
-                String sn5 = "0";
+                sn5 = "0";
                 props.setProperty("sn5",sn5);
             }
+            String sn6;
             try {
-                String sn6 = snArr[5];
+                sn6 = snArr[5];
                 props.setProperty("sn6",sn6);
             } catch (ArrayIndexOutOfBoundsException ex) {
-                String sn6 = "0";
+                sn6 = "0";
                 props.setProperty("sn6",sn6);
             }
             props.setProperty("modules",moduleTB.getText());
             isSelected = dmCheck.isSelected();
-            if (isSelected == true) {
+            if (isSelected) {
                 props.setProperty("displayModule", "1");
             } else {
                 props.setProperty("displayModule","0");
@@ -649,6 +657,117 @@ public class settings {
             props.setProperty("plates",plateTB.getText());
             props.setProperty("modInd",modIndTB.getText());
             props.setProperty("modPort",modPortTB.getText());
+            // ----------------------------------------------------
+            // Secondary Edgework
+            // (Specific things to make module making easier)
+            // ----------------------------------------------------
+            // Vowel in SN
+            String vowel = "f";
+            for (String s : snArr) {
+                if (string.isVowel(s)) vowel = "t";
+            }
+            props.setProperty("snVowel",vowel);
+            // Last Digit of SN
+            int lastDigit = 0;
+            if (string.isDigit(sn6)) lastDigit = Integer.parseInt(sn6);
+            else if (string.isDigit(sn5)) lastDigit = Integer.parseInt(sn5);
+            else if (string.isDigit(sn4)) lastDigit = Integer.parseInt(sn4);
+            else if (string.isDigit(sn3)) lastDigit = Integer.parseInt(sn3);
+            else if (string.isDigit(sn2)) lastDigit = Integer.parseInt(sn2);
+            else if (string.isDigit(sn1)) lastDigit = Integer.parseInt(sn1);
+            props.setProperty("snLastDig",String.valueOf(lastDigit));
+            // First Digit of SN
+            int firstDigit = 0;
+            if (string.isDigit(sn1)) firstDigit = Integer.parseInt(sn1);
+            else if (string.isDigit(sn2)) firstDigit = Integer.parseInt(sn2);
+            else if (string.isDigit(sn3)) firstDigit = Integer.parseInt(sn3);
+            else if (string.isDigit(sn4)) firstDigit = Integer.parseInt(sn4);
+            else if (string.isDigit(sn5)) firstDigit = Integer.parseInt(sn5);
+            else if (string.isDigit(sn6)) firstDigit = Integer.parseInt(sn6);
+            props.setProperty("snFirstDig",String.valueOf(firstDigit));
+            // Unlit Indicators
+            if (bobCheck.isSelected() && !litBobCheck.isSelected()) props.setProperty("bobUnlit","1");
+            else props.setProperty("bobUnlit","0");
+            if (carCheck.isSelected() && !litCarCheck.isSelected()) props.setProperty("carUnlit","1");
+            else props.setProperty("carUnlit","0");
+            if (clrCheck.isSelected() && !litClrCheck.isSelected()) props.setProperty("clrUnlit","1");
+            else props.setProperty("clrUnlit","0");
+            if (frkCheck.isSelected() && !litFrkCheck.isSelected()) props.setProperty("frkUnlit","1");
+            else props.setProperty("frkUnlit","0");
+            if (frqCheck.isSelected() && !litFrqCheck.isSelected()) props.setProperty("frqUnlit","1");
+            else props.setProperty("frqUnlit","0");
+            if (indCheck.isSelected() && !litIndCheck.isSelected()) props.setProperty("indUnlit","1");
+            else props.setProperty("indUnlit","0");
+            if (msaCheck.isSelected() && !litMsaCheck.isSelected()) props.setProperty("msaUnlit","1");
+            else props.setProperty("msaUnlit","0");
+            if (nsaCheck.isSelected() && !litNsaCheck.isSelected()) props.setProperty("nsaUnlit","1");
+            else props.setProperty("nsaUnlit","0");
+            if (sigCheck.isSelected() && !litSigCheck.isSelected()) props.setProperty("sigUnlit","1");
+            else props.setProperty("sigUnlit","0");
+            if (sndCheck.isSelected() && !litSndCheck.isSelected()) props.setProperty("sndUnlit","1");
+            else props.setProperty("sndUnlit","0");
+            if (trnCheck.isSelected() && !litTrnCheck.isSelected()) props.setProperty("trnUnlit","1");
+            else props.setProperty("trnUnlit","0");
+            // Total Indicators
+            int inds = 0;
+            if (bobCheck.isSelected()) inds++;
+            if (carCheck.isSelected()) inds++;
+            if (clrCheck.isSelected()) inds++;
+            if (frkCheck.isSelected()) inds++;
+            if (frqCheck.isSelected()) inds++;
+            if (indCheck.isSelected()) inds++;
+            if (msaCheck.isSelected()) inds++;
+            if (nsaCheck.isSelected()) inds++;
+            if (sigCheck.isSelected()) inds++;
+            if (sndCheck.isSelected()) inds++;
+            if (trnCheck.isSelected()) inds++;
+            props.setProperty("totalInds",String.valueOf(inds));
+            // Total Indicators (+ Mods)
+            inds += Integer.parseInt(modIndTB.getText());
+            props.setProperty("totalIndsPlusMods",String.valueOf(inds));
+            // Total Lit Indicators
+            int litInds = 0;
+            if (litBobCheck.isSelected()) litInds++;
+            if (litCarCheck.isSelected()) litInds++;
+            if (litClrCheck.isSelected()) litInds++;
+            if (litFrkCheck.isSelected()) litInds++;
+            if (litFrqCheck.isSelected()) litInds++;
+            if (litIndCheck.isSelected()) litInds++;
+            if (litMsaCheck.isSelected()) litInds++;
+            if (litNsaCheck.isSelected()) litInds++;
+            if (litSigCheck.isSelected()) litInds++;
+            if (litSndCheck.isSelected()) litInds++;
+            if (litTrnCheck.isSelected()) litInds++;
+            props.setProperty("totalIndsLit",String.valueOf(litInds));
+            // Total Unlit Indicators
+            int unlitInds = 0;
+            if (bobCheck.isSelected() && !litBobCheck.isSelected()) unlitInds++;
+            if (carCheck.isSelected() && !litCarCheck.isSelected()) unlitInds++;
+            if (clrCheck.isSelected() && !litClrCheck.isSelected()) unlitInds++;
+            if (frkCheck.isSelected() && !litFrkCheck.isSelected()) unlitInds++;
+            if (frqCheck.isSelected() && !litFrqCheck.isSelected()) unlitInds++;
+            if (indCheck.isSelected() && !litIndCheck.isSelected()) unlitInds++;
+            if (msaCheck.isSelected() && !litMsaCheck.isSelected()) unlitInds++;
+            if (nsaCheck.isSelected() && !litNsaCheck.isSelected()) unlitInds++;
+            if (sigCheck.isSelected() && !litSigCheck.isSelected()) unlitInds++;
+            if (sndCheck.isSelected() && !litSndCheck.isSelected()) unlitInds++;
+            if (trnCheck.isSelected() && !litTrnCheck.isSelected()) unlitInds++;
+            props.setProperty("totalIndsUnlit",String.valueOf(unlitInds));
+            // Total Ports
+            int ports = 0;
+            ports += Integer.parseInt(dvidQuantity);
+            ports += Integer.parseInt(parallelQuantity);
+            ports += Integer.parseInt(ps2Quantity);
+            ports += Integer.parseInt(rj45Quantity);
+            ports += Integer.parseInt(serialQuantity);
+            ports += Integer.parseInt(stereoRCAQuantity);
+            props.setProperty("totalPorts",String.valueOf(ports));
+            // Total Ports (+ Mods)
+            ports += Integer.parseInt(modPortTB.getText());
+            props.setProperty("totalPortsPlusMods",String.valueOf(ports));
+            // ----------------------------------------------------
+            // Saving
+            // ----------------------------------------------------
             // Write everything into the config file.
             try {
                 FileWriter writer = new FileWriter(configFile);

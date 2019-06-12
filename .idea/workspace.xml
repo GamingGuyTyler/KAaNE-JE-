@@ -8,12 +8,77 @@
   <component name="ChangeListManager">
     <list default="true" id="d44d9dc5-2aab-40df-860d-087858e770cc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/modloader.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/modloader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/unfairCipher.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/unfairCipher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$15.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$16.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$17.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$18.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$19.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$20.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$20.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$21.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$21.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$22.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$22.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$23.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$23.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$24.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$24.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$25.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$25.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$26.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$26.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$27.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$27.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$28.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$28.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$29.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$29.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$30.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$30.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$31.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$31.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$32.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$32.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$33.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$33.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$34.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$34.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$35.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$35.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$36.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$36.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$37.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$37.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$38.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$38.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$39.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$39.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$40.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$40.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$41.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$41.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$42.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$42.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$43.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$43.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$44.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$44.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$45.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$45.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$46.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$46.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$47.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$47.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$48.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$48.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$49.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$49.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$50.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$50.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$51.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$51.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$52.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$52.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$53.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$53.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$54.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$54.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$55.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$55.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$56.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$56.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$57.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$57.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$58.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$58.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$59.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$59.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$60.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$60.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$61.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$61.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$62.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$62.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$63.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$63.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$64.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$64.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/bitmaps.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bitmaps.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/kaane.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/kaane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/settings.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/settings.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bitmaps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bitmaps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kaane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kaane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modloader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unfairCipher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unfairCipher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,11 +93,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/settings.java">
+        <entry file="file://$PROJECT_DIR$/src/kaane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11815">
-              <caret line="705" column="40" selection-start-line="705" selection-start-column="40" selection-end-line="705" selection-end-column="40" />
+            <state relative-caret-position="459">
+              <caret line="39" column="74" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
               <folding>
+                <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -40,12 +106,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/kaane.java">
+        <entry file="file://$PROJECT_DIR$/src/bitmaps.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204">
-              <caret line="39" column="66" selection-start-line="39" selection-start-column="66" selection-end-line="39" selection-end-column="66" />
+            <state relative-caret-position="450">
+              <caret line="510" column="42" selection-start-line="510" selection-start-column="42" selection-end-line="510" selection-end-column="42" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/settings.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="11492">
+              <caret line="686" column="71" selection-start-line="686" selection-start-column="71" selection-end-line="686" selection-end-column="71" />
+              <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -55,21 +133,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/modloader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
+            <state relative-caret-position="1683">
               <caret line="115" column="52" selection-start-line="115" selection-start-column="52" selection-end-line="115" selection-end-column="52" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bitmaps.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -138,9 +203,7 @@
     <findStrings>
       <find>,5,</find>
       <find>5</find>
-      <find>q2</find>
       <find>q3</find>
-      <find>q1</find>
       <find>plainText.</find>
       <find>sn1</find>
       <find>);</find>
@@ -149,12 +212,22 @@
       <find>car</find>
       <find>==</find>
       <find>Replace</find>
+      <find>q1</find>
+      <find>Arr[0</find>
+      <find>isInteger</find>
+      <find>count</find>
+      <find>Arr</find>
+      <find>{q1Arr[0][0],q1Arr[0][1],q1Arr[0][2],q1Arr[0][3],q2Arr[0][0],q2Arr[0][1],q2Arr[0][2],q2Arr[0][3]},</find>
+      <find>q2</find>
+      <find>White</find>
+      <find>white</find>
+      <find>lit</find>
+      <find>1</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>q2</replace>
       <replace>q3</replace>
-      <replace>q4</replace>
       <replace>plain.</replace>
       <replace>sn6</replace>
       <replace>));</replace>
@@ -163,6 +236,14 @@
       <replace>snd</replace>
       <replace>.equals(</replace>
       <replace>replace</replace>
+      <replace>Arr[3</replace>
+      <replace>string.isDigit</replace>
+      <replace>white</replace>
+      <replace>q4</replace>
+      <replace>Black</replace>
+      <replace>black</replace>
+      <replace>unlit</replace>
+      <replace>6</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -176,13 +257,17 @@
         <option value="$PROJECT_DIR$/src/atc.java" />
         <option value="$PROJECT_DIR$/src/JTextFieldLimit.java" />
         <option value="$PROJECT_DIR$/src/aa.java" />
-        <option value="$PROJECT_DIR$/src/bitmaps.java" />
         <option value="$PROJECT_DIR$/src/string.java" />
         <option value="$PROJECT_DIR$/src/tangible/ListHelper.java" />
         <option value="$PROJECT_DIR$/src/PlayfairCipherEncryption.java" />
         <option value="$PROJECT_DIR$/src/unfairCipher.java" />
         <option value="$PROJECT_DIR$/src/modloader.java" />
+        <option value="$PROJECT_DIR$/src/test.java" />
         <option value="$PROJECT_DIR$/src/kaane.java" />
+        <option value="$PROJECT_DIR$/src/alchemy.java" />
+        <option value="$PROJECT_DIR$/config.properties" />
+        <option value="$PROJECT_DIR$/src/settings.java" />
+        <option value="$PROJECT_DIR$/src/bitmaps.java" />
       </list>
     </option>
   </component>
@@ -193,9 +278,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1551" />
+    <option name="x" value="953" />
+    <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
@@ -203,14 +287,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="KAaNE" type="b2602c69:ProjectViewProjectNode" />
               <item name="KAaNE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KAaNE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KAaNE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="KAaNE" type="b2602c69:ProjectViewProjectNode" />
@@ -229,6 +318,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -287,7 +377,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.43123668" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.4354486" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -296,7 +386,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3296582" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32719395" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32394367" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39869988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -304,7 +394,8 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32855567" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32827735" />
+      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -320,7 +411,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa3528.42106/ko.class" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa3528.42106/kp.class" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa3528.42106/kq.class" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa3528.42106/kr.class" />
@@ -369,23 +459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/awt/event/MouseAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="73" column="16" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/alchemy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="81" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tangible.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/function/Predicate.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -411,35 +484,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PlayfairCipherEncryption.java" />
-    <entry file="file://$PROJECT_DIR$/src/unfairCipher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="606" column="46" selection-start-line="606" selection-start-column="46" selection-end-line="606" selection-end-column="46" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="method#keyB#0;class#unfairCipher#0" />
-            <element signature="method#playfair#0;class#unfairCipher#0" />
-            <element signature="method#hexConvert#0;class#unfairCipher#0" />
-            <element signature="method#splitToThree#0;class#unfairCipher#0" />
-            <element signature="method#generateInstructions#0;class#unfairCipher#0" />
-            <element signature="method#fixYourselfDammit#0;class#unfairCipher#0" />
-            <element signature="method#prepareText#0;class#unfairCipher#0" />
-            <element signature="method#createTable#0;class#unfairCipher#0" />
-            <element signature="method#caesarEncode#0;class#unfairCipher#0" />
-            <element signature="method#isPrime#0;class#unfairCipher#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/regex/Matcher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8568">
@@ -461,20 +506,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/awt/event/MouseAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="73" column="16" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unfairCipher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4505">
+          <caret line="606" column="46" selection-start-line="606" selection-start-column="46" selection-end-line="606" selection-end-column="46" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#keyB#0;class#unfairCipher#0" />
+            <element signature="method#playfair#0;class#unfairCipher#0" />
+            <element signature="method#hexConvert#0;class#unfairCipher#0" />
+            <element signature="method#splitToThree#0;class#unfairCipher#0" />
+            <element signature="method#generateInstructions#0;class#unfairCipher#0" />
+            <element signature="method#fixYourselfDammit#0;class#unfairCipher#0" />
+            <element signature="method#prepareText#0;class#unfairCipher#0" />
+            <element signature="method#createTable#0;class#unfairCipher#0" />
+            <element signature="method#caesarEncode#0;class#unfairCipher#0" />
+            <element signature="method#isPrime#0;class#unfairCipher#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/alchemy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="254" column="8" selection-start-line="254" selection-start-column="8" selection-end-line="259" selection-end-column="64" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="56" column="11" lean-forward="true" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kaane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="39" column="74" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/settings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11815">
-          <caret line="705" column="40" selection-start-line="705" selection-start-column="40" selection-end-line="705" selection-end-column="40" />
+        <state relative-caret-position="11492">
+          <caret line="686" column="71" selection-start-line="686" selection-start-column="71" selection-end-line="686" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bitmaps.java">
+    <entry file="file://$PROJECT_DIR$/src/modloader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+        <state relative-caret-position="1683">
+          <caret line="115" column="52" selection-start-line="115" selection-start-column="52" selection-end-line="115" selection-end-column="52" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
@@ -521,24 +623,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/modloader.java">
+    <entry file="file://$PROJECT_DIR$/src/bitmaps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="115" column="52" selection-start-line="115" selection-start-column="52" selection-end-line="115" selection-end-column="52" />
+        <state relative-caret-position="450">
+          <caret line="510" column="42" selection-start-line="510" selection-start-column="42" selection-end-line="510" selection-end-column="42" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kaane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="39" column="66" selection-start-line="39" selection-start-column="66" selection-end-line="39" selection-end-column="66" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
+            <element signature="e#21545#40476#1" />
           </folding>
         </state>
       </provider>
