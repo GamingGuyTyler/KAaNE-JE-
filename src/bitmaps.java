@@ -170,7 +170,10 @@ public class bitmaps {
         q4x4y4Lbl.setBounds(150,150,20,20);
         // Button
         JButton button = new JButton("OK");
-        button.setBounds(55,180,60,20);
+        button.setBounds(85,180,75,20);
+        // Clear
+        JButton clear = new JButton("CLEAR");
+        clear.setBounds(15,180,75,20);
         // Output
         JLabel output = new JLabel();
         output.setBounds(65,200,50,20);
@@ -191,7 +194,7 @@ public class bitmaps {
         f.add(q4x1y2Lbl); f.add(q4x2y2Lbl); f.add(q4x3y2Lbl); f.add(q4x4y2Lbl);
         f.add(q4x1y3Lbl); f.add(q4x2y3Lbl); f.add(q4x3y3Lbl); f.add(q4x4y3Lbl);
         f.add(q4x1y4Lbl); f.add(q4x2y4Lbl); f.add(q4x3y4Lbl); f.add(q4x4y4Lbl);
-        f.add(button); f.add(output);
+        f.add(button); f.add(output); f.add(clear);
         // Define JFrame
         f.setLayout(null);
         f.setSize(180,250);
@@ -302,23 +305,23 @@ public class bitmaps {
                     {q3Arr[3][0],q3Arr[3][1],q3Arr[3][2],q3Arr[3][3],q4Arr[3][0],q4Arr[3][1],q4Arr[3][2],q4Arr[3][3]}
             };
             // Print for debug
-            System.out.println((q1Arr[0][0] ? "[X]" : "[O]") + " " + (q1Arr[0][1] ? "[X]" : "[O]") + " " + (q1Arr[0][2] ? "[X]" : "[O]") + " " + (q1Arr[0][3] ? "[X]" : "[O]") + " | "
-                    + (q2Arr[0][0] ? "[X]" : "[O]") + " " + (q2Arr[0][1] ? "[X]" : "[O]") + " " + (q2Arr[0][2] ? "[X]" : "[O]") + " " + (q2Arr[0][3] ? "[X]" : "[O]"));
-            System.out.println((q1Arr[1][0] ? "[X]" : "[O]") + " " + (q1Arr[1][1] ? "[X]" : "[O]") + " " + (q1Arr[1][2] ? "[X]" : "[O]") + " " + (q1Arr[1][3] ? "[X]" : "[O]") + " | "
-                    + (q2Arr[1][0] ? "[X]" : "[O]") + " " + (q2Arr[1][1] ? "[X]" : "[O]") + " " + (q2Arr[1][2] ? "[X]" : "[O]") + " " + (q2Arr[1][3] ? "[X]" : "[O]"));
-            System.out.println((q1Arr[2][0] ? "[X]" : "[O]") + " " + (q1Arr[2][1] ? "[X]" : "[O]") + " " + (q1Arr[2][2] ? "[X]" : "[O]") + " " + (q1Arr[2][3] ? "[X]" : "[O]") + " | "
-                    + (q2Arr[2][0] ? "[X]" : "[O]") + " " + (q2Arr[2][1] ? "[X]" : "[O]") + " " + (q2Arr[2][2] ? "[X]" : "[O]") + " " + (q2Arr[2][3] ? "[X]" : "[O]"));
-            System.out.println((q1Arr[3][0] ? "[X]" : "[O]") + " " + (q1Arr[3][1] ? "[X]" : "[O]") + " " + (q1Arr[3][2] ? "[X]" : "[O]") + " " + (q1Arr[3][3] ? "[X]" : "[O]") + " | "
-                    + (q2Arr[3][0] ? "[X]" : "[O]") + " " + (q2Arr[3][1] ? "[X]" : "[O]") + " " + (q2Arr[3][2] ? "[X]" : "[O]") + " " + (q2Arr[3][3] ? "[X]" : "[O]"));
-            System.out.println("----------------+----------------");
-            System.out.println((q3Arr[0][0] ? "[X]" : "[O]") + " " + (q3Arr[0][1] ? "[X]" : "[O]") + " " + (q3Arr[0][2] ? "[X]" : "[O]") + " " + (q3Arr[0][3] ? "[X]" : "[O]") + " | "
-                    + (q4Arr[0][0] ? "[X]" : "[O]") + " " + (q4Arr[0][1] ? "[X]" : "[O]") + " " + (q4Arr[0][2] ? "[X]" : "[O]") + " " + (q4Arr[0][3] ? "[X]" : "[O]"));
-            System.out.println((q3Arr[1][0] ? "[X]" : "[O]") + " " + (q3Arr[1][1] ? "[X]" : "[O]") + " " + (q3Arr[1][2] ? "[X]" : "[O]") + " " + (q3Arr[1][3] ? "[X]" : "[O]") + " | "
-                    + (q4Arr[1][0] ? "[X]" : "[O]") + " " + (q4Arr[1][1] ? "[X]" : "[O]") + " " + (q4Arr[1][2] ? "[X]" : "[O]") + " " + (q4Arr[1][3] ? "[X]" : "[O]"));
-            System.out.println((q3Arr[2][0] ? "[X]" : "[O]") + " " + (q3Arr[2][1] ? "[X]" : "[O]") + " " + (q3Arr[2][2] ? "[X]" : "[O]") + " " + (q3Arr[2][3] ? "[X]" : "[O]") + " | "
-                    + (q4Arr[2][0] ? "[X]" : "[O]") + " " + (q4Arr[2][1] ? "[X]" : "[O]") + " " + (q4Arr[2][2] ? "[X]" : "[O]") + " " + (q4Arr[2][3] ? "[X]" : "[O]"));
-            System.out.println((q3Arr[3][0] ? "[X]" : "[O]") + " " + (q3Arr[3][1] ? "[X]" : "[O]") + " " + (q3Arr[3][2] ? "[X]" : "[O]") + " " + (q3Arr[3][3] ? "[X]" : "[O]") + " | "
-                    + (q4Arr[3][0] ? "[X]" : "[O]") + " " + (q4Arr[3][1] ? "[X]" : "[O]") + " " + (q4Arr[3][2] ? "[X]" : "[O]") + " " + (q4Arr[3][3] ? "[X]" : "[O]"));
+            System.out.println((q1Arr[0][0] ? "██" : "░░") + (q1Arr[0][1] ? "██" : "░░") + (q1Arr[0][2] ? "██" : "░░") + (q1Arr[0][3] ? "██" : "░░") + " | "
+                    + (q2Arr[0][0] ? "██" : "░░") + (q2Arr[0][1] ? "██" : "░░") + (q2Arr[0][2] ? "██" : "░░") + (q2Arr[0][3] ? "██" : "░░"));
+            System.out.println((q1Arr[1][0] ? "██" : "░░") + (q1Arr[1][1] ? "██" : "░░") + (q1Arr[1][2] ? "██" : "░░") + (q1Arr[1][3] ? "██" : "░░") + " | "
+                    + (q2Arr[1][0] ? "██" : "░░") + (q2Arr[1][1] ? "██" : "░░") + (q2Arr[1][2] ? "██" : "░░") + (q2Arr[1][3] ? "██" : "░░"));
+            System.out.println((q1Arr[2][0] ? "██" : "░░") + (q1Arr[2][1] ? "██" : "░░") + (q1Arr[2][2] ? "██" : "░░") + (q1Arr[2][3] ? "██" : "░░") + " | "
+                    + (q2Arr[2][0] ? "██" : "░░") + (q2Arr[2][1] ? "██" : "░░") + (q2Arr[2][2] ? "██" : "░░") + (q2Arr[2][3] ? "██" : "░░"));
+            System.out.println((q1Arr[3][0] ? "██" : "░░") + (q1Arr[3][1] ? "██" : "░░") + (q1Arr[3][2] ? "██" : "░░") + (q1Arr[3][3] ? "██" : "░░") + " | "
+                    + (q2Arr[3][0] ? "██" : "░░") + (q2Arr[3][1] ? "██" : "░░") + (q2Arr[3][2] ? "██" : "░░") + (q2Arr[3][3] ? "██" : "░░"));
+            System.out.println("--------------+--------------");
+            System.out.println((q3Arr[0][0] ? "██" : "░░") + (q3Arr[0][1] ? "██" : "░░") + (q3Arr[0][2] ? "██" : "░░") + (q3Arr[0][3] ? "██" : "░░") + " | "
+                    + (q4Arr[0][0] ? "██" : "░░") + (q4Arr[0][1] ? "██" : "░░") + (q4Arr[0][2] ? "██" : "░░") + (q4Arr[0][3] ? "██" : "░░"));
+            System.out.println((q3Arr[1][0] ? "██" : "░░") + (q3Arr[1][1] ? "██" : "░░") + (q3Arr[1][2] ? "██" : "░░") + (q3Arr[1][3] ? "██" : "░░") + " | "
+                    + (q4Arr[1][0] ? "██" : "░░") + (q4Arr[1][1] ? "██" : "░░") + (q4Arr[1][2] ? "██" : "░░") + (q4Arr[1][3] ? "██" : "░░"));
+            System.out.println((q3Arr[2][0] ? "██" : "░░") + (q3Arr[2][1] ? "██" : "░░") + (q3Arr[2][2] ? "██" : "░░") + (q3Arr[2][3] ? "██" : "░░") + " | "
+                    + (q4Arr[2][0] ? "██" : "░░") + (q4Arr[2][1] ? "██" : "░░") + (q4Arr[2][2] ? "██" : "░░") + (q4Arr[2][3] ? "██" : "░░"));
+            System.out.println((q3Arr[3][0] ? "██" : "░░") + (q3Arr[3][1] ? "██" : "░░") + (q3Arr[3][2] ? "██" : "░░") + (q3Arr[3][3] ? "██" : "░░") + " | "
+                    + (q4Arr[3][0] ? "██" : "░░") + (q4Arr[3][1] ? "██" : "░░") + (q4Arr[3][2] ? "██" : "░░") + (q4Arr[3][3] ? "██" : "░░"));
             // Get SN last digit
             int lastsn = Integer.parseInt(props.getProperty("snLastDig"));
             System.out.println("SN Last: " + lastsn);
@@ -510,6 +513,79 @@ public class bitmaps {
             System.out.println("Button - " + btn);
             output.setText("PUSH " + btn);
 
+        });
+        // Clear Button functionality
+        clear.addActionListener((ActionEvent e) -> {
+            // q1
+            q1x1y1Lbl.setIcon(whiteIcon);
+            q1x2y1Lbl.setIcon(whiteIcon);
+            q1x3y1Lbl.setIcon(whiteIcon);
+            q1x4y1Lbl.setIcon(whiteIcon);
+            q1x1y2Lbl.setIcon(whiteIcon);
+            q1x2y2Lbl.setIcon(whiteIcon);
+            q1x3y2Lbl.setIcon(whiteIcon);
+            q1x4y2Lbl.setIcon(whiteIcon);
+            q1x1y3Lbl.setIcon(whiteIcon);
+            q1x2y3Lbl.setIcon(whiteIcon);
+            q1x3y3Lbl.setIcon(whiteIcon);
+            q1x4y3Lbl.setIcon(whiteIcon);
+            q1x1y4Lbl.setIcon(whiteIcon);
+            q1x2y4Lbl.setIcon(whiteIcon);
+            q1x3y4Lbl.setIcon(whiteIcon);
+            q1x4y4Lbl.setIcon(whiteIcon);
+            // q2
+            q2x1y1Lbl.setIcon(whiteIcon);
+            q2x2y1Lbl.setIcon(whiteIcon);
+            q2x3y1Lbl.setIcon(whiteIcon);
+            q2x4y1Lbl.setIcon(whiteIcon);
+            q2x1y2Lbl.setIcon(whiteIcon);
+            q2x2y2Lbl.setIcon(whiteIcon);
+            q2x3y2Lbl.setIcon(whiteIcon);
+            q2x4y2Lbl.setIcon(whiteIcon);
+            q2x1y3Lbl.setIcon(whiteIcon);
+            q2x2y3Lbl.setIcon(whiteIcon);
+            q2x3y3Lbl.setIcon(whiteIcon);
+            q2x4y3Lbl.setIcon(whiteIcon);
+            q2x1y4Lbl.setIcon(whiteIcon);
+            q2x2y4Lbl.setIcon(whiteIcon);
+            q2x3y4Lbl.setIcon(whiteIcon);
+            q2x4y4Lbl.setIcon(whiteIcon);
+            // q3
+            q3x1y1Lbl.setIcon(whiteIcon);
+            q3x2y1Lbl.setIcon(whiteIcon);
+            q3x3y1Lbl.setIcon(whiteIcon);
+            q3x4y1Lbl.setIcon(whiteIcon);
+            q3x1y2Lbl.setIcon(whiteIcon);
+            q3x2y2Lbl.setIcon(whiteIcon);
+            q3x3y2Lbl.setIcon(whiteIcon);
+            q3x4y2Lbl.setIcon(whiteIcon);
+            q3x1y3Lbl.setIcon(whiteIcon);
+            q3x2y3Lbl.setIcon(whiteIcon);
+            q3x3y3Lbl.setIcon(whiteIcon);
+            q3x4y3Lbl.setIcon(whiteIcon);
+            q3x1y4Lbl.setIcon(whiteIcon);
+            q3x2y4Lbl.setIcon(whiteIcon);
+            q3x3y4Lbl.setIcon(whiteIcon);
+            q3x4y4Lbl.setIcon(whiteIcon);
+            // q4
+            q4x1y1Lbl.setIcon(whiteIcon);
+            q4x2y1Lbl.setIcon(whiteIcon);
+            q4x3y1Lbl.setIcon(whiteIcon);
+            q4x4y1Lbl.setIcon(whiteIcon);
+            q4x1y2Lbl.setIcon(whiteIcon);
+            q4x2y2Lbl.setIcon(whiteIcon);
+            q4x3y2Lbl.setIcon(whiteIcon);
+            q4x4y2Lbl.setIcon(whiteIcon);
+            q4x1y3Lbl.setIcon(whiteIcon);
+            q4x2y3Lbl.setIcon(whiteIcon);
+            q4x3y3Lbl.setIcon(whiteIcon);
+            q4x4y3Lbl.setIcon(whiteIcon);
+            q4x1y4Lbl.setIcon(whiteIcon);
+            q4x2y4Lbl.setIcon(whiteIcon);
+            q4x3y4Lbl.setIcon(whiteIcon);
+            q4x4y4Lbl.setIcon(whiteIcon);
+            // output
+            output.setText("");
         });
         // Label Image Changing
         // Below if condition is to make code collapsible.
