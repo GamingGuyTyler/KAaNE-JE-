@@ -8,8 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d44d9dc5-2aab-40df-860d-087858e770cc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/kaane.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/kaane.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bitmaps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bitmaps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kaane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kaane.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/kaane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="39" column="74" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
+            <state relative-caret-position="542">
+              <caret line="45" column="8" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="43" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -37,14 +38,35 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/bitmaps.java">
+        <entry file="file://$PROJECT_DIR$/src/bitwiseOperations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="315" column="61" selection-start-line="315" selection-start-column="61" selection-end-line="315" selection-end-column="61" />
+            <state relative-caret-position="-2109">
+              <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/unfairCipher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1275">
+              <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="53" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#27608#46539#1" />
+                <element signature="method#keyB#0;class#unfairCipher#0" />
+                <element signature="method#playfair#0;class#unfairCipher#0" />
+                <element signature="method#hexConvert#0;class#unfairCipher#0" />
+                <element signature="method#splitToThree#0;class#unfairCipher#0" />
+                <element signature="method#generateInstructions#0;class#unfairCipher#0" />
+                <element signature="method#fixYourselfDammit#0;class#unfairCipher#0" />
+                <element signature="method#prepareText#0;class#unfairCipher#0" />
+                <element signature="method#createTable#0;class#unfairCipher#0" />
+                <element signature="method#caesarEncode#0;class#unfairCipher#0" />
+                <element signature="method#isPrime#0;class#unfairCipher#0" />
               </folding>
             </state>
           </provider>
@@ -53,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/settings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1794">
-              <caret line="141" column="44" selection-start-line="141" selection-start-column="44" selection-end-line="141" selection-end-column="44" />
+            <state relative-caret-position="-1173">
+              <caret line="103" column="39" lean-forward="true" selection-start-line="103" selection-start-column="39" selection-end-line="103" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -65,7 +87,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/modloader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1683">
+            <state relative-caret-position="389">
               <caret line="115" column="52" selection-start-line="115" selection-start-column="52" selection-end-line="115" selection-end-column="52" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -91,11 +113,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/atc.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4267">
+            <state relative-caret-position="2837">
               <caret line="262" column="8" selection-start-line="262" selection-start-column="8" selection-end-line="263" selection-end-column="52" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
+                <element signature="e#15143#15536#0" expanded="true" />
+                <element signature="e#15535#15536#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -113,7 +137,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/wires.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5508">
+            <state relative-caret-position="1256">
               <caret line="328" column="46" selection-start-line="328" selection-start-column="46" selection-end-line="328" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -153,10 +177,13 @@
       <find>White</find>
       <find>white</find>
       <find>lit</find>
-      <find>1</find>
       <find>q1</find>
       <find>[x]</find>
       <find>+ &quot; &quot; +</find>
+      <find>int</find>
+      <find>1</find>
+      <find>[0]</find>
+      <find>&amp;&amp;</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -180,6 +207,10 @@
       <replace>q4</replace>
       <replace>██</replace>
       <replace>+</replace>
+      <replace>String</replace>
+      <replace>2</replace>
+      <replace>[1]</replace>
+      <replace>||</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -196,14 +227,15 @@
         <option value="$PROJECT_DIR$/src/string.java" />
         <option value="$PROJECT_DIR$/src/tangible/ListHelper.java" />
         <option value="$PROJECT_DIR$/src/PlayfairCipherEncryption.java" />
-        <option value="$PROJECT_DIR$/src/unfairCipher.java" />
         <option value="$PROJECT_DIR$/src/modloader.java" />
         <option value="$PROJECT_DIR$/src/test.java" />
-        <option value="$PROJECT_DIR$/src/kaane.java" />
         <option value="$PROJECT_DIR$/src/alchemy.java" />
         <option value="$PROJECT_DIR$/config.properties" />
         <option value="$PROJECT_DIR$/src/settings.java" />
         <option value="$PROJECT_DIR$/src/bitmaps.java" />
+        <option value="$PROJECT_DIR$/src/kaane.java" />
+        <option value="$PROJECT_DIR$/src/unfairCipher.java" />
+        <option value="$PROJECT_DIR$/src/bitwiseOperations.java" />
       </list>
     </option>
   </component>
@@ -213,7 +245,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -223,7 +255,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -245,6 +276,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -311,9 +343,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.4354486" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.892779" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -322,7 +354,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3296582" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32394367" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32713348" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39869988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -347,8 +379,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa3528.42106/kp.class" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa3528.42106/kq.class" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa3528.42106/kr.class" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa3528.42106/l.class" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa3528.42106/m.class" />
@@ -378,13 +408,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/binaryLED.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5610">
-          <caret line="340" column="22" selection-start-line="340" selection-start-column="22" selection-end-line="340" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -450,27 +473,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/unfairCipher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4505">
-          <caret line="606" column="46" selection-start-line="606" selection-start-column="46" selection-end-line="606" selection-end-column="46" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="method#keyB#0;class#unfairCipher#0" />
-            <element signature="method#playfair#0;class#unfairCipher#0" />
-            <element signature="method#hexConvert#0;class#unfairCipher#0" />
-            <element signature="method#splitToThree#0;class#unfairCipher#0" />
-            <element signature="method#generateInstructions#0;class#unfairCipher#0" />
-            <element signature="method#fixYourselfDammit#0;class#unfairCipher#0" />
-            <element signature="method#prepareText#0;class#unfairCipher#0" />
-            <element signature="method#createTable#0;class#unfairCipher#0" />
-            <element signature="method#caesarEncode#0;class#unfairCipher#0" />
-            <element signature="method#isPrime#0;class#unfairCipher#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/alchemy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
@@ -488,10 +490,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kaane.java">
+    <entry file="file://$PROJECT_DIR$/src/string.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="39" column="74" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
+        <state relative-caret-position="476">
+          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bitmaps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="337" column="55" lean-forward="true" selection-start-line="337" selection-start-column="55" selection-end-line="337" selection-end-column="55" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
@@ -501,8 +510,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/modloader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1683">
+        <state relative-caret-position="389">
           <caret line="115" column="52" selection-start-line="115" selection-start-column="52" selection-end-line="115" selection-end-column="52" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wires.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1256">
+          <caret line="328" column="46" selection-start-line="328" selection-start-column="46" selection-end-line="328" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/binaryLED.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5610">
+          <caret line="340" column="22" selection-start-line="340" selection-start-column="22" selection-end-line="340" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bigCircle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kaane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="45" column="8" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="43" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
@@ -523,50 +567,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/atc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4267">
+        <state relative-caret-position="2837">
           <caret line="262" column="8" selection-start-line="262" selection-start-column="8" selection-end-line="263" selection-end-column="52" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#15143#15536#0" expanded="true" />
+            <element signature="e#15535#15536#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/string.java">
+    <entry file="file://$PROJECT_DIR$/src/unfairCipher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/wires.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5508">
-          <caret line="328" column="46" selection-start-line="328" selection-start-column="46" selection-end-line="328" selection-end-column="46" />
+        <state relative-caret-position="1275">
+          <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="53" />
           <folding>
+            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="method#keyB#0;class#unfairCipher#0" />
+            <element signature="method#playfair#0;class#unfairCipher#0" />
+            <element signature="method#hexConvert#0;class#unfairCipher#0" />
+            <element signature="method#splitToThree#0;class#unfairCipher#0" />
+            <element signature="method#generateInstructions#0;class#unfairCipher#0" />
+            <element signature="method#fixYourselfDammit#0;class#unfairCipher#0" />
+            <element signature="method#prepareText#0;class#unfairCipher#0" />
+            <element signature="method#createTable#0;class#unfairCipher#0" />
+            <element signature="method#caesarEncode#0;class#unfairCipher#0" />
+            <element signature="method#isPrime#0;class#unfairCipher#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/settings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1794">
-          <caret line="141" column="44" selection-start-line="141" selection-start-column="44" selection-end-line="141" selection-end-column="44" />
+        <state relative-caret-position="-1173">
+          <caret line="103" column="39" lean-forward="true" selection-start-line="103" selection-start-column="39" selection-end-line="103" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bitmaps.java">
+    <entry file="file://$PROJECT_DIR$/src/bitwiseOperations.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="315" column="61" selection-start-line="315" selection-start-column="61" selection-end-line="315" selection-end-column="61" />
+        <state relative-caret-position="-2109">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#27608#46539#1" />
           </folding>
         </state>
       </provider>
