@@ -94,33 +94,8 @@ public class bitwiseOperations {
             byte2[3] = litBOB;
             int unlitIndicators = Integer.parseInt(props.getProperty("totalIndsUnlit"));
             byte2[4] = (unlitIndicators > 1) ? 1 : 0;
-            String sn1 = props.getProperty("sn1");
-            String sn2 = props.getProperty("sn2");
-            String sn3 = props.getProperty("sn3");
-            String sn4 = props.getProperty("sn4");
-            String sn5 = props.getProperty("sn5");
-            String sn6 = props.getProperty("sn6");
-            boolean snOdd = false;
-            if (string.isDigit(sn1)) {
-                int a = Integer.parseInt(sn1);
-                if (a % 2 == 1) snOdd = true;
-            } else if (string.isDigit(sn2)) {
-                int a = Integer.parseInt(sn2);
-                if (a % 2 == 1) snOdd = true;
-            } else if (string.isDigit(sn3)) {
-                int a = Integer.parseInt(sn3);
-                if (a % 2 == 1) snOdd = true;
-            } else if (string.isDigit(sn4)) {
-                int a = Integer.parseInt(sn4);
-                if (a % 2 == 1) snOdd = true;
-            } else if (string.isDigit(sn5)) {
-                int a = Integer.parseInt(sn5);
-                if (a % 2 == 1) snOdd = true;
-            } else if (string.isDigit(sn6)) {
-                int a = Integer.parseInt(sn6);
-                if (a % 2 == 1) snOdd = true;
-            }
-            byte2[5] = snOdd ? 1 : 0;
+            int snLastDig = Integer.parseInt(props.getProperty("snLastDig"));
+            byte2[5] = (snLastDig % 2 != 0) ? 1 : 0;
             byte2[6] = (modules % 2 == 0) ? 1 : 0;
             int totalBats = Integer.parseInt(props.getProperty("batteriesTotal"));
             byte2[7] = (totalBats >= 2) ? 1 : 0;

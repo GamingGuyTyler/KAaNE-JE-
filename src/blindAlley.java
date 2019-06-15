@@ -215,7 +215,7 @@ public class blindAlley {
         }
         System.out.println("Highest Value: " + highestVal);
         // Find which ones have the highest value
-        for (int index = 1; index < conditions.length; index++) {
+        for (int index = 0; index < conditions.length; index++) {
             if (conditions[index] == highestVal) {
                 output[index] = true;
                 System.out.println("Region " + (index + 1) + " is TRUE");
