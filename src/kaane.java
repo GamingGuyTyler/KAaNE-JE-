@@ -38,7 +38,7 @@ class kaane {
                 "Adventure Game","Air Traffic Controller","Alchemy","Algebra","Alphabet","Alphabet Numbers",
                 "Anagrams","Adv. Vent Gas","Astrology","Backgrounds","Bases","Battleship",
                 "Benedict Cumberbatch","Big Circle","Binary LEDs","Bitmaps","Bitwise Operations","Blind Alley",
-                "Blind Maze","Unfair Cipher","Word Scramble"};
+                "Blind Maze","Boolean Venn Diagram","Unfair Cipher","Word Scramble"};
         final JComboBox<String> cb=new JComboBox<>(modules);
         cb.setBounds(50,70,175,20);
         // Do the cool autocomplete stuff
@@ -101,6 +101,7 @@ class kaane {
                 case "Bitwise Operations": bitwiseOperations.module(); break;
                 case "Blind Alley": blindAlley.module(); break;
                 case "Blind Maze": blindMaze.module(); break;
+                case "Boolean Venn Diagram": boolVennDiagram.module(); break;
             }
         });
     }
