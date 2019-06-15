@@ -765,6 +765,15 @@ public class settings {
             // Total Ports (+ Mods)
             ports += Integer.parseInt(modPortTB.getText());
             props.setProperty("totalPortsPlusMods",String.valueOf(ports));
+            // Total Port Types
+            int portTypes = 0;
+            portTypes += Integer.parseInt(dvidQuantity) > 0 ? 1 : 0;
+            portTypes += Integer.parseInt(parallelQuantity) > 0 ? 1 : 0;
+            portTypes += Integer.parseInt(ps2Quantity) > 0 ? 1 : 0;
+            portTypes += Integer.parseInt(rj45Quantity) > 0 ? 1 : 0;
+            portTypes += Integer.parseInt(serialQuantity) > 0 ? 1 : 0;
+            portTypes += Integer.parseInt(stereoRCAQuantity) > 0 ? 1 : 0;
+            props.getProperty("totalPortTypes",String.valueOf(portTypes));
             // ----------------------------------------------------
             // Saving
             // ----------------------------------------------------
