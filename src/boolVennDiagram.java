@@ -44,41 +44,52 @@ public class boolVennDiagram {
         changeBtn.setBounds(190,5,100,20);
         JButton button = new JButton("OK");
         button.setBounds(230,50,60,20);
-        // Output (TEMP)
-        // TODO: Make a fancy image output system
-        JTextField outNONE = new JTextField("NONE: FALSE");
-        outNONE.setBounds(205,80,85,20);
-        outNONE.setEditable(false);
-        JTextField outC = new JTextField("C: FALSE");
-        outC.setBounds(165,120,80,20);
-        outC.setEditable(false);
-        JTextField outB = new JTextField("B: FALSE");
-        outB.setBounds(5,120,80,20);
-        outB.setEditable(false);
-        JTextField outBC = new JTextField("BC: FALSE");
-        outBC.setBounds(85,120,80,20);
-        outBC.setEditable(false);
-        JTextField outA = new JTextField("A: FALSE");
-        outA.setBounds(85,80,80,20);
-        outA.setEditable(false);
-        JTextField outAC = new JTextField("AC: FALSE");
-        outAC.setBounds(165,100,80,20);
-        outAC.setEditable(false);
-        JTextField outAB = new JTextField("AB: FALSE");
-        outAB.setBounds(5,100,80,20);
-        outAB.setEditable(false);
-        JTextField outABC = new JTextField("ABC: FALSE");
-        outABC.setBounds(85,100,80,20);
-        outABC.setEditable(false);
+        // Output
+        ImageIcon vennDiag = new ImageIcon("imgs/boolVennDiagram/venndiag.png");
+        ImageIcon Agreen = new ImageIcon("imgs/boolVennDiagram/Agreen.png");
+        ImageIcon Bgreen = new ImageIcon("imgs/boolVennDiagram/Bgreen.png");
+        ImageIcon Cgreen = new ImageIcon("imgs/boolVennDiagram/Cgreen.png");
+        ImageIcon ABgreen = new ImageIcon("imgs/boolVennDiagram/ABgreen.png");
+        ImageIcon ACgreen = new ImageIcon("imgs/boolVennDiagram/ACgreen.png");
+        ImageIcon BCgreen = new ImageIcon("imgs/boolVennDiagram/BCgreen.png");
+        ImageIcon ABCgreen = new ImageIcon("imgs/boolVennDiagram/ABCgreen.png");
+        ImageIcon NONEgreen = new ImageIcon("imgs/boolVennDiagram/NONEgreen.png");
+        ImageIcon Ared = new ImageIcon("imgs/boolVennDiagram/Ared.png");
+        ImageIcon Bred = new ImageIcon("imgs/boolVennDiagram/Bred.png");
+        ImageIcon Cred = new ImageIcon("imgs/boolVennDiagram/Cred.png");
+        ImageIcon ABred = new ImageIcon("imgs/boolVennDiagram/ABred.png");
+        ImageIcon ACred = new ImageIcon("imgs/boolVennDiagram/ACred.png");
+        ImageIcon BCred = new ImageIcon("imgs/boolVennDiagram/BCred.png");
+        ImageIcon ABCred = new ImageIcon("imgs/boolVennDiagram/ABCred.png");
+        ImageIcon NONEred = new ImageIcon("imgs/boolVennDiagram/NONEred.png");
+        JLabel vennDiagram = new JLabel(vennDiag);
+        vennDiagram.setBounds(25,75,244,234);
+        JLabel outA = new JLabel(Agreen);
+        outA.setBounds(68,78,157,77);
+        JLabel outAB = new JLabel(ABgreen);
+        outAB.setBounds(68,148,75,76);
+        JLabel outABC = new JLabel(ABCgreen);
+        outABC.setBounds(108,159,77,77);
+        JLabel outAC = new JLabel(ACgreen);
+        outAC.setBounds(151,148,74,75);
+        JLabel outB = new JLabel(Bgreen);
+        outB.setBounds(28,160,115,146);
+        JLabel outBC = new JLabel(BCgreen);
+        outBC.setBounds(108,230,77,64);
+        JLabel outC = new JLabel(Cgreen);
+        outC.setBounds(150,160,116,146);
+        JLabel outNONE = new JLabel(NONEgreen);
+        outNONE.setBounds(240,80,43,43);
         // Add
         f.add(expressionOut);
         f.add(logicCB1); f.add(logicCB2);
         f.add(logicLabel1); f.add(logicLabel2);
         f.add(updateBtn); f.add(changeBtn);
         f.add(button);
-        f.add(outNONE); f.add(outABC);
-        f.add(outA); f.add(outB); f.add(outC);
-        f.add(outAB); f.add(outAC); f.add(outBC);
+        f.add(vennDiagram);
+                      f.add(outA);   f.add(outNONE);
+        f.add(outAB); f.add(outABC); f.add(outAC);
+        f.add(outB);  f.add(outBC);  f.add(outC);
         // Define JFrame
         f.setLayout(null);
         f.setSize(300,102);
@@ -114,8 +125,9 @@ public class boolVennDiagram {
             String[] results = new String[8];
             for (int i = 0; i < 8; i++) {
                 results[i] = sol[i] == 1 ? "TRUE" : "FALSE";
-                System.out.println(results[i]);
+                System.out.println("Result " + i + " - " + results[i]);
             }
+            /**
             outNONE.setText("NONE: " + results[0]);
             outC.setText("C: " + results[1]);
             outB.setText("B: " + results[2]);
@@ -124,7 +136,17 @@ public class boolVennDiagram {
             outAC.setText("AC: " + results[5]);
             outAB.setText("AB: " + results[6]);
             outABC.setText("ABC: " + results[7]);
-            f.setSize(300,180);
+             */
+            // Output
+            if (results[0].equals("TRUE")) outNONE.setIcon(NONEgreen); else outNONE.setIcon(NONEred);
+            if (results[1].equals("TRUE")) outC.setIcon(Cgreen); else outC.setIcon(Cred);
+            if (results[2].equals("TRUE")) outB.setIcon(Bgreen); else outB.setIcon(Bred);
+            if (results[3].equals("TRUE")) outBC.setIcon(BCgreen); else outBC.setIcon(BCred);
+            if (results[4].equals("TRUE")) outA.setIcon(Agreen); else outA.setIcon(Ared);
+            if (results[5].equals("TRUE")) outAC.setIcon(ACgreen); else outAC.setIcon(ACred);
+            if (results[6].equals("TRUE")) outAB.setIcon(ABgreen); else outAB.setIcon(ABred);
+            if (results[7].equals("TRUE")) outABC.setIcon(ABCgreen); else outABC.setIcon(ABCred);
+            f.setSize(300,340);
         });
         // Update Expression
         updateBtn.addActionListener((ActionEvent e) -> {
