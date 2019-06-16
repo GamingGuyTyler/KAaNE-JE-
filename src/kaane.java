@@ -33,12 +33,12 @@ class kaane {
         String modules[]={"","Settings", "Custom Modloader", // KAaNE menus
                 "Wires","Button","Keypad","Simon Says", // vanilla
                 "Who's on First","Memory","Morse Code","Complicated Wires","Wire Sequences",
-                "Mazes","Passwords","Needy Gas","Capciator Discharge","Needy Knobs",
+                "Mazes","Passwords","Needy Gas","Capacitor Discharge","Needy Knobs",
                 "101 Dalmatians","3D Maze","3D Tunnels","aa","Accumulation","Adjacent Letters", // mods
                 "Adventure Game","Air Traffic Controller","Alchemy","Algebra","Alphabet","Alphabet Numbers",
                 "Anagrams","Adv. Vent Gas","Astrology","Backgrounds","Bases","Battleship",
                 "Benedict Cumberbatch","Big Circle","Binary LEDs","Bitmaps","Bitwise Operations","Blind Alley",
-                "Blind Maze","Boolean Venn Diagram","Unfair Cipher","Word Scramble"};
+                "Blind Maze","Boolean Venn Diagram","Broken Buttons","Unfair Cipher","Word Scramble"};
         final JComboBox<String> cb=new JComboBox<>(modules);
         cb.setBounds(50,70,175,20);
         // Do the cool autocomplete stuff
@@ -72,7 +72,7 @@ class kaane {
                 case "Mazes": mazes.module(); break;
                 case "Passwords": passwords.module(); break;
                 case "Needy Gas": needyGas.module(); break;
-                case "Capciator Discharge": needyCD.module(); break;
+                case "Capacitor Discharge": needyCD.module(); break;
                 case "Needy Knobs": needyKnobs.module(); break;
                 case "Adventure Game": adventureGame.module(); break;
                 case "Algebra": algebra.module(); break;
@@ -102,6 +102,7 @@ class kaane {
                 case "Blind Alley": blindAlley.module(); break;
                 case "Blind Maze": blindMaze.module(); break;
                 case "Boolean Venn Diagram": boolVennDiagram.module(); break;
+                case "Broken Buttons": brokenButtons.module(); break;
             }
         });
     }
