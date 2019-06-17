@@ -24,6 +24,10 @@ public class brokenButtons {
         f = new JFrame("KAaNE [BROKEN BTNS]");
         ImageIcon icon = new ImageIcon("imgs/icons/Broken Buttons.png");
         f.setIconImage(icon.getImage());
+        // Ensure it's reset
+        pressed = 0;
+        submit = "L";
+        letterE = false;
         // CB
         String[] words = {"BOMB","BLAST","BOOM","BURST", // Explosions
         "WIRE","BUTTON","MODULE","LIGHT","LED","SWITCH","RJ-45","DVI-D","RCA","PS/2","SERIAL","PORT", // Bomb Components
@@ -231,8 +235,8 @@ public class brokenButtons {
                     System.out.println("Pressed: " + pressed);
                 }
                 else if (lessThan3.size() > 0) {
-                    System.out.println("Press >3 letters (rule 8)");
-                    output.append("Press any button that has >3 letters, then replace text and press OK on here\n");
+                    System.out.println("Press < 3 letters (rule 8)");
+                    output.append("Press any button that has < 3 letters, then replace text and press OK on here\n");
                     pressed++;
                     System.out.println("Pressed: " + pressed);
                 }
@@ -254,7 +258,7 @@ public class brokenButtons {
                     for (String currBtn : colArr) {
                         int z = getPos(currBtn,buttonPos);
                         for (int x = 0; x < 3; x++) {
-                            sol.add(buttonPos[z][x]);
+                            sol.add(buttonPos[z-1][x]);
                         }
                     }
                     String[] solArr = new String[sol.size()];
@@ -262,7 +266,7 @@ public class brokenButtons {
                     System.out.println("Press any row that has a column button in it. (rule 11)");
                     System.out.println("[That would be either " + solArr[0] + ", " + solArr[1] + ", or " + solArr[2] + "]");
                     output.append("Press any row that has a column button in it, then replace text and press OK on here.\n");
-                    output.append("(That would be either " + solArr[0] + ", "+ solArr[1] + ", or " + solArr[3] + ")\n");
+                    output.append("(That would be either " + solArr[0] + ", "+ solArr[1] + ", or " + solArr[2] + ")\n");
                     pressed++;
                     System.out.println("Pressed: " + pressed);
                 }
@@ -274,8 +278,12 @@ public class brokenButtons {
                     System.out.println("Pressed: " + pressed);
                 }
                 else {
+                    if (letterE) {
+                        System.out.println("Submit on RIGHT (rule 13)");
+                        submit = "R";
+                    }
                     submit = (submit.equals("L")) ? "left" : "right";
-                    System.out.println("Press the " + submit + " submit button (rule 13)");
+                    System.out.println("Press the " + submit + " submit button (rule 14)");
                     output.append("Press the " + submit + " submit button\n");
                 }
             }
@@ -299,10 +307,10 @@ public class brokenButtons {
             submit = "L";
             letterE = false;
         });
-        pressIfLetterE.addActionListener((ActionEvent e) ->
+        pressIfLetterE.addActionListener((ActionEvent e) -> {
             // The sole purpose of this button is to make coding easier.
-            letterE = true
-        );
+            if (pressed == 1) letterE = true;
+        });
     }
     private static ArrayList getButtons(String Text,String[] Buttons) {
         ArrayList Found = new ArrayList();
@@ -313,16 +321,16 @@ public class brokenButtons {
     }
     private static ArrayList getDuplicates(String[] buttons) {
         ArrayList dupeButtons = new ArrayList();
-        for (String btn1 : buttons)
-            if (btn1.length() > 1)
-                for (String btn2 : buttons)
-                    if (btn1.equals(btn2))
-                        dupeButtons.add(btn1);
+        for (int i = 0; i < buttons.length-1; i++)
+            if (buttons[i].length() > 1)
+                for (int j = i + 1; j < buttons.length; j++)
+                    if (buttons[i].equals(buttons[j]))
+                        dupeButtons.add(buttons[i]);
         return dupeButtons;
     }
     private static int getPos(String text, String[][] buttons) {
-        for (int x = 0; x<buttons.length; x++)
-            for (int y = 0; y<buttons.length; y++)
+        for (int x = 0; x<4; x++)
+            for (int y = 0; y<3; y++)
                 if (text.equals(buttons[x][y]))
                     return y;
         return 0;

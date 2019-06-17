@@ -87,6 +87,10 @@ public class theBulb {
         f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         f.setVisible(true);
         button.addActionListener((ActionEvent e) -> {
+            output.setText("");
+            stage = 1;
+            pressI = false;
+            answered = false;
             color = (String) colorCB.getItemAt(colorCB.getSelectedIndex());
             clear = clearCB.isSelected();
             light = lightCB.isSelected();
