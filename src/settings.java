@@ -685,6 +685,17 @@ public class settings {
             else if (string.isDigit(sn5)) firstDigit = Integer.parseInt(sn5);
             else if (string.isDigit(sn6)) firstDigit = Integer.parseInt(sn6);
             props.setProperty("snFirstDig",String.valueOf(firstDigit));
+            // Total Digits/Letters in SN
+            int snDigs = 0;
+            int snLets = 0;
+            if (string.isDigit(sn1)) snDigs++; else snLets++;
+            if (string.isDigit(sn2)) snDigs++; else snLets++;
+            if (string.isDigit(sn3)) snDigs++; else snLets++;
+            if (string.isDigit(sn4)) snDigs++; else snLets++;
+            if (string.isDigit(sn5)) snDigs++; else snLets++;
+            if (string.isDigit(sn6)) snDigs++; else snLets++;
+            props.setProperty("snTotalDigs",String.valueOf(snDigs));
+            props.setProperty("snTotalLets",String.valueOf(snLets));
             // Unlit Indicators
             if (bobCheck.isSelected() && !litBobCheck.isSelected()) props.setProperty("bobUnlit","1");
             else props.setProperty("bobUnlit","0");
