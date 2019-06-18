@@ -39,7 +39,7 @@ class kaane {
                 "Anagrams","Adv. Vent Gas","Astrology","Backgrounds","Bases","Battleship",
                 "Benedict Cumberbatch","Big Circle","Binary LEDs","Bitmaps","Bitwise Operations","Blind Alley",
                 "Blind Maze","Boolean Venn Diagram","Broken Buttons","The Bulb","Burglar Alarm","Unfair Cipher",
-                "Word Scramble"};
+                "Wire Placement","Word Scramble"};
         final JComboBox<String> cb=new JComboBox<>(modules);
         cb.setBounds(50,70,175,20);
         // Do the cool autocomplete stuff
@@ -106,6 +106,7 @@ class kaane {
                 case "Broken Buttons": brokenButtons.module(); break;
                 case "The Bulb": theBulb.module(); break;
                 case "Burglar Alarm": burglarAlarm.module(); break;
+                case "Wire Placement": wirePlacement.module(); break;
             }
         });
     }

@@ -9,9 +9,7 @@
     <list default="true" id="d44d9dc5-2aab-40df-860d-087858e770cc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/kaane.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/kaane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kaane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kaane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,8 +26,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/kaane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1819">
-              <caret line="107" column="67" selection-start-line="107" selection-start-column="67" selection-end-line="107" selection-end-column="67" />
+            <state relative-caret-position="699">
+              <caret line="108" column="63" selection-start-line="108" selection-start-column="63" selection-end-line="108" selection-end-column="63" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -39,11 +37,58 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/burglarAlarm.java">
+        <entry file="file://$PROJECT_DIR$/src/wirePlacement.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+              <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
               <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3242#3294#0" />
+                <element signature="e#3252#3550#1" />
+                <element signature="e#3405#3783#0" expanded="true" />
+                <element signature="e#3782#3783#0" expanded="true" />
+                <element signature="e#3825#4203#0" expanded="true" />
+                <element signature="e#4202#4203#0" expanded="true" />
+                <element signature="e#4245#4623#0" expanded="true" />
+                <element signature="e#4622#4623#0" expanded="true" />
+                <element signature="e#4665#5043#0" expanded="true" />
+                <element signature="e#5042#5043#0" expanded="true" />
+                <element signature="e#5085#5463#0" expanded="true" />
+                <element signature="e#5462#5463#0" expanded="true" />
+                <element signature="e#5505#5883#0" expanded="true" />
+                <element signature="e#5882#5883#0" expanded="true" />
+                <element signature="e#5925#6303#0" expanded="true" />
+                <element signature="e#6302#6303#0" expanded="true" />
+                <element signature="e#6345#6723#0" expanded="true" />
+                <element signature="e#6722#6723#0" expanded="true" />
+                <element signature="e#6765#7143#0" expanded="true" />
+                <element signature="e#7142#7143#0" expanded="true" />
+                <element signature="e#7185#7563#0" expanded="true" />
+                <element signature="e#7562#7563#0" expanded="true" />
+                <element signature="e#7605#7983#0" expanded="true" />
+                <element signature="e#7982#7983#0" expanded="true" />
+                <element signature="e#8025#8403#0" expanded="true" />
+                <element signature="e#8402#8403#0" expanded="true" />
+                <element signature="e#8445#8823#0" expanded="true" />
+                <element signature="e#8822#8823#0" expanded="true" />
+                <element signature="e#8865#9243#0" expanded="true" />
+                <element signature="e#9242#9243#0" expanded="true" />
+                <element signature="e#9285#9663#0" expanded="true" />
+                <element signature="e#9662#9663#0" expanded="true" />
+                <element signature="e#9705#10083#0" expanded="true" />
+                <element signature="e#10082#10083#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/burglarAlarm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="72" selection-end-column="27" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -53,8 +98,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/settings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="697" column="68" lean-forward="true" selection-start-line="697" selection-start-column="68" selection-end-line="697" selection-end-column="68" />
+            <state relative-caret-position="11679">
+              <caret line="697" column="68" selection-start-line="697" selection-start-column="68" selection-end-line="697" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -65,7 +110,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/unfairCipher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3468">
+            <state relative-caret-position="3688">
               <caret line="218" column="17" selection-start-line="218" selection-start-column="17" selection-end-line="218" selection-end-column="17" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -88,8 +133,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/boolVennDiagram.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1581">
-              <caret line="93" column="8" selection-start-line="93" selection-start-column="8" selection-end-line="99" selection-end-column="27" />
+            <state relative-caret-position="509">
+              <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -101,8 +146,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/blindMaze.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="50" column="8" lean-forward="true" selection-start-line="50" selection-start-column="8" selection-end-line="52" selection-end-column="46" />
+            <state relative-caret-position="595">
+              <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="52" selection-end-column="46" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -122,25 +167,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>==</find>
-      <find>Replace</find>
-      <find>Arr[0</find>
-      <find>isInteger</find>
-      <find>count</find>
-      <find>Arr</find>
-      <find>{q1Arr[0][0],q1Arr[0][1],q1Arr[0][2],q1Arr[0][3],q2Arr[0][0],q2Arr[0][1],q2Arr[0][2],q2Arr[0][3]},</find>
-      <find>q2</find>
-      <find>White</find>
-      <find>white</find>
-      <find>lit</find>
-      <find>q1</find>
       <find>[x]</find>
       <find>+ &quot; &quot; +</find>
       <find>int</find>
       <find>[0]</find>
       <find>&amp;&amp;</find>
       <find>20</find>
-      <find>1</find>
       <find>north</find>
       <find>)</find>
       <find>totalPortType</find>
@@ -152,19 +184,21 @@
       <find>n3</find>
       <find>solvedModulesTB</find>
       <find>setValue</find>
+      <find>,5,</find>
+      <find>1</find>
+      <find>reA</find>
+      <find>white</find>
+      <find>oCut</find>
+      <find>eA</find>
+      <find>3</find>
+      <find>=</find>
+      <find>Blue</find>
+      <find>A</find>
+      <find>return</find>
+      <find>;</find>
+      <find>&quot;);</find>
     </findStrings>
     <replaceStrings>
-      <replace>Int</replace>
-      <replace>UnlitInt</replace>
-      <replace>snd</replace>
-      <replace>.equals(</replace>
-      <replace>replace</replace>
-      <replace>Arr[3</replace>
-      <replace>string.isDigit</replace>
-      <replace>white</replace>
-      <replace>Black</replace>
-      <replace>black</replace>
-      <replace>unlit</replace>
       <replace>6</replace>
       <replace>q4</replace>
       <replace>██</replace>
@@ -184,6 +218,17 @@
       <replace>JTextField</replace>
       <replace>red</replace>
       <replace>n12</replace>
+      <replace>,65,</replace>
+      <replace>reD</replace>
+      <replace>blue</replace>
+      <replace>ontCut</replace>
+      <replace>eD</replace>
+      <replace>4</replace>
+      <replace>BLU</replace>
+      <replace>D</replace>
+      <replace>out =</replace>
+      <replace>; break;</replace>
+      <replace>, cut&quot;);</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -211,10 +256,11 @@
         <option value="$PROJECT_DIR$/src/boolVennDiagram.java" />
         <option value="$PROJECT_DIR$/src/brokenButtons.java" />
         <option value="$PROJECT_DIR$/src/theBulb.java" />
-        <option value="$PROJECT_DIR$/src/kaane.java" />
         <option value="$PROJECT_DIR$/src/settings.java" />
         <option value="$PROJECT_DIR$/config.properties" />
         <option value="$PROJECT_DIR$/src/burglarAlarm.java" />
+        <option value="$PROJECT_DIR$/src/kaane.java" />
+        <option value="$PROJECT_DIR$/src/wirePlacement.java" />
       </list>
     </option>
   </component>
@@ -254,8 +300,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -387,7 +433,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa3528.42106/rain.png" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa3528.42106/rock.png" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa3528.42106/s.class" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa3528.42106/shadow.png" />
@@ -532,17 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bitmaps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16677">
-          <caret line="993" column="4" selection-start-line="993" selection-start-column="4" selection-end-line="1001" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/blindAlley.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -565,27 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/unfairCipher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3468">
-          <caret line="218" column="17" selection-start-line="218" selection-start-column="17" selection-end-line="218" selection-end-column="17" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="method#keyB#0;class#unfairCipher#0" />
-            <element signature="method#playfair#0;class#unfairCipher#0" />
-            <element signature="method#hexConvert#0;class#unfairCipher#0" />
-            <element signature="method#splitToThree#0;class#unfairCipher#0" />
-            <element signature="method#generateInstructions#0;class#unfairCipher#0" />
-            <element signature="method#fixYourselfDammit#0;class#unfairCipher#0" />
-            <element signature="method#prepareText#0;class#unfairCipher#0" />
-            <element signature="method#createTable#0;class#unfairCipher#0" />
-            <element signature="method#caesarEncode#0;class#unfairCipher#0" />
-            <element signature="method#isPrime#0;class#unfairCipher#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/adventureGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8916">
@@ -604,43 +617,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kaane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1819">
-          <caret line="107" column="67" selection-start-line="107" selection-start-column="67" selection-end-line="107" selection-end-column="67" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/theBulb.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1360">
           <caret line="80" column="8" selection-start-line="80" selection-start-column="8" selection-end-line="87" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/boolVennDiagram.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1581">
-          <caret line="93" column="8" selection-start-line="93" selection-start-column="8" selection-end-line="99" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/blindMaze.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="50" column="8" lean-forward="true" selection-start-line="50" selection-start-column="8" selection-end-line="52" selection-end-column="46" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
@@ -659,16 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="697" column="68" lean-forward="true" selection-start-line="697" selection-start-column="68" selection-end-line="697" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -693,12 +663,134 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/burglarAlarm.java">
+    <entry file="file://$PROJECT_DIR$/src/settings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+        <state relative-caret-position="11679">
+          <caret line="697" column="68" selection-start-line="697" selection-start-column="68" selection-end-line="697" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/blindMaze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="52" selection-end-column="46" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unfairCipher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3688">
+          <caret line="218" column="17" selection-start-line="218" selection-start-column="17" selection-end-line="218" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#keyB#0;class#unfairCipher#0" />
+            <element signature="method#playfair#0;class#unfairCipher#0" />
+            <element signature="method#hexConvert#0;class#unfairCipher#0" />
+            <element signature="method#splitToThree#0;class#unfairCipher#0" />
+            <element signature="method#generateInstructions#0;class#unfairCipher#0" />
+            <element signature="method#fixYourselfDammit#0;class#unfairCipher#0" />
+            <element signature="method#prepareText#0;class#unfairCipher#0" />
+            <element signature="method#createTable#0;class#unfairCipher#0" />
+            <element signature="method#caesarEncode#0;class#unfairCipher#0" />
+            <element signature="method#isPrime#0;class#unfairCipher#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/boolVennDiagram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kaane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="699">
+          <caret line="108" column="63" selection-start-line="108" selection-start-column="63" selection-end-line="108" selection-end-column="63" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/burglarAlarm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="72" selection-end-column="27" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bitmaps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="938" column="21" selection-start-line="938" selection-start-column="21" selection-end-line="939" selection-end-column="56" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#47124#47376#0" expanded="true" />
+            <element signature="e#47375#47376#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wirePlacement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3242#3294#0" />
+            <element signature="e#3252#3550#1" />
+            <element signature="e#3405#3783#0" expanded="true" />
+            <element signature="e#3782#3783#0" expanded="true" />
+            <element signature="e#3825#4203#0" expanded="true" />
+            <element signature="e#4202#4203#0" expanded="true" />
+            <element signature="e#4245#4623#0" expanded="true" />
+            <element signature="e#4622#4623#0" expanded="true" />
+            <element signature="e#4665#5043#0" expanded="true" />
+            <element signature="e#5042#5043#0" expanded="true" />
+            <element signature="e#5085#5463#0" expanded="true" />
+            <element signature="e#5462#5463#0" expanded="true" />
+            <element signature="e#5505#5883#0" expanded="true" />
+            <element signature="e#5882#5883#0" expanded="true" />
+            <element signature="e#5925#6303#0" expanded="true" />
+            <element signature="e#6302#6303#0" expanded="true" />
+            <element signature="e#6345#6723#0" expanded="true" />
+            <element signature="e#6722#6723#0" expanded="true" />
+            <element signature="e#6765#7143#0" expanded="true" />
+            <element signature="e#7142#7143#0" expanded="true" />
+            <element signature="e#7185#7563#0" expanded="true" />
+            <element signature="e#7562#7563#0" expanded="true" />
+            <element signature="e#7605#7983#0" expanded="true" />
+            <element signature="e#7982#7983#0" expanded="true" />
+            <element signature="e#8025#8403#0" expanded="true" />
+            <element signature="e#8402#8403#0" expanded="true" />
+            <element signature="e#8445#8823#0" expanded="true" />
+            <element signature="e#8822#8823#0" expanded="true" />
+            <element signature="e#8865#9243#0" expanded="true" />
+            <element signature="e#9242#9243#0" expanded="true" />
+            <element signature="e#9285#9663#0" expanded="true" />
+            <element signature="e#9662#9663#0" expanded="true" />
+            <element signature="e#9705#10083#0" expanded="true" />
+            <element signature="e#10082#10083#0" expanded="true" />
           </folding>
         </state>
       </provider>
