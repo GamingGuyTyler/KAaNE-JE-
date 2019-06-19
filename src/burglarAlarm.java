@@ -73,6 +73,8 @@ public class burglarAlarm {
         f.setVisible(true);
         // Do logic
         button.addActionListener((ActionEvent e) -> {
+            moduleNumStr = "";
+            moduleNumArrList = new ArrayList<>();
             solved = Integer.parseInt(solvedTB.getText());
             moduleNumStr = moduleNumberTB.getText();
             for (int i = 0; i<moduleNumStr.length(); i++) {

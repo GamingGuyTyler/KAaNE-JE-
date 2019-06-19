@@ -28,62 +28,67 @@ public class wirePlacement {
         ImageIcon whiteIcon = new ImageIcon("imgs/wirePlacement/white.png");
         ImageIcon blackIcon = new ImageIcon("imgs/wirePlacement/black.png");
         JLabel wireA1lbl = new JLabel(whiteIcon);
-        wireA1lbl.setBounds(5,5,20,20);
+        wireA1lbl.setBounds(5,5,40,40);
         JLabel wireA2lbl = new JLabel(whiteIcon);
-        wireA2lbl.setBounds(5,25,20,20);
+        wireA2lbl.setBounds(5,45,40,40);
         JLabel wireA3lbl = new JLabel(whiteIcon);
-        wireA3lbl.setBounds(5,45,20,20);
+        wireA3lbl.setBounds(5,85,40,40);
         JLabel wireA4lbl = new JLabel(whiteIcon);
-        wireA4lbl.setBounds(5,65,20,20);
+        wireA4lbl.setBounds(5,125,40,40);
         JLabel wireB1lbl = new JLabel(whiteIcon);
-        wireB1lbl.setBounds(25,5,20,20);
+        wireB1lbl.setBounds(45,5,40,40);
         JLabel wireB2lbl = new JLabel(whiteIcon);
-        wireB2lbl.setBounds(25,25,20,20);
+        wireB2lbl.setBounds(45,45,40,40);
         JLabel wireB3lbl = new JLabel(whiteIcon);
-        wireB3lbl.setBounds(25,45,20,20);
+        wireB3lbl.setBounds(45,85,40,40);
         JLabel wireB4lbl = new JLabel(whiteIcon);
-        wireB4lbl.setBounds(25,65,20,20);
+        wireB4lbl.setBounds(45,125,40,40);
         JLabel wireC1lbl = new JLabel(whiteIcon);
-        wireC1lbl.setBounds(45,5,20,20);
+        wireC1lbl.setBounds(85,5,40,40);
         JLabel wireC2lbl = new JLabel(whiteIcon);
-        wireC2lbl.setBounds(45,25,20,20);
+        wireC2lbl.setBounds(85,45,40,40);
         JLabel wireC3lbl = new JLabel(whiteIcon);
-        wireC3lbl.setBounds(45,45,20,20);
+        wireC3lbl.setBounds(85,85,40,40);
         JLabel wireC4lbl = new JLabel(whiteIcon);
-        wireC4lbl.setBounds(45,65,20,20);
+        wireC4lbl.setBounds(85,125,40,40);
         JLabel wireD1lbl = new JLabel(whiteIcon);
-        wireD1lbl.setBounds(65,5,20,20);
+        wireD1lbl.setBounds(125,5,40,40);
         JLabel wireD2lbl = new JLabel(whiteIcon);
-        wireD2lbl.setBounds(65,25,20,20);
+        wireD2lbl.setBounds(125,45,40,40);
         JLabel wireD3lbl = new JLabel(whiteIcon);
-        wireD3lbl.setBounds(65,45,20,20);
+        wireD3lbl.setBounds(125,85,40,40);
         JLabel wireD4lbl = new JLabel(whiteIcon);
-        wireD4lbl.setBounds(65,65,20,20);
+        wireD4lbl.setBounds(125,125,40,40);
         // Output Icons
-        ImageIcon whiteCut = new ImageIcon("imgs/wirePlacement/whiteDoCut");
-        ImageIcon blackCut = new ImageIcon("imgs/wirePlacement/blackDoCut");
-        ImageIcon redCut = new ImageIcon("imgs/wirePlacement/redDoCut");
-        ImageIcon yellowCut = new ImageIcon("imgs/wirePlacement/yellowDoCut");
-        ImageIcon blueCut = new ImageIcon("imgs/wirePlacement/blueDoCut");
-        ImageIcon whiteDontCut= new ImageIcon("imgs/wirePlacement/whiteDontCut");
-        ImageIcon blackDontCut= new ImageIcon("imgs/wirePlacement/blackDontCut");
-        ImageIcon redDontCut= new ImageIcon("imgs/wirePlacement/redDontCut");
-        ImageIcon yellowDontCut= new ImageIcon("imgs/wirePlacement/yellowDontCut");
-        ImageIcon blueDontCut= new ImageIcon("imgs/wirePlacement/blueDontCut");
+        ImageIcon whiteCut = new ImageIcon("imgs/wirePlacement/whiteDoCut.png");
+        ImageIcon blackCut = new ImageIcon("imgs/wirePlacement/blackDoCut.png");
+        ImageIcon redCut = new ImageIcon("imgs/wirePlacement/redDoCut.png");
+        ImageIcon yellowCut = new ImageIcon("imgs/wirePlacement/yellowDoCut.png");
+        ImageIcon blueCut = new ImageIcon("imgs/wirePlacement/blueDoCut.png");
+        ImageIcon whiteDontCut= new ImageIcon("imgs/wirePlacement/whiteDontCut.png");
+        ImageIcon blackDontCut= new ImageIcon("imgs/wirePlacement/blackDontCut.png");
+        ImageIcon redDontCut= new ImageIcon("imgs/wirePlacement/redDontCut.png");
+        ImageIcon yellowDontCut= new ImageIcon("imgs/wirePlacement/yellowDontCut.png");
+        ImageIcon blueDontCut= new ImageIcon("imgs/wirePlacement/blueDontCut.png");
         // Button
         JButton button = new JButton("OK");
-        button.setBounds(90,25,80,20);
+        button.setBounds(200,24,80,40);
         JButton clear = new JButton("CLEAR");
-        clear.setBounds(90,45,80,20);
+        clear.setBounds(200,64,80,40);
+        // CB
+        String[] colors = {"White","Black","Red","Yellow","Blue"};
+        JComboBox colorChoose = new JComboBox(colors);
+        colorChoose.setBounds(200,104,80,40);
         // Add
         f.add(wireA1lbl); f.add(wireB1lbl); f.add(wireC1lbl); f.add(wireD1lbl);
         f.add(wireA2lbl); f.add(wireB2lbl); f.add(wireC2lbl); f.add(wireD2lbl);
         f.add(wireA3lbl); f.add(wireB3lbl); f.add(wireC3lbl); f.add(wireD3lbl);
         f.add(wireA4lbl); f.add(wireB4lbl); f.add(wireC4lbl); f.add(wireD4lbl);
         f.add(button); f.add(clear);
+        f.add(colorChoose);
         // Define JFrame
         f.setLayout(null);
-        f.setSize(300,120);
+        f.setSize(320,200);
         f.setResizable(false);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         f.setLocation(dim.width/2-f.getSize().width/2, dim.height/2-f.getSize().height/2);
@@ -136,7 +141,7 @@ public class wirePlacement {
                         System.out.println("(C3 is Blue while C3 is also Black???)");
                     } if (wireB1.equals("Black")) {
                         System.out.println("B1 Black, cut");
-                        wireC3lbl.setIcon(blackCut);
+                        wireB1lbl.setIcon(blackCut);
                     } if (wireC4.equals("Red")) {
                         System.out.println("C4 Red, cut");
                         wireC4lbl.setIcon(redCut);
@@ -218,9 +223,9 @@ public class wirePlacement {
                     if (wireA2.equals("Yellow")) {
                         System.out.println("A2 Yellow, cut");
                         wireA2lbl.setIcon(yellowCut);
-                    } if (wireC4.equals("White")) {
+                    } if (wireC4.equals("Blue")) {
                         System.out.println("C4 Blue, cut");
-                        wireC4lbl.setIcon(whiteCut);
+                        wireC4lbl.setIcon(blueCut);
                     } if (wireB3.equals("White")) {
                         System.out.println("B3 White, cut");
                         wireB3lbl.setIcon(whiteCut);
@@ -387,114 +392,290 @@ public class wirePlacement {
         if (true) {
             wireA1lbl.addMouseListener(new MouseAdapter() {
                 public void mouseClicked(MouseEvent e) {
-                    Icon icon = wireA1lbl.getIcon();
-                    icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
-                    wireA1lbl.setIcon(icon);
+                    if (e.isShiftDown()) {
+                        Icon icon = wireA1lbl.getIcon();
+                        icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
+                        wireA1lbl.setIcon(icon);
+                    } else {
+                        String currCol = (String) colorChoose.getItemAt(colorChoose.getSelectedIndex());
+                        switch (currCol) {
+                            case "White": wireA1lbl.setIcon(whiteIcon); break;
+                            case "Black": wireA1lbl.setIcon(blackIcon); break;
+                            case "Red": wireA1lbl.setIcon(redIcon); break;
+                            case "Yellow": wireA1lbl.setIcon(yellowIcon); break;
+                            default: wireA1lbl.setIcon(blueIcon); break;
+                        }
+                    }
                 }
             });
             wireA2lbl.addMouseListener(new MouseAdapter() {
                 public void mouseClicked(MouseEvent e) {
-                    Icon icon = wireA2lbl.getIcon();
-                    icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
-                    wireA2lbl.setIcon(icon);
+                    if (e.isShiftDown()) {
+                        Icon icon = wireA2lbl.getIcon();
+                        icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
+                        wireA2lbl.setIcon(icon);
+                    } else {
+                        String currCol = (String) colorChoose.getItemAt(colorChoose.getSelectedIndex());
+                        switch (currCol) {
+                            case "White": wireA2lbl.setIcon(whiteIcon); break;
+                            case "Black": wireA2lbl.setIcon(blackIcon); break;
+                            case "Red": wireA2lbl.setIcon(redIcon); break;
+                            case "Yellow": wireA2lbl.setIcon(yellowIcon); break;
+                            default: wireA2lbl.setIcon(blueIcon); break;
+                        }
+                    }
                 }
             });
             wireA3lbl.addMouseListener(new MouseAdapter() {
                 public void mouseClicked(MouseEvent e) {
-                    Icon icon = wireA3lbl.getIcon();
-                    icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
-                    wireA3lbl.setIcon(icon);
+                    if (e.isShiftDown()) {
+                        Icon icon = wireA3lbl.getIcon();
+                        icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
+                        wireA3lbl.setIcon(icon);
+                    } else {
+                        String currCol = (String) colorChoose.getItemAt(colorChoose.getSelectedIndex());
+                        switch (currCol) {
+                            case "White": wireA3lbl.setIcon(whiteIcon); break;
+                            case "Black": wireA3lbl.setIcon(blackIcon); break;
+                            case "Red": wireA3lbl.setIcon(redIcon); break;
+                            case "Yellow": wireA3lbl.setIcon(yellowIcon); break;
+                            default: wireA3lbl.setIcon(blueIcon); break;
+                        }
+                    }
                 }
             });
             wireA4lbl.addMouseListener(new MouseAdapter() {
                 public void mouseClicked(MouseEvent e) {
-                    Icon icon = wireA4lbl.getIcon();
-                    icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
-                    wireA4lbl.setIcon(icon);
+                    if (e.isShiftDown()) {
+                        Icon icon = wireA4lbl.getIcon();
+                        icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
+                        wireA4lbl.setIcon(icon);
+                    } else {
+                        String currCol = (String) colorChoose.getItemAt(colorChoose.getSelectedIndex());
+                        switch (currCol) {
+                            case "White": wireA4lbl.setIcon(whiteIcon); break;
+                            case "Black": wireA4lbl.setIcon(blackIcon); break;
+                            case "Red": wireA4lbl.setIcon(redIcon); break;
+                            case "Yellow": wireA4lbl.setIcon(yellowIcon); break;
+                            default: wireA4lbl.setIcon(blueIcon); break;
+                        }
+                    }
                 }
             });
             wireB1lbl.addMouseListener(new MouseAdapter() {
                 public void mouseClicked(MouseEvent e) {
-                    Icon icon = wireB1lbl.getIcon();
-                    icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
-                    wireB1lbl.setIcon(icon);
+                    if (e.isShiftDown()) {
+                        Icon icon = wireB1lbl.getIcon();
+                        icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
+                        wireB1lbl.setIcon(icon);
+                    } else {
+                        String currCol = (String) colorChoose.getItemAt(colorChoose.getSelectedIndex());
+                        switch (currCol) {
+                            case "White": wireB1lbl.setIcon(whiteIcon); break;
+                            case "Black": wireB1lbl.setIcon(blackIcon); break;
+                            case "Red": wireB1lbl.setIcon(redIcon); break;
+                            case "Yellow": wireB1lbl.setIcon(yellowIcon); break;
+                            default: wireB1lbl.setIcon(blueIcon); break;
+                        }
+                    }
                 }
             });
             wireB2lbl.addMouseListener(new MouseAdapter() {
                 public void mouseClicked(MouseEvent e) {
-                    Icon icon = wireB2lbl.getIcon();
-                    icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
-                    wireB2lbl.setIcon(icon);
+                    if (e.isShiftDown()) {
+                        Icon icon = wireB2lbl.getIcon();
+                        icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
+                        wireB2lbl.setIcon(icon);
+                    } else {
+                        String currCol = (String) colorChoose.getItemAt(colorChoose.getSelectedIndex());
+                        switch (currCol) {
+                            case "White": wireB2lbl.setIcon(whiteIcon); break;
+                            case "Black": wireB2lbl.setIcon(blackIcon); break;
+                            case "Red": wireB2lbl.setIcon(redIcon); break;
+                            case "Yellow": wireB2lbl.setIcon(yellowIcon); break;
+                            default: wireB2lbl.setIcon(blueIcon); break;
+                        }
+                    }
                 }
             });
             wireB3lbl.addMouseListener(new MouseAdapter() {
                 public void mouseClicked(MouseEvent e) {
-                    Icon icon = wireB3lbl.getIcon();
-                    icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
-                    wireB3lbl.setIcon(icon);
+                    if (e.isShiftDown()) {
+                        Icon icon = wireB3lbl.getIcon();
+                        icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
+                        wireB3lbl.setIcon(icon);
+                    } else {
+                        String currCol = (String) colorChoose.getItemAt(colorChoose.getSelectedIndex());
+                        switch (currCol) {
+                            case "White": wireB3lbl.setIcon(whiteIcon); break;
+                            case "Black": wireB3lbl.setIcon(blackIcon); break;
+                            case "Red": wireB3lbl.setIcon(redIcon); break;
+                            case "Yellow": wireB3lbl.setIcon(yellowIcon); break;
+                            default: wireB3lbl.setIcon(blueIcon); break;
+                        }
+                    }
                 }
             });
             wireB4lbl.addMouseListener(new MouseAdapter() {
                 public void mouseClicked(MouseEvent e) {
-                    Icon icon = wireB4lbl.getIcon();
-                    icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
-                    wireB4lbl.setIcon(icon);
+                    if (e.isShiftDown()) {
+                        Icon icon = wireB4lbl.getIcon();
+                        icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
+                        wireB4lbl.setIcon(icon);
+                    } else {
+                        String currCol = (String) colorChoose.getItemAt(colorChoose.getSelectedIndex());
+                        switch (currCol) {
+                            case "White": wireB4lbl.setIcon(whiteIcon); break;
+                            case "Black": wireB4lbl.setIcon(blackIcon); break;
+                            case "Red": wireB4lbl.setIcon(redIcon); break;
+                            case "Yellow": wireB4lbl.setIcon(yellowIcon); break;
+                            default: wireB4lbl.setIcon(blueIcon); break;
+                        }
+                    }
                 }
             });
             wireC1lbl.addMouseListener(new MouseAdapter() {
                 public void mouseClicked(MouseEvent e) {
-                    Icon icon = wireC1lbl.getIcon();
-                    icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
-                    wireC1lbl.setIcon(icon);
+                    if (e.isShiftDown()) {
+                        Icon icon = wireC1lbl.getIcon();
+                        icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
+                        wireC1lbl.setIcon(icon);
+                    } else {
+                        String currCol = (String) colorChoose.getItemAt(colorChoose.getSelectedIndex());
+                        switch (currCol) {
+                            case "White": wireC1lbl.setIcon(whiteIcon); break;
+                            case "Black": wireC1lbl.setIcon(blackIcon); break;
+                            case "Red": wireC1lbl.setIcon(redIcon); break;
+                            case "Yellow": wireC1lbl.setIcon(yellowIcon); break;
+                            default: wireC1lbl.setIcon(blueIcon); break;
+                        }
+                    }
                 }
             });
             wireC2lbl.addMouseListener(new MouseAdapter() {
                 public void mouseClicked(MouseEvent e) {
-                    Icon icon = wireC2lbl.getIcon();
-                    icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
-                    wireC2lbl.setIcon(icon);
+                    if (e.isShiftDown()) {
+                        Icon icon = wireC2lbl.getIcon();
+                        icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
+                        wireC2lbl.setIcon(icon);
+                    } else {
+                        String currCol = (String) colorChoose.getItemAt(colorChoose.getSelectedIndex());
+                        switch (currCol) {
+                            case "White": wireC2lbl.setIcon(whiteIcon); break;
+                            case "Black": wireC2lbl.setIcon(blackIcon); break;
+                            case "Red": wireC2lbl.setIcon(redIcon); break;
+                            case "Yellow": wireC2lbl.setIcon(yellowIcon); break;
+                            default: wireC2lbl.setIcon(blueIcon); break;
+                        }
+                    }
                 }
             });
             wireC3lbl.addMouseListener(new MouseAdapter() {
                 public void mouseClicked(MouseEvent e) {
-                    Icon icon = wireC3lbl.getIcon();
-                    icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
-                    wireC3lbl.setIcon(icon);
+                    if (e.isShiftDown()) {
+                        Icon icon = wireC3lbl.getIcon();
+                        icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
+                        wireC3lbl.setIcon(icon);
+                    } else {
+                        String currCol = (String) colorChoose.getItemAt(colorChoose.getSelectedIndex());
+                        switch (currCol) {
+                            case "White": wireC3lbl.setIcon(whiteIcon); break;
+                            case "Black": wireC3lbl.setIcon(blackIcon); break;
+                            case "Red": wireC3lbl.setIcon(redIcon); break;
+                            case "Yellow": wireC3lbl.setIcon(yellowIcon); break;
+                            default: wireC3lbl.setIcon(blueIcon); break;
+                        }
+                    }
                 }
             });
             wireC4lbl.addMouseListener(new MouseAdapter() {
                 public void mouseClicked(MouseEvent e) {
-                    Icon icon = wireC4lbl.getIcon();
-                    icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
-                    wireC4lbl.setIcon(icon);
+                    if (e.isShiftDown()) {
+                        Icon icon = wireC4lbl.getIcon();
+                        icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
+                        wireC4lbl.setIcon(icon);
+                    } else {
+                        String currCol = (String) colorChoose.getItemAt(colorChoose.getSelectedIndex());
+                        switch (currCol) {
+                            case "White": wireC4lbl.setIcon(whiteIcon); break;
+                            case "Black": wireC4lbl.setIcon(blackIcon); break;
+                            case "Red": wireC4lbl.setIcon(redIcon); break;
+                            case "Yellow": wireC4lbl.setIcon(yellowIcon); break;
+                            default: wireC4lbl.setIcon(blueIcon); break;
+                        }
+                    }
                 }
             });
             wireD1lbl.addMouseListener(new MouseAdapter() {
                 public void mouseClicked(MouseEvent e) {
-                    Icon icon = wireD1lbl.getIcon();
-                    icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
-                    wireD1lbl.setIcon(icon);
+                    if (e.isShiftDown()) {
+                        Icon icon = wireD1lbl.getIcon();
+                        icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
+                        wireD1lbl.setIcon(icon);
+                    } else {
+                        String currCol = (String) colorChoose.getItemAt(colorChoose.getSelectedIndex());
+                        switch (currCol) {
+                            case "White": wireD1lbl.setIcon(whiteIcon); break;
+                            case "Black": wireD1lbl.setIcon(blackIcon); break;
+                            case "Red": wireD1lbl.setIcon(redIcon); break;
+                            case "Yellow": wireD1lbl.setIcon(yellowIcon); break;
+                            default: wireD1lbl.setIcon(blueIcon); break;
+                        }
+                    }
                 }
             });
             wireD2lbl.addMouseListener(new MouseAdapter() {
                 public void mouseClicked(MouseEvent e) {
-                    Icon icon = wireD2lbl.getIcon();
-                    icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
-                    wireD2lbl.setIcon(icon);
+                    if (e.isShiftDown()) {
+                        Icon icon = wireD2lbl.getIcon();
+                        icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
+                        wireD2lbl.setIcon(icon);
+                    } else {
+                        String currCol = (String) colorChoose.getItemAt(colorChoose.getSelectedIndex());
+                        switch (currCol) {
+                            case "White": wireD2lbl.setIcon(whiteIcon); break;
+                            case "Black": wireD2lbl.setIcon(blackIcon); break;
+                            case "Red": wireD2lbl.setIcon(redIcon); break;
+                            case "Yellow": wireD2lbl.setIcon(yellowIcon); break;
+                            default: wireD2lbl.setIcon(blueIcon); break;
+                        }
+                    }
                 }
             });
             wireD3lbl.addMouseListener(new MouseAdapter() {
                 public void mouseClicked(MouseEvent e) {
-                    Icon icon = wireD3lbl.getIcon();
-                    icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
-                    wireD3lbl.setIcon(icon);
+                    if (e.isShiftDown()) {
+                        Icon icon = wireD3lbl.getIcon();
+                        icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
+                        wireD3lbl.setIcon(icon);
+                    } else {
+                        String currCol = (String) colorChoose.getItemAt(colorChoose.getSelectedIndex());
+                        switch (currCol) {
+                            case "White": wireD3lbl.setIcon(whiteIcon); break;
+                            case "Black": wireD3lbl.setIcon(blackIcon); break;
+                            case "Red": wireD3lbl.setIcon(redIcon); break;
+                            case "Yellow": wireD3lbl.setIcon(yellowIcon); break;
+                            default: wireD3lbl.setIcon(blueIcon); break;
+                        }
+                    }
                 }
             });
             wireD4lbl.addMouseListener(new MouseAdapter() {
                 public void mouseClicked(MouseEvent e) {
-                    Icon icon = wireD4lbl.getIcon();
-                    icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
-                    wireD4lbl.setIcon(icon);
+                    if (e.isShiftDown()) {
+                        Icon icon = wireD4lbl.getIcon();
+                        icon = (icon == whiteIcon) ? blackIcon : (icon == blackIcon) ? redIcon : (icon == redIcon) ? yellowIcon : (icon == yellowIcon) ? blueIcon : whiteIcon;
+                        wireD4lbl.setIcon(icon);
+                    } else {
+                        String currCol = (String) colorChoose.getItemAt(colorChoose.getSelectedIndex());
+                        switch (currCol) {
+                            case "White": wireD4lbl.setIcon(whiteIcon); break;
+                            case "Black": wireD4lbl.setIcon(blackIcon); break;
+                            case "Red": wireD4lbl.setIcon(redIcon); break;
+                            case "Yellow": wireD4lbl.setIcon(yellowIcon); break;
+                            default: wireD4lbl.setIcon(blueIcon); break;
+                        }
+                    }
                 }
             });
         }
