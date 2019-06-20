@@ -3,7 +3,7 @@
  * 
  * Started the project on June 16, 2018 at around 5:35 AM.
  * 
- * Current Version: 0.7.1 (β)
+ * Current Version: 0.8 (β)
  *
  * Credits can be found on www.github.com/GamingGuyTyler/KAaNE-JE-/wiki/Credits
  *

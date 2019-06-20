@@ -7,24 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d44d9dc5-2aab-40df-860d-087858e770cc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wirePlacement/black.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/wirePlacement/black.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wirePlacement/blackDoCut.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/wirePlacement/blackDoCut.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wirePlacement/blackDontCut.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/wirePlacement/blackDontCut.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wirePlacement/blue.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/wirePlacement/blue.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wirePlacement/blueDoCut.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/wirePlacement/blueDoCut.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wirePlacement/blueDontCut.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/wirePlacement/blueDontCut.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wirePlacement/red.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/wirePlacement/red.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wirePlacement/redDoCut.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/wirePlacement/redDoCut.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wirePlacement/redDontCut.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/wirePlacement/redDontCut.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wirePlacement/white.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/wirePlacement/white.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wirePlacement/whiteDoCut.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/wirePlacement/whiteDoCut.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wirePlacement/whiteDontCut.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/wirePlacement/whiteDontCut.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wirePlacement/yellow.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/wirePlacement/yellow.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wirePlacement/yellowDoCut.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/wirePlacement/yellowDoCut.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wirePlacement/yellowDontCut.png" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/wirePlacement/yellowDontCut.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/burglarAlarm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/burglarAlarm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/wirePlacement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wirePlacement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/KAaNE_jar/KAaNE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/KAaNE_jar/KAaNE.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kaane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kaane.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,10 +26,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/kaane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="924">
-              <caret line="106" column="57" selection-start-line="106" selection-start-column="57" selection-end-line="106" selection-end-column="57" />
+            <state relative-caret-position="85">
+              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -54,39 +38,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/wirePlacement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="227" column="51" lean-forward="true" selection-start-line="227" selection-start-column="51" selection-end-line="227" selection-end-column="51" />
+            <state relative-caret-position="3655">
+              <caret line="227" column="51" selection-start-line="227" selection-start-column="51" selection-end-line="227" selection-end-column="51" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#24955#26000#0" expanded="true" />
-                <element signature="e#25999#26000#0" expanded="true" />
-                <element signature="e#26042#27087#0" expanded="true" />
-                <element signature="e#27086#27087#0" expanded="true" />
-                <element signature="e#29303#30348#0" expanded="true" />
-                <element signature="e#30347#30348#0" expanded="true" />
-                <element signature="e#30390#31435#0" expanded="true" />
-                <element signature="e#31434#31435#0" expanded="true" />
-                <element signature="e#31477#32522#0" expanded="true" />
-                <element signature="e#32521#32522#0" expanded="true" />
-                <element signature="e#32564#33609#0" expanded="true" />
-                <element signature="e#33608#33609#0" expanded="true" />
-                <element signature="e#33651#34696#0" expanded="true" />
-                <element signature="e#34695#34696#0" expanded="true" />
-                <element signature="e#34738#35783#0" expanded="true" />
-                <element signature="e#35782#35783#0" expanded="true" />
-                <element signature="e#35825#36870#0" expanded="true" />
-                <element signature="e#36869#36870#0" expanded="true" />
-                <element signature="e#36912#37957#0" expanded="true" />
-                <element signature="e#37956#37957#0" expanded="true" />
-                <element signature="e#37999#39044#0" expanded="true" />
-                <element signature="e#39043#39044#0" expanded="true" />
-                <element signature="e#39086#40131#0" expanded="true" />
-                <element signature="e#40130#40131#0" expanded="true" />
-                <element signature="e#40173#41218#0" expanded="true" />
-                <element signature="e#41217#41218#0" expanded="true" />
-                <element signature="e#41260#42305#0" expanded="true" />
-                <element signature="e#42304#42305#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -95,7 +51,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/burglarAlarm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1706">
+            <state relative-caret-position="4692">
               <caret line="292" column="41" selection-start-line="292" selection-start-column="41" selection-end-line="292" selection-end-column="41" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -268,9 +224,9 @@
         <option value="$PROJECT_DIR$/src/theBulb.java" />
         <option value="$PROJECT_DIR$/src/settings.java" />
         <option value="$PROJECT_DIR$/config.properties" />
-        <option value="$PROJECT_DIR$/src/kaane.java" />
         <option value="$PROJECT_DIR$/src/burglarAlarm.java" />
         <option value="$PROJECT_DIR$/src/wirePlacement.java" />
+        <option value="$PROJECT_DIR$/src/kaane.java" />
       </list>
     </option>
   </component>
@@ -280,7 +236,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -290,6 +246,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -310,7 +267,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -378,10 +334,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.892779" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.8923241" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -390,7 +345,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3296582" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989059" visible="true" weight="0.32713348" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989059" weight="0.32713348" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39824945" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -687,6 +642,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/kaane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wirePlacement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3655">
+          <caret line="227" column="51" selection-start-line="227" selection-start-column="51" selection-end-line="227" selection-end-column="51" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/burglarAlarm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4692">
+          <caret line="292" column="41" selection-start-line="292" selection-start-column="41" selection-end-line="292" selection-end-column="41" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/settings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11679">
@@ -733,67 +720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="52" selection-end-column="46" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/burglarAlarm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1706">
-          <caret line="292" column="41" selection-start-line="292" selection-start-column="41" selection-end-line="292" selection-end-column="41" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/wirePlacement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="227" column="51" lean-forward="true" selection-start-line="227" selection-start-column="51" selection-end-line="227" selection-end-column="51" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#24955#26000#0" expanded="true" />
-            <element signature="e#25999#26000#0" expanded="true" />
-            <element signature="e#26042#27087#0" expanded="true" />
-            <element signature="e#27086#27087#0" expanded="true" />
-            <element signature="e#29303#30348#0" expanded="true" />
-            <element signature="e#30347#30348#0" expanded="true" />
-            <element signature="e#30390#31435#0" expanded="true" />
-            <element signature="e#31434#31435#0" expanded="true" />
-            <element signature="e#31477#32522#0" expanded="true" />
-            <element signature="e#32521#32522#0" expanded="true" />
-            <element signature="e#32564#33609#0" expanded="true" />
-            <element signature="e#33608#33609#0" expanded="true" />
-            <element signature="e#33651#34696#0" expanded="true" />
-            <element signature="e#34695#34696#0" expanded="true" />
-            <element signature="e#34738#35783#0" expanded="true" />
-            <element signature="e#35782#35783#0" expanded="true" />
-            <element signature="e#35825#36870#0" expanded="true" />
-            <element signature="e#36869#36870#0" expanded="true" />
-            <element signature="e#36912#37957#0" expanded="true" />
-            <element signature="e#37956#37957#0" expanded="true" />
-            <element signature="e#37999#39044#0" expanded="true" />
-            <element signature="e#39043#39044#0" expanded="true" />
-            <element signature="e#39086#40131#0" expanded="true" />
-            <element signature="e#40130#40131#0" expanded="true" />
-            <element signature="e#40173#41218#0" expanded="true" />
-            <element signature="e#41217#41218#0" expanded="true" />
-            <element signature="e#41260#42305#0" expanded="true" />
-            <element signature="e#42304#42305#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kaane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="106" column="57" selection-start-line="106" selection-start-column="57" selection-end-line="106" selection-end-column="57" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
