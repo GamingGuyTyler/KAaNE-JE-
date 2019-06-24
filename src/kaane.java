@@ -55,7 +55,7 @@ class kaane {
         f.setLocation(dim.width/2-f.getSize().width/2, dim.height/2-f.getSize().height/2);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         // Wait till the user actually does stuff
-        b.addActionListener((ActionEvent e) -> {
+        b.addActionListener(e -> {
             String x = cb.getItemAt(cb.getSelectedIndex());
             // Modules start below
             switch (x) {

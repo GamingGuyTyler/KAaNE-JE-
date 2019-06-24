@@ -28,14 +28,8 @@ public class settings {
         try {
             FileReader reader = new FileReader(configFile);
             props.load(reader);
-        } catch (FileNotFoundException ex) {
-            System.out.println("ERROR CODE #0001");
-            System.out.println("Config file could not be found!");
-            System.out.println("Ignoring...");
-        } catch (IOException ex) {
-            System.out.println("ERROR CODE #0002");
-            System.out.println("IO Exception while trying to load file!");
-            System.out.println("Ignoring...");
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
         // Define the Welcome Text
         JLabel welcomeText = new JLabel();
@@ -171,8 +165,7 @@ public class settings {
         moduleText.setBounds(311,73,60,20);
         // Define the Display Module checkbox
         JCheckBox dmCheck = new JCheckBox("DISPLAY MODULES");
-        dmCheck.setBounds(0,270,150,20);
-        dmCheck.setVisible(false); // set it to visible since it's unfinished
+        dmCheck.setBounds(0,300,150,20);
         // Define the plate text box.
         ImprovedFormattedTextField plateTB = new ImprovedFormattedTextField(integerNumberInstance,0);
         plateTB.setBounds(121,213,50,20);
@@ -193,175 +186,51 @@ public class settings {
         modPortText.setBounds(176,253,80,20);
         // Set all the settings to mirror the config file
         // Indicators
-        int checks = Integer.parseInt(props.getProperty("bob"));
-        if (checks == 0) {
-            bobCheck.setSelected(false);
-        } else {
-            bobCheck.setSelected(true);
-        }
-        checks = Integer.parseInt(props.getProperty("bobLit"));
-        if (checks == 0) {
-            litBobCheck.setSelected(false);
-        } else {
-            litBobCheck.setSelected(true);
-        }
-        checks = Integer.parseInt(props.getProperty("car"));
-        if (checks == 0) {
-            carCheck.setSelected(false);
-        } else {
-            carCheck.setSelected(true);
-        }
-        checks = Integer.parseInt(props.getProperty("carLit"));
-        if (checks == 0) {
-            litCarCheck.setSelected(false);
-        } else {
-            litCarCheck.setSelected(true);
-        }
-        checks = Integer.parseInt(props.getProperty("clr"));
-        if (checks == 0) {
-            clrCheck.setSelected(false);
-        } else {
-            clrCheck.setSelected(true);
-        }
-        checks = Integer.parseInt(props.getProperty("clrLit"));
-        if (checks == 0) {
-            litClrCheck.setSelected(false);
-        } else {
-            litClrCheck.setSelected(true);
-        }
-        checks = Integer.parseInt(props.getProperty("frk"));
-        if (checks == 0) {
-            frkCheck.setSelected(false);
-        } else {
-            frkCheck.setSelected(true);
-        }
-        checks = Integer.parseInt(props.getProperty("frkLit"));
-        if (checks == 0) {
-            litFrkCheck.setSelected(false);
-        } else {
-            litFrkCheck.setSelected(true);
-        }
-        checks = Integer.parseInt(props.getProperty("frq"));
-        if (checks == 0) {
-            frqCheck.setSelected(false);
-        } else {
-            frqCheck.setSelected(true);
-        }
-        checks = Integer.parseInt(props.getProperty("frqLit"));
-        if (checks == 0) {
-            litFrqCheck.setSelected(false);
-        } else {
-            litFrqCheck.setSelected(true);
-        }
-        checks = Integer.parseInt(props.getProperty("ind"));
-        if (checks == 0) {
-            indCheck.setSelected(false);
-        } else {
-            indCheck.setSelected(true);
-        }
-        checks = Integer.parseInt(props.getProperty("indLit"));
-        if (checks == 0) {
-            litIndCheck.setSelected(false);
-        } else {
-            litIndCheck.setSelected(true);
-        }
-        checks = Integer.parseInt(props.getProperty("msa"));
-        if (checks == 0) {
-            msaCheck.setSelected(false);
-        } else {
-            msaCheck.setSelected(true);
-        }
-        checks = Integer.parseInt(props.getProperty("msaLit"));
-        if (checks == 0) {
-            litMsaCheck.setSelected(false);
-        } else {
-            litMsaCheck.setSelected(true);
-        }
-        checks = Integer.parseInt(props.getProperty("nsa"));
-        if (checks == 0) {
-            nsaCheck.setSelected(false);
-        } else {
-            nsaCheck.setSelected(true);
-        }
-        checks = Integer.parseInt(props.getProperty("nsaLit"));
-        if (checks == 0) {
-            litNsaCheck.setSelected(false);
-        } else {
-            litNsaCheck.setSelected(true);
-        }
-        checks = Integer.parseInt(props.getProperty("sig"));
-        if (checks == 0) {
-            sigCheck.setSelected(false);
-        } else {
-            sigCheck.setSelected(true);
-        }
-        checks = Integer.parseInt(props.getProperty("sigLit"));
-        if (checks == 0) {
-            litSigCheck.setSelected(false);
-        } else {
-            litSigCheck.setSelected(true);
-        }
-        checks = Integer.parseInt(props.getProperty("snd"));
-        if (checks == 0) {
-            sndCheck.setSelected(false);
-        } else {
-            sndCheck.setSelected(true);
-        }
-        checks = Integer.parseInt(props.getProperty("sndLit"));
-        if (checks == 0) {
-            litSndCheck.setSelected(false);
-        } else {
-            litSndCheck.setSelected(true);
-        }
-        checks = Integer.parseInt(props.getProperty("trn"));
-        if (checks == 0) {
-            trnCheck.setSelected(false);
-        } else {
-            trnCheck.setSelected(true);
-        }
-        checks = Integer.parseInt(props.getProperty("trnLit"));
-        if (checks == 0) {
-            litTrnCheck.setSelected(false);
-        } else {
-            litTrnCheck.setSelected(true);
-        }
+        if (Integer.parseInt(props.getProperty("bob")) == 1) bobCheck.setSelected(true);
+        if (Integer.parseInt(props.getProperty("bobLit")) == 1) litBobCheck.setSelected(true);
+        if (Integer.parseInt(props.getProperty("car")) == 1) carCheck.setSelected(true);
+        if (Integer.parseInt(props.getProperty("carLit")) == 1) litCarCheck.setSelected(true);
+        if (Integer.parseInt(props.getProperty("clr")) == 1) clrCheck.setSelected(true);
+        if (Integer.parseInt(props.getProperty("clrLit")) == 1) litClrCheck.setSelected(true);
+        if (Integer.parseInt(props.getProperty("frk")) == 1) frkCheck.setSelected(true);
+        if (Integer.parseInt(props.getProperty("frkLit")) == 1) litFrkCheck.setSelected(true);
+        if (Integer.parseInt(props.getProperty("frq")) == 1) frqCheck.setSelected(true);
+        if (Integer.parseInt(props.getProperty("frqLit")) == 1) litFrqCheck.setSelected(true);
+        if (Integer.parseInt(props.getProperty("ind")) == 1) indCheck.setSelected(true);
+        if (Integer.parseInt(props.getProperty("indLit")) == 1) litIndCheck.setSelected(true);
+        if (Integer.parseInt(props.getProperty("msa")) == 1) msaCheck.setSelected(true);
+        if (Integer.parseInt(props.getProperty("msaLit")) == 1) litMsaCheck.setSelected(true);
+        if (Integer.parseInt(props.getProperty("nsa")) == 1) nsaCheck.setSelected(true);
+        if (Integer.parseInt(props.getProperty("nsaLit")) == 1) litNsaCheck.setSelected(true);
+        if (Integer.parseInt(props.getProperty("sig")) == 1) sigCheck.setSelected(true);
+        if (Integer.parseInt(props.getProperty("sigLit")) == 1) litSigCheck.setSelected(true);
+        if (Integer.parseInt(props.getProperty("snd")) == 1) sndCheck.setSelected(true);
+        if (Integer.parseInt(props.getProperty("sndLit")) == 1) litSndCheck.setSelected(true);
+        if (Integer.parseInt(props.getProperty("trn")) == 1) trnCheck.setSelected(true);
+        if (Integer.parseInt(props.getProperty("trnLit")) == 1) litTrnCheck.setSelected(true);
         // Batteries
-        String checksString = props.getProperty("batteriesAA");
-        batteriesAATextBox.setText(checksString);
-        checksString = props.getProperty("batteriesD");
-        batteriesDTextBox.setText(checksString);
-        checksString = props.getProperty("dvidQuantity");
-        dvidTB.setText(checksString);
-        checksString = props.getProperty("parallelQuantity");
-        parallelTB.setText(checksString);
-        checksString = props.getProperty("ps2Quantity");
-        ps2TB.setText(checksString);
-        checksString = props.getProperty("rj45Quantity");
-        rj45TB.setText(checksString);
-        checksString = props.getProperty("serialQuantity");
-        serialTB.setText(checksString);
-        checksString = props.getProperty("stereoRCAQuantity");
-        stereoRCATB.setText(checksString);
+        batteriesAATextBox.setText(props.getProperty("batteriesAA"));
+        batteriesDTextBox.setText(props.getProperty("batteriesD"));
+        dvidTB.setText(props.getProperty("dvidQuantity"));
+        parallelTB.setText(props.getProperty("parallelQuantity"));
+        ps2TB.setText(props.getProperty("ps2Quantity"));
+        rj45TB.setText(props.getProperty("rj45Quantity"));
+        serialTB.setText(props.getProperty("serialQuantity"));
+        stereoRCATB.setText(props.getProperty("stereoRCAQuantity"));
         // SN
-        checksString = props.getProperty("sn1");
-        String checksString2 = props.getProperty("sn2");
-        String checksString3 = props.getProperty("sn3");
-        String checksString4 = props.getProperty("sn4");
-        String checksString5 = props.getProperty("sn5");
-        String checksString6 = props.getProperty("sn6");
-        snTextBox.setText(checksString + checksString2 + checksString3 + checksString4 + checksString5 + checksString6);
+        snTextBox.setText(props.getProperty("sn1") + props.getProperty("sn2")
+                + props.getProperty("sn3") + props.getProperty("sn4")
+                + props.getProperty("sn5") + props.getProperty("sn6"));
         // Modules
-        checksString = props.getProperty("modules");
-        moduleTB.setText(checksString);
+        moduleTB.setText(props.getProperty("modules"));
         // Plates
-        checksString = props.getProperty("plates");
-        plateTB.setText(checksString);
+        plateTB.setText(props.getProperty("plates"));
         // Mod Indicators
-        checksString = props.getProperty("modInd");
-        modIndTB.setText(checksString);
+        modIndTB.setText(props.getProperty("modInd"));
         // Mod Ports
-        checksString = props.getProperty("modPort");
-        modPortTB.setText(checksString);
+        modPortTB.setText(props.getProperty("modPort"));
+        // Display Module
+        if (Integer.parseInt(props.getProperty("displayModule")) == 1) dmCheck.setSelected(true);
         // Add everything in the JFrame
         f.add(welcomeText); f.add(saveButton); 
         f.add(bobCheck); f.add(litBobCheck); f.add(carCheck); f.add(litCarCheck); f.add(clrCheck); f.add(litClrCheck); f.add(frkCheck); f.add(litFrkCheck); f.add(frqCheck); f.add(litFrqCheck); f.add(indCheck); f.add(litIndCheck); f.add(msaCheck); f.add(litMsaCheck); f.add(nsaCheck); f.add(litNsaCheck); f.add(sigCheck); f.add(litSigCheck); f.add(sndCheck); f.add(litSndCheck); f.add(trnCheck); f.add(litTrnCheck); 
@@ -380,7 +249,7 @@ public class settings {
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         f.setLocation(dim.width/2-f.getSize().width/2, dim.height/2-f.getSize().height/2);
         f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        saveButton.addActionListener((ActionEvent e) -> {
+        saveButton.addActionListener(e -> {
             changeText.setForeground(new Color(0,0,0,255));
             changeText.setBackground(new Color(255,255,255,255));
             x = 255;
@@ -388,170 +257,111 @@ public class settings {
             // Primary Edgework
             // ----------------------------------------------------
             // Re-set the Indicator Properties.
-            boolean isSelected = bobCheck.isSelected();
-            if (isSelected == true) {
+            if (bobCheck.isSelected()) {
                 props.setProperty("bob","1");
-                isSelected = litBobCheck.isSelected();
-                if (isSelected == true) {
-                    props.setProperty("bobLit","1");
-                } else {
-                    props.setProperty("bobLit","0");
-                }
+                if (litBobCheck.isSelected()) props.setProperty("bobLit","1");
+                else props.setProperty("bobLit","0");
             } else {
                 props.setProperty("bob","0");
                 props.setProperty("bobLit","0");
                 // Unselect the LIT check box since the indicator isn't checked.
                 litBobCheck.setSelected(false);
             }
-            isSelected = carCheck.isSelected();
-            if (isSelected == true) {
+            if (carCheck.isSelected()) {
                 props.setProperty("car","1");
-                isSelected = litCarCheck.isSelected();
-                if (isSelected == true) {
-                    props.setProperty("carLit","1");
-                } else {
-                    props.setProperty("carLit","0");
-                }
+                if (litCarCheck.isSelected()) props.setProperty("carLit","1");
+                else props.setProperty("carLit","0");
             } else {
                 props.setProperty("car","0");
                 props.setProperty("carLit","0");
                 litCarCheck.setSelected(false);
             }
-            isSelected = clrCheck.isSelected();
-            if (isSelected == true) {
+            if (clrCheck.isSelected()) {
                 props.setProperty("clr","1");
-                isSelected = litClrCheck.isSelected();
-                if (isSelected == true) {
-                    props.setProperty("clrLit","1");
-                } else {
-                    props.setProperty("clrLit","0");
-                }
+                if (litClrCheck.isSelected()) props.setProperty("clrLit","1");
+                else props.setProperty("clrLit","0");
             } else {
                 props.setProperty("clr","0");
                 props.setProperty("clrLit","0");
                 litClrCheck.setSelected(false);
             }
-            isSelected = frkCheck.isSelected();
-            if (isSelected == true) {
+            if (frkCheck.isSelected()) {
                 props.setProperty("frk","1");
-                isSelected = litFrkCheck.isSelected();
-                if (isSelected == true) {
-                    props.setProperty("frkLit","1");
-                } else {
-                    props.setProperty("frkLit","0");
-                }
+                if (litFrkCheck.isSelected()) props.setProperty("frkLit","1");
+                else props.setProperty("frkLit","0");
             } else {
                 props.setProperty("frk","0");
                 props.setProperty("frkLit","0");
                 litFrkCheck.setSelected(false);
             }
-            isSelected = frqCheck.isSelected();
-            if (isSelected == true) {
+            if (frqCheck.isSelected()) {
                 props.setProperty("frq","1");
-                isSelected = litFrqCheck.isSelected();
-                if (isSelected == true) {
-                    props.setProperty("frqLit","1");
-                } else {
-                    props.setProperty("frqLit","0");
-                }
+                if (litFrqCheck.isSelected()) props.setProperty("frqLit","1");
+                else props.setProperty("frqLit","0");
             } else {
                 props.setProperty("frq","0");
                 props.setProperty("frqLit","0");
                 litFrqCheck.setSelected(false);
             }
-            isSelected = indCheck.isSelected();
-            if (isSelected == true) {
+            if (indCheck.isSelected()) {
                 props.setProperty("ind","1");
-                isSelected = litIndCheck.isSelected();
-                if (isSelected == true) {
-                    props.setProperty("indLit","1");
-                } else {
-                    props.setProperty("indLit","0");
-                }
+                if (litIndCheck.isSelected()) props.setProperty("indLit","1");
+                else props.setProperty("indLit","0");
             } else {
                 props.setProperty("ind","0");
                 props.setProperty("indLit","0");
                 litIndCheck.setSelected(false);
             }
-            isSelected = msaCheck.isSelected();
-            if (isSelected == true) {
+            if (msaCheck.isSelected()) {
                 props.setProperty("msa","1");
-                isSelected = litMsaCheck.isSelected();
-                if (isSelected == true) {
-                    props.setProperty("msaLit","1");
-                } else {
-                    props.setProperty("msaLit","0");
-                }
+                if (litMsaCheck.isSelected()) props.setProperty("msaLit","1");
+                else props.setProperty("msaLit","0");
             } else {
                 props.setProperty("msa","0");
                 props.setProperty("msaLit","0");
                 litMsaCheck.setSelected(false);
             }
-            isSelected = nsaCheck.isSelected();
-            if (isSelected == true) {
+            if (nsaCheck.isSelected()) {
                 props.setProperty("nsa","1");
-                isSelected = litNsaCheck.isSelected();
-                if (isSelected == true) {
-                    props.setProperty("nsaLit","1");
-                } else {
-                    props.setProperty("nsaLit","0");
-                }
+                if (litNsaCheck.isSelected()) props.setProperty("nsaLit","1");
+                else props.setProperty("nsaLit","0");
             } else {
                 props.setProperty("nsa","0");
                 props.setProperty("nsaLit","0");
                 litNsaCheck.setSelected(false);
             }
-            isSelected = sigCheck.isSelected();
-            if (isSelected == true) {
+            if (sigCheck.isSelected()) {
                 props.setProperty("sig","1");
-                isSelected = litSigCheck.isSelected();
-                if (isSelected == true) {
-                    props.setProperty("sigLit","1");
-                } else {
-                    props.setProperty("sigLit","0");
-                }
+                if (litSigCheck.isSelected()) props.setProperty("sigLit","1");
+                else props.setProperty("sigLit","0");
             } else {
                 props.setProperty("sig","0");
                 props.setProperty("sigLit","0");
                 litSigCheck.setSelected(false);
             }
-            isSelected = sndCheck.isSelected();
-            if (isSelected == true) {
+            if (sndCheck.isSelected()) {
                 props.setProperty("snd","1");
-                isSelected = litSndCheck.isSelected();
-                if (isSelected == true) {
-                    props.setProperty("sndLit","1");
-                } else {
-                    props.setProperty("sndLit","0");
-                }
+                if (litSndCheck.isSelected()) props.setProperty("sndLit","1");
+                else props.setProperty("sndLit","0");
             } else {
                 props.setProperty("snd","0");
                 props.setProperty("sndLit","0");
                 litSndCheck.setSelected(false);
             }
-            isSelected = trnCheck.isSelected();
-            if (isSelected == true) {
+            if (trnCheck.isSelected()) {
                 props.setProperty("trn","1");
-                isSelected = litTrnCheck.isSelected();
-                if (isSelected == true) {
-                    props.setProperty("trnLit","1");
-                } else {
-                    props.setProperty("trnLit","0");
-                }
+                if (litTrnCheck.isSelected()) props.setProperty("trnLit","1");
+                else props.setProperty("trnLit","0");
             } else {
                 props.setProperty("trn","0");
                 props.setProperty("trnLit","0");
                 litTrnCheck.setSelected(false);
             }
             // Re-set the Battery properties.
-            String batteriesAA = batteriesAATextBox.getText();
-            String batteriesD = batteriesDTextBox.getText();
-            String batteriesTotal = Integer.toString(Integer.parseInt(batteriesAA) + Integer.parseInt(batteriesD));
-            String batteryHolders = Integer.toString(Integer.parseInt(batteriesD) + (Integer.parseInt(batteriesAA) / 2));
-            props.setProperty("batteriesTotal",batteriesTotal);
-            props.setProperty("batteryHolders",batteryHolders);
-            props.setProperty("batteriesAA",batteriesAA);
-            props.setProperty("batteriesD",batteriesD);
+            props.setProperty("batteriesTotal",Integer.toString(Integer.parseInt(batteriesAATextBox.getText()) + Integer.parseInt(batteriesDTextBox.getText())));
+            props.setProperty("batteryHolders",Integer.toString(Integer.parseInt(batteriesDTextBox.getText()) + (Integer.parseInt(batteriesAATextBox.getText()) / 2)));
+            props.setProperty("batteriesAA",batteriesAATextBox.getText());
+            props.setProperty("batteriesD",batteriesDTextBox.getText());
             String dvidQuantity = dvidTB.getText();
             String parallelQuantity = parallelTB.getText();
             String ps2Quantity = ps2TB.getText();
@@ -564,36 +374,18 @@ public class settings {
             props.setProperty("rj45Quantity",rj45Quantity);
             props.setProperty("serialQuantity",serialQuantity);
             props.setProperty("stereoRCAQuantity",stereoRCAQuantity);
-            if (Integer.parseInt(dvidQuantity) > 0) {
-                props.setProperty("dvid","1");
-            } else {
-                props.setProperty("dvid","0");
-            }
-            if (Integer.parseInt(parallelQuantity) > 0) {
-                props.setProperty("parallel","1");
-            } else {
-                props.setProperty("parallel","0");
-            }
-            if (Integer.parseInt(ps2Quantity) > 0) {
-                props.setProperty("ps2","1");
-            } else {
-                props.setProperty("ps2","0");
-            }
-            if (Integer.parseInt(rj45Quantity) > 0) {
-                props.setProperty("rj45","1");
-            } else {
-                props.setProperty("rj45","0");
-            }
-            if (Integer.parseInt(serialQuantity) > 0) {
-                props.setProperty("serial","1");
-            } else {
-                props.setProperty("serial","0");
-            }
-            if (Integer.parseInt(stereoRCAQuantity) > 0) {
-                props.setProperty("stereoRCA","1");
-            } else {
-                props.setProperty("stereoRCA","0");
-            }
+            if (Integer.parseInt(dvidQuantity) > 0) props.setProperty("dvid","1");
+            else props.setProperty("dvid","0");
+            if (Integer.parseInt(parallelQuantity) > 0) props.setProperty("parallel","1");
+            else props.setProperty("parallel","0");
+            if (Integer.parseInt(ps2Quantity) > 0) props.setProperty("ps2","1");
+            else props.setProperty("ps2","0");
+            if (Integer.parseInt(rj45Quantity) > 0) props.setProperty("rj45","1");
+            else props.setProperty("rj45","0");
+            if (Integer.parseInt(serialQuantity) > 0) props.setProperty("serial","1");
+            else props.setProperty("serial","0");
+            if (Integer.parseInt(stereoRCAQuantity) > 0) props.setProperty("stereoRCA","1");
+            else props.setProperty("stereoRCA","0");
             // Upper-Case the SN.
             String sn = snTextBox.getText();
             sn = sn.toUpperCase();
@@ -647,8 +439,7 @@ public class settings {
                 props.setProperty("sn6",sn6);
             }
             props.setProperty("modules",moduleTB.getText());
-            isSelected = dmCheck.isSelected();
-            if (isSelected) {
+            if (dmCheck.isSelected()) {
                 props.setProperty("displayModule", "1");
             } else {
                 props.setProperty("displayModule","0");
@@ -817,7 +608,7 @@ public class settings {
             t.setInitialDelay(2000);
             t.start();
         });
-        clearButton.addActionListener((ActionEvent e) -> {
+        clearButton.addActionListener(e -> {
             changeText.setForeground(new Color(0,0,0,255));
             changeText.setBackground(new Color(255,255,255,255));
             x = 255;
