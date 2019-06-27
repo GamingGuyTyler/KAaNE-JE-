@@ -8,44 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d44d9dc5-2aab-40df-860d-087858e770cc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/button$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/button.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/button.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/settings.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/settings.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/wires.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/wires.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/black1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/black2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/black3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/black4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/black5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/black6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/blue1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/blue2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/blue3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/blue4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/blue5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/blue6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/none.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/red1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/red2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/red3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/red4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/red5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/red6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/white1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/white2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/white3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/white4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/white5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/white6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/yellow1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/yellow2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/yellow3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/yellow4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/yellow5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/wires/yellow6.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/button.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kaane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kaane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/wires.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/wires.java" afterDir="false" />
     </list>
@@ -61,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/kaane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="48" column="39" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+            <state relative-caret-position="161">
+              <caret line="65" column="54" lean-forward="true" selection-start-line="65" selection-start-column="54" selection-end-line="65" selection-end-column="54" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -77,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/wires.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1513">
-              <caret line="328" column="35" lean-forward="true" selection-start-line="328" selection-start-column="35" selection-end-line="328" selection-end-column="35" />
+            <state relative-caret-position="3638">
+              <caret line="337" column="41" selection-start-line="337" selection-start-column="41" selection-end-line="337" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/button.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="152" column="16" lean-forward="true" selection-start-line="152" selection-start-column="16" selection-end-line="152" selection-end-column="16" />
+            <state relative-caret-position="408">
+              <caret line="48" column="41" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/settings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-670">
-              <caret line="608" column="22" lean-forward="true" selection-start-line="608" selection-start-column="22" selection-end-line="608" selection-end-column="22" />
+            <state relative-caret-position="32">
+              <caret line="209" column="20" lean-forward="true" selection-start-line="209" selection-start-column="20" selection-end-line="209" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -212,10 +177,10 @@
         <option value="$PROJECT_DIR$/src/burglarAlarm.java" />
         <option value="$PROJECT_DIR$/src/wirePlacement.java" />
         <option value="$PROJECT_DIR$/config.properties" />
-        <option value="$PROJECT_DIR$/src/wires.java" />
         <option value="$PROJECT_DIR$/src/kaane.java" />
-        <option value="$PROJECT_DIR$/src/settings.java" />
+        <option value="$PROJECT_DIR$/src/wires.java" />
         <option value="$PROJECT_DIR$/src/button.java" />
+        <option value="$PROJECT_DIR$/src/settings.java" />
       </list>
     </option>
   </component>
@@ -236,7 +201,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -253,6 +217,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -320,9 +285,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="0" width="974" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.8916849" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.9671773" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -331,7 +295,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3296582" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989059" visible="true" weight="0.32603937" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989059" weight="0.3249453" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39824945" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -688,31 +652,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kaane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="48" column="39" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-670">
-          <caret line="608" column="22" lean-forward="true" selection-start-line="608" selection-start-column="22" selection-end-line="608" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/wires.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1513">
-          <caret line="328" column="35" lean-forward="true" selection-start-line="328" selection-start-column="35" selection-end-line="328" selection-end-column="35" />
+        <state relative-caret-position="3638">
+          <caret line="337" column="41" selection-start-line="337" selection-start-column="41" selection-end-line="337" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -721,9 +664,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/button.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="152" column="16" lean-forward="true" selection-start-line="152" selection-start-column="16" selection-end-line="152" selection-end-column="16" />
+        <state relative-caret-position="408">
+          <caret line="48" column="41" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
           <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/settings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="209" column="20" lean-forward="true" selection-start-line="209" selection-start-column="20" selection-end-line="209" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kaane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="65" column="54" lean-forward="true" selection-start-line="65" selection-start-column="54" selection-end-line="65" selection-end-column="54" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>

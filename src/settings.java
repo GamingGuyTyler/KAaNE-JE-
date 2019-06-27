@@ -44,8 +44,7 @@ public class settings {
         clearButton.setBounds(175,30,75,20);
         // Define the Saved/Cleared Text
         JLabel changeText = new JLabel();
-        changeText.setHorizontalAlignment(JLabel.CENTER);
-        changeText.setSize(320,600);
+        changeText.setBounds(150,280,70,20);
         changeText.setVisible(false);
         changeText.setForeground(new Color(0,0,0,255));
         changeText.setBackground(new Color(255,255,255,255));
@@ -165,7 +164,7 @@ public class settings {
         moduleText.setBounds(311,73,60,20);
         // Define the Display Module checkbox
         JCheckBox dmCheck = new JCheckBox("DISPLAY MODULES");
-        dmCheck.setBounds(0,300,150,20);
+        dmCheck.setBounds(0,300,134,20);
         // Define the plate text box.
         ImprovedFormattedTextField plateTB = new ImprovedFormattedTextField(integerNumberInstance,0);
         plateTB.setBounds(121,213,50,20);

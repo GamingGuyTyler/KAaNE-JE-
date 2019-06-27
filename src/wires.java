@@ -212,7 +212,7 @@ public class wires {
                     wire3txt.setText("CUT");
                     wire3txt.setVisible(true);
                 }
-            } if("4".equals(x)) {
+            } if(x.equals("4")) {
                 String w4 = wire4cb.getItemAt(wire4cb.getSelectedIndex());
                 System.out.println("4th wire - " + w4);
                 String[] wires = {w1,w2,w3,w4};
@@ -327,6 +327,15 @@ public class wires {
             wire4txt.setText("#4");
             wire5txt.setText("#5");
             wire6txt.setText("#6");
+            // make visible
+            wire1txt.setVisible(true);
+            wire2txt.setVisible(true);
+            wire3txt.setVisible(true);
+            // based on amount CB, set visible
+            int x = Integer.parseInt(inputAmount.getItemAt(inputAmount.getSelectedIndex()));
+            if (x > 3) wire4txt.setVisible(true);
+            if (x > 4) wire5txt.setVisible(true);
+            if (x == 6) wire6txt.setVisible(true);
         });
         update.addActionListener(e -> {
             // Get wire selections

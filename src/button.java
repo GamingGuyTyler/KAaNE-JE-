@@ -15,12 +15,13 @@ import java.util.*;
 
 public class button {
     static JFrame f;
-    static JLayeredPane l = new JLayeredPane();
+    static JLayeredPane l;
     public static void module() {
         System.out.println("[BUTTON MODULE]");
         f = new JFrame("KAaNE [BUTTON MODULE]");
         ImageIcon icon = new ImageIcon("imgs/icons/button.png");
         f.setIconImage(icon.getImage());
+        l = new JLayeredPane();
         // Grab the config stuff
         File configFile = new File("config.properties");
         Properties props = new Properties();
@@ -47,7 +48,7 @@ public class button {
         JComboBox<String> textCombo = new JComboBox<>(tText);
         textCombo.setBounds(50,70,90,20);
         // Define the Final text
-        JLabel finalText = new JLabel("<html>Hold the button.<br/>Release on 4 if the strip is blue.<br/>Release on 5 if the strip is yellow.<br/>Release on 1 if it's anything else.</html>");
+        JLabel finalText = new JLabel("");
         finalText.setHorizontalAlignment(JLabel.CENTER);
         finalText.setSize(320,320);
         finalText.setVisible(false);
