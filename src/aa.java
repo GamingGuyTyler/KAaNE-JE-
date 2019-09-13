@@ -28,7 +28,7 @@ public class aa {
         JButton button = new JButton("OK");
         button.setBounds(60,5,60,20);
         // Output Text
-        JLabel output = new JLabel("test");
+        JLabel output = new JLabel("");
         output.setBounds(5,30,200,20);
         // Add everything
         f.add(input); f.add(button); f.add(output);
@@ -54,7 +54,7 @@ public class aa {
                     "cn","co","cp","cq","cr","cs","ct","cu","cv","cw","cx","cy","cz",
                     "da","db","dc","dd","de","df"};
             // Check if text is available
-            if (!Arrays.stream(texts).anyMatch(inputted::equals)) {
+            if (Arrays.stream(texts).noneMatch(inputted::equals)) {
                 // If not, shank them
                 output.setText("Invalid Input!");
                 System.out.println("Invalid Input.");

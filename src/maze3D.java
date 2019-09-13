@@ -107,8 +107,8 @@ public class maze3D {
         icons.put("BDH",bdhIcon);
         icons.put("CDH",cdhIcon);
         JComboBox<String> mazesCB = new JComboBox(new Object[] {"ABC","ABD","ABH","ACD","ACH","ADH","BCD","BCH","BDH","CDH"});
-	mazesCB.setRenderer(new IconListRenderer(icons));
-	mazesCB.setBounds(10,10,110,56);
+        mazesCB.setRenderer(new IconListRenderer(icons));
+        mazesCB.setBounds(10,10,110,56);
         // Direction CB
         String directions[] = {"N","S","W","E"};
         JComboBox<String> dirCB = new JComboBox(directions);
@@ -116,14 +116,18 @@ public class maze3D {
         // Output images
         JLabel outputMaze = new JLabel();
         outputMaze.setBounds(10,70,300,336);
+        abcImg = abcIcon2.getImage();
+        abcImg = abcImg.getScaledInstance(300, 336, java.awt.Image.SCALE_SMOOTH);
+        abcIcon = new ImageIcon(abcImg);
+        outputMaze.setIcon(abcIcon);
         ImageIcon indc = new ImageIcon("imgs/mazes3D/indicator.png");
         JLabel outputInd = new JLabel(indc);
         outputInd.setBounds(51,147,21,23);
-        outputInd.setVisible(false);
         ImageIcon horLine = new ImageIcon("imgs/mazes3D/horizontal-line2.png");
         ImageIcon verLine = new ImageIcon("imgs/mazes3D/vertical-line2.png");
         JLabel outputLine = new JLabel();
-        outputLine.setVisible(false);
+        outputLine.setIcon(verLine);
+        outputLine.setBounds(81,135,25,256);
         // Layered Pane
         e = new JLayeredPane();
         e.setBounds(0,0,350,450);

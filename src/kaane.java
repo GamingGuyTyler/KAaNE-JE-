@@ -35,8 +35,8 @@ class kaane {
                 "Who's on First","Memory","Morse Code","Complicated Wires","Wire Sequences",
                 "Mazes","Passwords","Needy Gas","Capacitor Discharge","Needy Knobs",
                 "101 Dalmatians","3D Maze","3D Tunnels","aa","Accumulation","Adjacent Letters", // mods
-                "Adventure Game","Air Traffic Controller","Alchemy","Algebra","Alphabet","Alphabet Numbers",
-                "Anagrams","Adv. Vent Gas","Astrology","Backgrounds","Bases","Battleship",
+                "Adv. Vent Gas","Adventure Game","Air Traffic Controller","Alchemy","Algebra","Alphabet",
+                "Alphabet Numbers","Anagrams","Astrology","Backgrounds","Bases","Battleship",
                 "Benedict Cumberbatch","Big Circle","Binary LEDs","Bitmaps","Bitwise Operations","Blind Alley",
                 "Blind Maze","Boolean Venn Diagram","Broken Buttons","The Bulb","Burglar Alarm","Unfair Cipher",
                 "Wire Placement","Word Scramble"};
